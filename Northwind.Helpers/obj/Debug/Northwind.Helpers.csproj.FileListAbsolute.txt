@@ -1,0 +1,11 @@
+C:\Documents\01_BA_BilgeAdam\02_809420_203_SabahSinifi\Day053\Day053\Northwind.Helpers\bin\Debug\Northwind.Helpers.dll
+C:\Documents\01_BA_BilgeAdam\02_809420_203_SabahSinifi\Day053\Day053\Northwind.Helpers\bin\Debug\Northwind.Helpers.pdb
+C:\Documents\01_BA_BilgeAdam\02_809420_203_SabahSinifi\Day053\Day053\Northwind.Helpers\obj\Debug\Northwind.Helpers.csprojAssemblyReference.cache
+C:\Documents\01_BA_BilgeAdam\02_809420_203_SabahSinifi\Day053\Day053\Northwind.Helpers\obj\Debug\Northwind.Helpers.dll
+C:\Documents\01_BA_BilgeAdam\02_809420_203_SabahSinifi\Day053\Day053\Northwind.Helpers\obj\Debug\Northwind.Helpers.pdb
+C:\Users\erkan.gorgulu\Desktop\Day053\Day053\Day053\Northwind.Helpers\obj\Debug\Northwind.Helpers.dll
+C:\Users\erkan.gorgulu\Desktop\Day053\Day053\Day053\Northwind.Helpers\obj\Debug\Northwind.Helpers.pdb
+C:\Users\erkan.gorgulu\Desktop\Day053\Day053\Day053\Northwind.Helpers\bin\Debug\Northwind.Helpers.dll
+C:\Users\erkan.gorgulu\Desktop\Day053\Day053\Day053\Northwind.Helpers\bin\Debug\Northwind.Helpers.pdb
+C:\Users\erkan.gorgulu\Desktop\Day053\Day053\Day053\Northwind.Helpers\obj\Debug\Northwind.Helpers.csprojAssemblyReference.cache
+C:\Users\erkan.gorgulu\Desktop\Day053\Day053\Day053\Northwind.Helpers\obj\Debug\Northwind.Helpers.csproj.CoreCompileInputs.cache

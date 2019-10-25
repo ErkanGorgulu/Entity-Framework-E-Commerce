@@ -1,0 +1,11 @@
+C:\Documents\01_BA_BilgeAdam\02_809420_203_SabahSinifi\Day053\Day053\Northwind.Entities\bin\Debug\Northwind.Entities.dll
+C:\Documents\01_BA_BilgeAdam\02_809420_203_SabahSinifi\Day053\Day053\Northwind.Entities\bin\Debug\Northwind.Entities.pdb
+C:\Documents\01_BA_BilgeAdam\02_809420_203_SabahSinifi\Day053\Day053\Northwind.Entities\obj\Debug\Northwind.Entities.csprojAssemblyReference.cache
+C:\Documents\01_BA_BilgeAdam\02_809420_203_SabahSinifi\Day053\Day053\Northwind.Entities\obj\Debug\Northwind.Entities.dll
+C:\Documents\01_BA_BilgeAdam\02_809420_203_SabahSinifi\Day053\Day053\Northwind.Entities\obj\Debug\Northwind.Entities.pdb
+C:\Users\erkan.gorgulu\Desktop\Day053\Day053\Day053\Northwind.Entities\bin\Debug\Northwind.Entities.dll
+C:\Users\erkan.gorgulu\Desktop\Day053\Day053\Day053\Northwind.Entities\bin\Debug\Northwind.Entities.pdb
+C:\Users\erkan.gorgulu\Desktop\Day053\Day053\Day053\Northwind.Entities\obj\Debug\Northwind.Entities.csprojAssemblyReference.cache
+C:\Users\erkan.gorgulu\Desktop\Day053\Day053\Day053\Northwind.Entities\obj\Debug\Northwind.Entities.csproj.CoreCompileInputs.cache
+C:\Users\erkan.gorgulu\Desktop\Day053\Day053\Day053\Northwind.Entities\obj\Debug\Northwind.Entities.dll
+C:\Users\erkan.gorgulu\Desktop\Day053\Day053\Day053\Northwind.Entities\obj\Debug\Northwind.Entities.pdb
