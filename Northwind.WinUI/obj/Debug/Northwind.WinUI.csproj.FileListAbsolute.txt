@@ -61,3 +61,4 @@ C:\Users\erkan\Desktop\Northwind E-Commerce\Northwind.WinUI\obj\Debug\Northwind.
 C:\Users\erkan\Desktop\Northwind E-Commerce\Northwind.WinUI\obj\Debug\Northwind.WinUI.exe
 C:\Users\erkan\Desktop\Northwind E-Commerce\Northwind.WinUI\obj\Debug\Northwind.WinUI.pdb
 C:\Users\erkan\Desktop\Northwind E-Commerce\Northwind.WinUI\bin\Debug\Northwind.Helpers.dll.config
+C:\Users\erkan\Desktop\Northwind E-Commerce\Northwind.WinUI\obj\Debug\Northwind.WinUI.Forms.FormsProducts.FormUpdateProducts.resources

@@ -56,7 +56,7 @@
             this.ordersToolStripMenuItem});
             this.mainMenu.Location = new System.Drawing.Point(0, 0);
             this.mainMenu.Name = "mainMenu";
-            this.mainMenu.Size = new System.Drawing.Size(863, 24);
+            this.mainMenu.Size = new System.Drawing.Size(1184, 24);
             this.mainMenu.TabIndex = 2;
             this.mainMenu.Text = "menuStrip1";
             // 
@@ -97,6 +97,7 @@
             this.updateProductToolStripMenuItem.Name = "updateProductToolStripMenuItem";
             this.updateProductToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.updateProductToolStripMenuItem.Text = "Update Product";
+            this.updateProductToolStripMenuItem.Click += new System.EventHandler(this.updateProductToolStripMenuItem_Click);
             // 
             // deleteProductToolStripMenuItem
             // 
@@ -138,7 +139,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(863, 544);
+            this.ClientSize = new System.Drawing.Size(1184, 961);
             this.Controls.Add(this.mainMenu);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.IsMdiContainer = true;

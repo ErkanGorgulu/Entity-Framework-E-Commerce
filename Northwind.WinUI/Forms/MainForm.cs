@@ -39,5 +39,12 @@ namespace Northwind.WinUI.Forms
             formAddProduct.MdiParent = this;
             formAddProduct.Show();
         }
+
+        private void updateProductToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormUpdateProducts formUpdateProducts = new FormUpdateProducts();
+            formUpdateProducts.MdiParent = this;
+            formUpdateProducts.Show();
+        }
     }
 }

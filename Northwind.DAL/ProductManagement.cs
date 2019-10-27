@@ -64,7 +64,9 @@ namespace Northwind.DAL
                         UnitsInStock = Convert.ToInt32(sql["UnitsInStock"]),
                         UnitsOnOrder = Convert.ToInt32(sql["UnitsOnOrder"]),
                         ReorderLevel = Convert.ToInt32(sql["ReorderLevel"]),
-                        Discontinued = Convert.ToByte(sql["Discontinued"]) == 1 ? true : false  
+                        Discontinued = Convert.ToByte(sql["Discontinued"]) == 1 ? true : false,
+                        CategoryId = Convert.ToInt32(sql["CategoryID"]),
+                        SupplierId = Convert.ToInt32(sql["SupplierID"])
                     };
                     productsList.Add(products);
                 }
@@ -101,6 +103,33 @@ namespace Northwind.DAL
             return isAdded;
         }
         //updateproduct
+
+        public bool UpdateProduct(Products products)
+        {
+            string sqlQuery = "EXEC SP_UpdateProduct @productname, @supplierId, @categoryid, @quantityperunit, @unitprice, @unitsinstock, @unitsonorder, @reorderlevel, @discontinued, @productid";
+            SqlCommand sqlCommand = new SqlCommand(sqlQuery, sqlConnection);
+            sqlCommand.Parameters.AddWithValue("@productid", products.ProductId);
+            sqlCommand.Parameters.AddWithValue("@productname", products.ProductName);
+            sqlCommand.Parameters.AddWithValue("@supplierid", products.SupplierId);
+            sqlCommand.Parameters.AddWithValue("@categoryid", products.CategoryId);
+            sqlCommand.Parameters.AddWithValue("@quantityperunit", products.QuantityPerUnit);
+            sqlCommand.Parameters.AddWithValue("@unitprice", products.UnitPrice);
+            sqlCommand.Parameters.AddWithValue("@unitsinstock", products.UnitsInStock);
+            sqlCommand.Parameters.AddWithValue("@unitsonorder", products.UnitsOnOrder);
+            sqlCommand.Parameters.AddWithValue("@reorderlevel", products.ReorderLevel);
+            if (products.Discontinued)
+                sqlCommand.Parameters.AddWithValue("@discontinued", 1);
+            else
+                sqlCommand.Parameters.AddWithValue("@discontinued", 0);
+            if (sqlConnection.State == System.Data.ConnectionState.Closed)
+            {
+                sqlConnection.Open();
+            }
+
+            bool isUpdated = sqlCommand.ExecuteNonQuery() > 0 ? true : false;
+
+            return isUpdated;
+        }
         //deleteproduct
     }
 }

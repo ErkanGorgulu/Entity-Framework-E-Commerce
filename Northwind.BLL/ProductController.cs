@@ -25,5 +25,11 @@ namespace Northwind.BLL
             bool isAdded = productManagement.AddProduct(products);
             return isAdded;
         }
+
+        public bool UpdateProduct(Products products)
+        {
+            bool isUpdated = productManagement.UpdateProduct(products);
+            return isUpdated;
+        }
     }
 }

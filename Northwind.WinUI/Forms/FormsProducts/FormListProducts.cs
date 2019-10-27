@@ -23,8 +23,6 @@ namespace Northwind.WinUI.Forms
         ProductController productController = new ProductController();
         private void FormProducts_Load(object sender, EventArgs e)
         {
-            dataGridProducts.ColumnHeadersVisible = false;
-
             #region fill products table                       
             List<Products> productList = productController.GetProducts();
             dataGridProducts.DataSource = productList;
