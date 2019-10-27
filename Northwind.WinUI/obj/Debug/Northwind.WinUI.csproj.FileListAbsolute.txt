@@ -60,3 +60,4 @@ C:\Users\erkan\Desktop\Northwind E-Commerce\Northwind.WinUI\obj\Debug\Northwind.
 C:\Users\erkan\Desktop\Northwind E-Commerce\Northwind.WinUI\obj\Debug\Northwind.WinUI.csproj.CopyComplete
 C:\Users\erkan\Desktop\Northwind E-Commerce\Northwind.WinUI\obj\Debug\Northwind.WinUI.exe
 C:\Users\erkan\Desktop\Northwind E-Commerce\Northwind.WinUI\obj\Debug\Northwind.WinUI.pdb
+C:\Users\erkan\Desktop\Northwind E-Commerce\Northwind.WinUI\bin\Debug\Northwind.Helpers.dll.config

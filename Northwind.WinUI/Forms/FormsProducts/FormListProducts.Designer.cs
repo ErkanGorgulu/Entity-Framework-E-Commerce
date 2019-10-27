@@ -54,7 +54,9 @@
             // 
             this.dataGridProducts.AllowUserToAddRows = false;
             this.dataGridProducts.AllowUserToDeleteRows = false;
-            this.dataGridProducts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridProducts.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dataGridProducts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dataGridProducts.ColumnHeadersVisible = false;
             this.dataGridProducts.Location = new System.Drawing.Point(12, 93);
             this.dataGridProducts.Name = "dataGridProducts";
             this.dataGridProducts.ReadOnly = true;
@@ -214,7 +216,7 @@
             this.btnAddProduct.UseVisualStyleBackColor = true;
             this.btnAddProduct.Click += new System.EventHandler(this.BtnAddProduct_Click);
             // 
-            // FormProducts
+            // FormListProducts
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -238,7 +240,7 @@
             this.Controls.Add(this.lblQuantityPerUnit);
             this.Controls.Add(this.lblProductName);
             this.Controls.Add(this.dataGridProducts);
-            this.Name = "FormProducts";
+            this.Name = "FormListProducts";
             this.Text = "FormProducts";
             this.Load += new System.EventHandler(this.FormProducts_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridProducts)).EndInit();

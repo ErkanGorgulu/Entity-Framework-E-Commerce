@@ -14,3 +14,4 @@ C:\Users\erkan\Desktop\Northwind E-Commerce\Northwind.Helpers\bin\Debug\Northwin
 C:\Users\erkan\Desktop\Northwind E-Commerce\Northwind.Helpers\obj\Debug\Northwind.Helpers.csprojAssemblyReference.cache
 C:\Users\erkan\Desktop\Northwind E-Commerce\Northwind.Helpers\obj\Debug\Northwind.Helpers.dll
 C:\Users\erkan\Desktop\Northwind E-Commerce\Northwind.Helpers\obj\Debug\Northwind.Helpers.pdb
+C:\Users\erkan\Desktop\Northwind E-Commerce\Northwind.Helpers\bin\Debug\Northwind.Helpers.dll.config

@@ -29,3 +29,4 @@ C:\Users\erkan\Desktop\Northwind E-Commerce\Northwind.DAL\obj\Debug\Northwind.DA
 C:\Users\erkan\Desktop\Northwind E-Commerce\Northwind.DAL\obj\Debug\Northwind.DAL.csproj.CopyComplete
 C:\Users\erkan\Desktop\Northwind E-Commerce\Northwind.DAL\obj\Debug\Northwind.DAL.dll
 C:\Users\erkan\Desktop\Northwind E-Commerce\Northwind.DAL\obj\Debug\Northwind.DAL.pdb
+C:\Users\erkan\Desktop\Northwind E-Commerce\Northwind.DAL\bin\Debug\Northwind.Helpers.dll.config
