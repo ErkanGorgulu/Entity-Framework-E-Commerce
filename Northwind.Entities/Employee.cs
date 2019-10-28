@@ -25,6 +25,7 @@ namespace Northwind.Entities
         public string Notes { get; set; }
         public int ReportsTo { get; set; }
         public string ReportsToText { get; set; }
+        public string NameWithTitle { get; set; }
         //public byte[] Photo { get; set; }
         //public string PhotoPath { get; set; }
     }

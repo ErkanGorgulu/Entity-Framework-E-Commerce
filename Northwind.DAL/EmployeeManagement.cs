@@ -38,7 +38,9 @@ namespace Northwind.DAL
 	                                ,E.Extension
 	                                ,E.Notes
 	                                ,E.ReportsTo
-	                                ,(SELECT ER.FirstName + ' ' + ER.LastName FROM Employees AS [ER] WHERE E.ReportsTo = ER.EmployeeID ) AS [ReportsTo]
+	                                ,(SELECT ER.FirstName + ' ' + ER.LastName FROM Employees AS [ER] WHERE E.ReportsTo = ER.EmployeeID ) AS [ReportsToText]
+                                    ,E.FirstName + ' ' + E.LastName + ' - ' + E.Title AS [NameWithTitle]
+                                    
 		                                FROM 
 			                                Employees AS [E]";
             SqlCommand sqlCommand = new SqlCommand(sqlQuery,sqlConnection);
@@ -75,6 +77,7 @@ namespace Northwind.DAL
                     employee.ReportsTo = reportsToValue;
                     //Index 16 is ReportsToText value for ReportsTo
                     employee.ReportsToText = dataReader[16].ToString();
+                    employee.NameWithTitle = dataReader[17].ToString();
                     employees.Add(employee);
                 }
             }

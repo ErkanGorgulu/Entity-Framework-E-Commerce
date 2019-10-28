@@ -96,7 +96,9 @@ namespace Northwind.WinUI.Forms
 
         private void addEmployeeToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            FormAddEmployee formAddEmployee = new FormAddEmployee();
+            formAddEmployee.MdiParent = this;
+            formAddEmployee.Show();
         }
     }
 }
