@@ -32,5 +32,11 @@ namespace Northwind.BLL
             bool isUpdated = categoryManagment.UpdateCategory(category);
             return isUpdated;
         }
+
+        public bool DeleteCategory(Category category)
+        {
+            bool isDeleted = categoryManagment.DeleteCategory(category);
+            return isDeleted;
+        }
     }
 }

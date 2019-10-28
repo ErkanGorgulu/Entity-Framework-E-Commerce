@@ -101,6 +101,7 @@
             this.deleteCategoryToolStripMenuItem.Name = "deleteCategoryToolStripMenuItem";
             this.deleteCategoryToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.deleteCategoryToolStripMenuItem.Text = "Delete Category";
+            this.deleteCategoryToolStripMenuItem.Click += new System.EventHandler(this.deleteCategoryToolStripMenuItem_Click);
             // 
             // productToolStripMenuItem
             // 

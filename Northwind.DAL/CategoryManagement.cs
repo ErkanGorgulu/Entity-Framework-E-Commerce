@@ -98,5 +98,21 @@ namespace Northwind.DAL
             return isUpdated;
         }
 
+        public bool DeleteCategory(Category category)
+        {
+            string sqlQuery = "EXEC SP_DeleteCategory @categoryid";
+            SqlCommand sqlCommand = new SqlCommand(sqlQuery, sqlConnection);
+            sqlCommand.CommandText = "SP_DeleteCategory";
+            sqlCommand.CommandType = CommandType.StoredProcedure;
+            sqlCommand.Parameters.AddWithValue("categoryid", category.CategoryId);
+            if(sqlConnection.State == ConnectionState.Closed)
+            {
+                sqlConnection.Open();
+            }
+            bool isDeleted = sqlCommand.ExecuteNonQuery() > 0 ? true : false;
+            sqlConnection.Close();
+            return isDeleted;
+        }
+
     }
 }
