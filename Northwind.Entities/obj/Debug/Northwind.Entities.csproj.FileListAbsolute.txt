@@ -9,3 +9,8 @@ C:\Users\erkan.gorgulu\Desktop\Day053\Day053\Day053\Northwind.Entities\obj\Debug
 C:\Users\erkan.gorgulu\Desktop\Day053\Day053\Day053\Northwind.Entities\obj\Debug\Northwind.Entities.csproj.CoreCompileInputs.cache
 C:\Users\erkan.gorgulu\Desktop\Day053\Day053\Day053\Northwind.Entities\obj\Debug\Northwind.Entities.dll
 C:\Users\erkan.gorgulu\Desktop\Day053\Day053\Day053\Northwind.Entities\obj\Debug\Northwind.Entities.pdb
+C:\Users\erkan\Desktop\Northwind E-Commerce\Northwind.Entities\bin\Debug\Northwind.Entities.dll
+C:\Users\erkan\Desktop\Northwind E-Commerce\Northwind.Entities\bin\Debug\Northwind.Entities.pdb
+C:\Users\erkan\Desktop\Northwind E-Commerce\Northwind.Entities\obj\Debug\Northwind.Entities.csprojAssemblyReference.cache
+C:\Users\erkan\Desktop\Northwind E-Commerce\Northwind.Entities\obj\Debug\Northwind.Entities.dll
+C:\Users\erkan\Desktop\Northwind E-Commerce\Northwind.Entities\obj\Debug\Northwind.Entities.pdb

@@ -23,3 +23,16 @@ C:\Users\erkan.gorgulu\Desktop\Day053\Day053\Day053\Northwind.BLL\obj\Debug\Nort
 C:\Users\erkan.gorgulu\Desktop\Day053\Day053\Day053\Northwind.BLL\obj\Debug\Northwind.BLL.csproj.CopyComplete
 C:\Users\erkan.gorgulu\Desktop\Day053\Day053\Day053\Northwind.BLL\obj\Debug\Northwind.BLL.dll
 C:\Users\erkan.gorgulu\Desktop\Day053\Day053\Day053\Northwind.BLL\obj\Debug\Northwind.BLL.pdb
+C:\Users\erkan\Desktop\Northwind E-Commerce\Northwind.BLL\bin\Debug\Northwind.BLL.dll
+C:\Users\erkan\Desktop\Northwind E-Commerce\Northwind.BLL\bin\Debug\Northwind.BLL.pdb
+C:\Users\erkan\Desktop\Northwind E-Commerce\Northwind.BLL\bin\Debug\Northwind.DAL.dll
+C:\Users\erkan\Desktop\Northwind E-Commerce\Northwind.BLL\bin\Debug\Northwind.Entities.dll
+C:\Users\erkan\Desktop\Northwind E-Commerce\Northwind.BLL\bin\Debug\Northwind.Helpers.dll
+C:\Users\erkan\Desktop\Northwind E-Commerce\Northwind.BLL\bin\Debug\Northwind.DAL.pdb
+C:\Users\erkan\Desktop\Northwind E-Commerce\Northwind.BLL\bin\Debug\Northwind.Entities.pdb
+C:\Users\erkan\Desktop\Northwind E-Commerce\Northwind.BLL\bin\Debug\Northwind.Helpers.pdb
+C:\Users\erkan\Desktop\Northwind E-Commerce\Northwind.BLL\obj\Debug\Northwind.BLL.csprojAssemblyReference.cache
+C:\Users\erkan\Desktop\Northwind E-Commerce\Northwind.BLL\obj\Debug\Northwind.BLL.csproj.CopyComplete
+C:\Users\erkan\Desktop\Northwind E-Commerce\Northwind.BLL\obj\Debug\Northwind.BLL.dll
+C:\Users\erkan\Desktop\Northwind E-Commerce\Northwind.BLL\obj\Debug\Northwind.BLL.pdb
+C:\Users\erkan\Desktop\Northwind E-Commerce\Northwind.BLL\bin\Debug\Northwind.Helpers.dll.config
