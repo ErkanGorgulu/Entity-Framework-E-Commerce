@@ -19,14 +19,3 @@ C:\Users\erkan.gorgulu\Desktop\Day053\Day053\Day053\Northwind.DAL\obj\Debug\Nort
 C:\Users\erkan.gorgulu\Desktop\Day053\Day053\Day053\Northwind.DAL\obj\Debug\Northwind.DAL.csproj.CopyComplete
 C:\Users\erkan.gorgulu\Desktop\Day053\Day053\Day053\Northwind.DAL\obj\Debug\Northwind.DAL.dll
 C:\Users\erkan.gorgulu\Desktop\Day053\Day053\Day053\Northwind.DAL\obj\Debug\Northwind.DAL.pdb
-C:\Users\erkan\Desktop\Northwind E-Commerce\Northwind.DAL\bin\Debug\Northwind.DAL.dll
-C:\Users\erkan\Desktop\Northwind E-Commerce\Northwind.DAL\bin\Debug\Northwind.DAL.pdb
-C:\Users\erkan\Desktop\Northwind E-Commerce\Northwind.DAL\bin\Debug\Northwind.Entities.dll
-C:\Users\erkan\Desktop\Northwind E-Commerce\Northwind.DAL\bin\Debug\Northwind.Helpers.dll
-C:\Users\erkan\Desktop\Northwind E-Commerce\Northwind.DAL\bin\Debug\Northwind.Entities.pdb
-C:\Users\erkan\Desktop\Northwind E-Commerce\Northwind.DAL\bin\Debug\Northwind.Helpers.pdb
-C:\Users\erkan\Desktop\Northwind E-Commerce\Northwind.DAL\obj\Debug\Northwind.DAL.csprojAssemblyReference.cache
-C:\Users\erkan\Desktop\Northwind E-Commerce\Northwind.DAL\obj\Debug\Northwind.DAL.csproj.CopyComplete
-C:\Users\erkan\Desktop\Northwind E-Commerce\Northwind.DAL\obj\Debug\Northwind.DAL.dll
-C:\Users\erkan\Desktop\Northwind E-Commerce\Northwind.DAL\obj\Debug\Northwind.DAL.pdb
-C:\Users\erkan\Desktop\Northwind E-Commerce\Northwind.DAL\bin\Debug\Northwind.Helpers.dll.config
