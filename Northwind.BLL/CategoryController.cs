@@ -26,5 +26,11 @@ namespace Northwind.BLL
 
             return isAdded;
         }
+
+        public bool UpdateCategory(Category category)
+        {
+            bool isUpdated = categoryManagment.UpdateCategory(category);
+            return isUpdated;
+        }
     }
 }

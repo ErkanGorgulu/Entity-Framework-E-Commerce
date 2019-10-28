@@ -108,12 +108,7 @@ namespace Northwind.WinUI.Forms.FormsProducts
             productList = productController.GetProducts();
             Products product = new Products();
             product.ProductId = Convert.ToInt32(cmbProductsList.SelectedValue);
-            
-            foreach (Products item in productList)
-            {
-                if (item.ProductId == Convert.ToInt32(cmbProductsList.SelectedValue))
-                    product.ProductName = item.ProductName;
-            }
+            product.ProductName = cmbProductsList.GetItemText(cmbProductsList.SelectedItem);
             product.SupplierId = Convert.ToInt32(cmbSuppliers.SelectedValue);
             product.CategoryId = Convert.ToInt32(cmbCategories.SelectedValue);
             product.QuantityPerUnit = txtQuantityOfUnit.Text;

@@ -87,12 +87,14 @@
             this.addCategoryToolStripMenuItem.Name = "addCategoryToolStripMenuItem";
             this.addCategoryToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.addCategoryToolStripMenuItem.Text = "Add Category";
+            this.addCategoryToolStripMenuItem.Click += new System.EventHandler(this.addCategoryToolStripMenuItem_Click);
             // 
             // updateCategoryToolStripMenuItem
             // 
             this.updateCategoryToolStripMenuItem.Name = "updateCategoryToolStripMenuItem";
             this.updateCategoryToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.updateCategoryToolStripMenuItem.Text = "Update Category";
+            this.updateCategoryToolStripMenuItem.Click += new System.EventHandler(this.updateCategoryToolStripMenuItem_Click);
             // 
             // deleteCategoryToolStripMenuItem
             // 

@@ -64,3 +64,4 @@ C:\Users\erkan\Desktop\Northwind E-Commerce\Northwind.WinUI\obj\Debug\Northwind.
 C:\Users\erkan\Desktop\Northwind E-Commerce\Northwind.WinUI\obj\Debug\Northwind.WinUI.Forms.FormsProducts.FormProductDelete.resources
 C:\Users\erkan\Desktop\Northwind E-Commerce\Northwind.WinUI\obj\Debug\Northwind.WinUI.Forms.FormCategories.FormAddCategory.resources
 C:\Users\erkan\Desktop\Northwind E-Commerce\Northwind.WinUI\obj\Debug\Northwind.WinUI.Forms.FormListCategory.resources
+C:\Users\erkan\Desktop\Northwind E-Commerce\Northwind.WinUI\obj\Debug\Northwind.WinUI.Forms.FormCategories.FormUpdateCategory.resources

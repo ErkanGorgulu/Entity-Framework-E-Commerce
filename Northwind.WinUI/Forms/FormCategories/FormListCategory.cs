@@ -16,20 +16,6 @@ namespace Northwind.WinUI.Forms
 
         CategoryController categoryController = new CategoryController();
 
-        private void btnAddCategory_Click(object sender, EventArgs e)
-        {
-            Category category = new Category
-            {
-                CategoryName = txtCategoryName.Text,
-                CategoryDescription = txtCategoryDescription.Text
-            };
-
-            var result = categoryController.AddCategory(category);
-
-            //if(result) //......
-            MessageBox.Show(result.ToString());
-        }
-
         private void FormCategory_Load(object sender, EventArgs e)
         {
             dataGridCategories.DataSource = categoryController.GetCategories();

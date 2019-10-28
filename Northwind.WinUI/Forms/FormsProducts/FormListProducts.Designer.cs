@@ -36,11 +36,13 @@
             // 
             this.dataGridProducts.AllowUserToAddRows = false;
             this.dataGridProducts.AllowUserToDeleteRows = false;
+            this.dataGridProducts.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dataGridProducts.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dataGridProducts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dataGridProducts.Location = new System.Drawing.Point(12, 12);
             this.dataGridProducts.Name = "dataGridProducts";
             this.dataGridProducts.ReadOnly = true;
+            this.dataGridProducts.RowHeadersVisible = false;
             this.dataGridProducts.RowHeadersWidth = 100;
             this.dataGridProducts.Size = new System.Drawing.Size(1128, 667);
             this.dataGridProducts.TabIndex = 0;

@@ -80,5 +80,23 @@ namespace Northwind.DAL
             return isAdded;
         }
 
+        public bool UpdateCategory(Category category)
+        {
+            string sqlQuery = "EXEC SP_UpdateCategory @categoryname, @description, @categoryid";
+            SqlCommand sqlCommand = new SqlCommand(sqlQuery, sqlConnection);
+            sqlCommand.CommandText = "SP_UpdateCategory";
+            sqlCommand.CommandType = CommandType.StoredProcedure;
+            sqlCommand.Parameters.AddWithValue("@categoryname", category.CategoryName);
+            sqlCommand.Parameters.AddWithValue("@description", category.CategoryDescription);
+            sqlCommand.Parameters.AddWithValue("@categoryid", category.CategoryId);
+            if(sqlConnection.State == ConnectionState.Closed)
+            {
+                sqlConnection.Open();
+            }
+            bool isUpdated = sqlCommand.ExecuteNonQuery() > 0 ? true : false;
+            sqlConnection.Close();
+            return isUpdated;
+        }
+
     }
 }
