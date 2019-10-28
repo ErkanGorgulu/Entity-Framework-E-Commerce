@@ -1,4 +1,5 @@
-﻿using Northwind.WinUI.Forms.FormsProducts;
+﻿using Northwind.WinUI.Forms.FormCategories;
+using Northwind.WinUI.Forms.FormsProducts;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -47,7 +48,7 @@ namespace Northwind.WinUI.Forms
 
         private void deleteProductToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FormProductDelete formProductDelete = new FormProductDelete();
+            FormDeleteProduct formProductDelete = new FormDeleteProduct();
             formProductDelete.MdiParent = this;
             formProductDelete.Show();
         }
@@ -57,6 +58,27 @@ namespace Northwind.WinUI.Forms
             FormListCategory formCategory = new FormListCategory();
             formCategory.MdiParent = this;
             formCategory.Show();
+        }
+
+        private void addCategoryToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormAddCategory formAddCategory = new FormAddCategory();
+            formAddCategory.MdiParent = this;
+            formAddCategory.Show();
+        }
+
+        private void updateCategoryToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormUpdateCategory formUpdateCategory = new FormUpdateCategory();
+            formUpdateCategory.MdiParent = this;
+            formUpdateCategory.Show();
+        }
+
+        private void deleteCategoryToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormDeleteCategory formDeleteCategory = new FormDeleteCategory();
+            formDeleteCategory.MdiParent = this;
+            formDeleteCategory.Show();
         }
     }
 }

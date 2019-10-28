@@ -1,6 +1,6 @@
 ﻿namespace Northwind.WinUI.Forms.FormsProducts
 {
-    partial class FormProductDelete
+    partial class FormDeleteProduct
     {
         /// <summary>
         /// Required designer variable.

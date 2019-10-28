@@ -33,7 +33,6 @@
             this.lblCategoryDescription = new System.Windows.Forms.Label();
             this.txtCategoryName = new System.Windows.Forms.TextBox();
             this.lblCategoryName = new System.Windows.Forms.Label();
-            this.lblCategoryId = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnAddCategory
@@ -84,16 +83,6 @@
             this.lblCategoryName.TabIndex = 15;
             this.lblCategoryName.Text = "Kategori Adı";
             // 
-            // lblCategoryId
-            // 
-            this.lblCategoryId.AutoSize = true;
-            this.lblCategoryId.Location = new System.Drawing.Point(41, 36);
-            this.lblCategoryId.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
-            this.lblCategoryId.Name = "lblCategoryId";
-            this.lblCategoryId.Size = new System.Drawing.Size(81, 13);
-            this.lblCategoryId.TabIndex = 14;
-            this.lblCategoryId.Text = "Sıra Numarası : ";
-            // 
             // FormAddCategory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -104,7 +93,6 @@
             this.Controls.Add(this.lblCategoryDescription);
             this.Controls.Add(this.txtCategoryName);
             this.Controls.Add(this.lblCategoryName);
-            this.Controls.Add(this.lblCategoryId);
             this.Name = "FormAddCategory";
             this.Text = "Form Add Category";
             this.ResumeLayout(false);
@@ -119,6 +107,5 @@
         private System.Windows.Forms.Label lblCategoryDescription;
         private System.Windows.Forms.TextBox txtCategoryName;
         private System.Windows.Forms.Label lblCategoryName;
-        private System.Windows.Forms.Label lblCategoryId;
     }
 }

@@ -27,10 +27,10 @@ namespace Northwind.WinUI.Forms.FormCategories
                 CategoryDescription = txtCategoryDescription.Text
             };
 
-            var result = categoryController.AddCategory(category);
+            bool isAdded = categoryController.AddCategory(category);
 
-            //if(result) //......
-            MessageBox.Show(result.ToString());
+            if(isAdded)
+            MessageBox.Show("Successfully Added");
         }
     }
 }

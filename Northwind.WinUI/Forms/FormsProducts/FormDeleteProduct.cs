@@ -12,9 +12,9 @@ using System.Windows.Forms;
 
 namespace Northwind.WinUI.Forms.FormsProducts
 {
-    public partial class FormProductDelete : Form
+    public partial class FormDeleteProduct : Form
     {
-        public FormProductDelete()
+        public FormDeleteProduct()
         {
             InitializeComponent();
         }

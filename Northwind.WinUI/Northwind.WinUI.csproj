@@ -52,11 +52,23 @@
     <Compile Include="Forms\FormCategories\FormAddCategory.Designer.cs">
       <DependentUpon>FormAddCategory.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\FormCategories\FormDeleteCategory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormCategories\FormDeleteCategory.Designer.cs">
+      <DependentUpon>FormDeleteCategory.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FormCategories\FormListCategory.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\FormCategories\FormListCategory.Designer.cs">
       <DependentUpon>FormListCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormCategories\FormUpdateCategory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormCategories\FormUpdateCategory.Designer.cs">
+      <DependentUpon>FormUpdateCategory.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\FormsProducts\FormAddProduct.cs">
       <SubType>Form</SubType>
@@ -70,11 +82,11 @@
     <Compile Include="Forms\FormsProducts\FormListProducts.Designer.cs">
       <DependentUpon>FormListProducts.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FormsProducts\FormProductDelete.cs">
+    <Compile Include="Forms\FormsProducts\FormDeleteProduct.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FormsProducts\FormProductDelete.Designer.cs">
-      <DependentUpon>FormProductDelete.cs</DependentUpon>
+    <Compile Include="Forms\FormsProducts\FormDeleteProduct.Designer.cs">
+      <DependentUpon>FormDeleteProduct.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\FormsProducts\FormUpdateProducts.cs">
       <SubType>Form</SubType>
@@ -93,8 +105,14 @@
     <EmbeddedResource Include="Forms\FormCategories\FormAddCategory.resx">
       <DependentUpon>FormAddCategory.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormCategories\FormDeleteCategory.resx">
+      <DependentUpon>FormDeleteCategory.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormCategories\FormListCategory.resx">
       <DependentUpon>FormListCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormCategories\FormUpdateCategory.resx">
+      <DependentUpon>FormUpdateCategory.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormsProducts\FormAddProduct.resx">
       <DependentUpon>FormAddProduct.cs</DependentUpon>
@@ -102,8 +120,8 @@
     <EmbeddedResource Include="Forms\FormsProducts\FormListProducts.resx">
       <DependentUpon>FormListProducts.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FormsProducts\FormProductDelete.resx">
-      <DependentUpon>FormProductDelete.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\FormsProducts\FormDeleteProduct.resx">
+      <DependentUpon>FormDeleteProduct.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormsProducts\FormUpdateProducts.resx">
       <DependentUpon>FormUpdateProducts.cs</DependentUpon>
