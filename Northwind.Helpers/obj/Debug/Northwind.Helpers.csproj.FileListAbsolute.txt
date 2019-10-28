@@ -9,9 +9,3 @@ C:\Users\erkan.gorgulu\Desktop\Day053\Day053\Day053\Northwind.Helpers\bin\Debug\
 C:\Users\erkan.gorgulu\Desktop\Day053\Day053\Day053\Northwind.Helpers\bin\Debug\Northwind.Helpers.pdb
 C:\Users\erkan.gorgulu\Desktop\Day053\Day053\Day053\Northwind.Helpers\obj\Debug\Northwind.Helpers.csprojAssemblyReference.cache
 C:\Users\erkan.gorgulu\Desktop\Day053\Day053\Day053\Northwind.Helpers\obj\Debug\Northwind.Helpers.csproj.CoreCompileInputs.cache
-C:\Users\erkan\Desktop\Northwind E-Commerce\Northwind.Helpers\bin\Debug\Northwind.Helpers.dll
-C:\Users\erkan\Desktop\Northwind E-Commerce\Northwind.Helpers\bin\Debug\Northwind.Helpers.pdb
-C:\Users\erkan\Desktop\Northwind E-Commerce\Northwind.Helpers\obj\Debug\Northwind.Helpers.csprojAssemblyReference.cache
-C:\Users\erkan\Desktop\Northwind E-Commerce\Northwind.Helpers\obj\Debug\Northwind.Helpers.dll
-C:\Users\erkan\Desktop\Northwind E-Commerce\Northwind.Helpers\obj\Debug\Northwind.Helpers.pdb
-C:\Users\erkan\Desktop\Northwind E-Commerce\Northwind.Helpers\bin\Debug\Northwind.Helpers.dll.config

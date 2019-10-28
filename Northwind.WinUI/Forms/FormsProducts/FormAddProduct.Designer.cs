@@ -225,7 +225,6 @@
             this.Controls.Add(this.lblProductName);
             this.Name = "FormAddProduct";
             this.Text = "FormAddProduct";
-            this.Load += new System.EventHandler(this.FormAddProduct_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

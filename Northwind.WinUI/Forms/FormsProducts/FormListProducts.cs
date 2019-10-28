@@ -32,41 +32,40 @@ namespace Northwind.WinUI.Forms
 
             #region fill category combobox
 
-            //CategoryController categoryController = new CategoryController();
-            //List<Category> categories = categoryController.GetCategories();
-            //cmbCategories.DataSource = categories;
-            //cmbCategories.ValueMember = "CategoryId";
-            //cmbCategories.DisplayMember = "CategoryName";
+            CategoryController categoryController = new CategoryController();
+            List<Category> categories = categoryController.GetCategories();
+            cmbCategories.DataSource = categories;
+            cmbCategories.ValueMember = "CategoryId";
+            cmbCategories.DisplayMember = "CategoryName";
             #endregion
 
             #region fill suppliers combobox
 
-            //SqlConnection sqlConnection = new SqlConnection(ConnectionTools.ConnectionString);
-            //string sqlQuery = "SELECT * FROM Suppliers";
-            //SqlCommand sqlCommand = new SqlCommand(sqlQuery, sqlConnection);
-            //if(sqlConnection.State == ConnectionState.Closed)
-            //{
-            //    sqlConnection.Open();
-            //}
-            //List<Suppliers> suppliersList = new List<Suppliers>();
-            //SqlDataReader sqlData = sqlCommand.ExecuteReader();
-            //if (sqlData.HasRows)
-            //{
-            //    while (sqlData.Read())
-            //    {
-            //        Suppliers suppliers = new Suppliers {
-            //            SupplierId = Convert.ToInt32(sqlData["SupplierId"]),
-            //            CompanyName = sqlData["CompanyName"].ToString()
-            //        };
-            //        suppliersList.Add(suppliers);
-            //    }
-            //}
-            //cmbSuppliers.DataSource = suppliersList;
-            //cmbSuppliers.ValueMember = "SupplierId";
-            //cmbSuppliers.DisplayMember = "CompanyName";
-            //sqlConnection.Close();
+            SqlConnection sqlConnection = new SqlConnection(ConnectionTools.ConnectionString);
+            string sqlQuery = "SELECT * FROM Suppliers";
+            SqlCommand sqlCommand = new SqlCommand(sqlQuery, sqlConnection);
+            if(sqlConnection.State == ConnectionState.Closed)
+            {
+                sqlConnection.Open();
+            }
+            List<Suppliers> suppliersList = new List<Suppliers>();
+            SqlDataReader sqlData = sqlCommand.ExecuteReader();
+            if (sqlData.HasRows)
+            {
+                while (sqlData.Read())
+                {
+                    Suppliers suppliers = new Suppliers {
+                        SupplierId = Convert.ToInt32(sqlData["SupplierId"]),
+                        CompanyName = sqlData["CompanyName"].ToString()
+                    };
+                    suppliersList.Add(suppliers);
+                }
+            }
+            cmbSuppliers.DataSource = suppliersList;
+            cmbSuppliers.ValueMember = "SupplierId";
+            cmbSuppliers.DisplayMember = "CompanyName";
+            sqlConnection.Close();
             #endregion
-
         }
 
         private void BtnAddProduct_Click(object sender, EventArgs e)
