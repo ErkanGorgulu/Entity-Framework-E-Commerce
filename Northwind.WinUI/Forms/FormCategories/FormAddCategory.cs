@@ -2,20 +2,23 @@
 using Northwind.Entities;
 using System;
 using System.Collections.Generic;
-using System.Data.SqlClient;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Northwind.WinUI.Forms
+namespace Northwind.WinUI.Forms.FormCategories
 {
-    public partial class FormCategory : Form
+    public partial class FormAddCategory : Form
     {
-        public FormCategory()
+        public FormAddCategory()
         {
             InitializeComponent();
         }
-
         CategoryController categoryController = new CategoryController();
-
         private void btnAddCategory_Click(object sender, EventArgs e)
         {
             Category category = new Category
@@ -28,11 +31,6 @@ namespace Northwind.WinUI.Forms
 
             //if(result) //......
             MessageBox.Show(result.ToString());
-        }
-
-        private void FormCategory_Load(object sender, EventArgs e)
-        {
-            dataGridCategories.DataSource = categoryController.GetCategories();
         }
     }
 }
