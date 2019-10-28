@@ -51,7 +51,6 @@ C:\Users\erkan\Desktop\Northwind E-Commerce\Northwind.WinUI\bin\Debug\Northwind.
 C:\Users\erkan\Desktop\Northwind E-Commerce\Northwind.WinUI\bin\Debug\Northwind.Helpers.pdb
 C:\Users\erkan\Desktop\Northwind E-Commerce\Northwind.WinUI\bin\Debug\Northwind.DAL.pdb
 C:\Users\erkan\Desktop\Northwind E-Commerce\Northwind.WinUI\obj\Debug\Northwind.WinUI.csprojAssemblyReference.cache
-C:\Users\erkan\Desktop\Northwind E-Commerce\Northwind.WinUI\obj\Debug\Northwind.WinUI.Forms.FormCategory.resources
 C:\Users\erkan\Desktop\Northwind E-Commerce\Northwind.WinUI\obj\Debug\Northwind.WinUI.Forms.FormsProducts.FormAddProduct.resources
 C:\Users\erkan\Desktop\Northwind E-Commerce\Northwind.WinUI\obj\Debug\Northwind.WinUI.Forms.FormListProducts.resources
 C:\Users\erkan\Desktop\Northwind E-Commerce\Northwind.WinUI\obj\Debug\Northwind.WinUI.Forms.MainForm.resources
@@ -62,3 +61,6 @@ C:\Users\erkan\Desktop\Northwind E-Commerce\Northwind.WinUI\obj\Debug\Northwind.
 C:\Users\erkan\Desktop\Northwind E-Commerce\Northwind.WinUI\obj\Debug\Northwind.WinUI.pdb
 C:\Users\erkan\Desktop\Northwind E-Commerce\Northwind.WinUI\bin\Debug\Northwind.Helpers.dll.config
 C:\Users\erkan\Desktop\Northwind E-Commerce\Northwind.WinUI\obj\Debug\Northwind.WinUI.Forms.FormsProducts.FormUpdateProducts.resources
+C:\Users\erkan\Desktop\Northwind E-Commerce\Northwind.WinUI\obj\Debug\Northwind.WinUI.Forms.FormsProducts.FormProductDelete.resources
+C:\Users\erkan\Desktop\Northwind E-Commerce\Northwind.WinUI\obj\Debug\Northwind.WinUI.Forms.FormCategories.FormAddCategory.resources
+C:\Users\erkan\Desktop\Northwind E-Commerce\Northwind.WinUI\obj\Debug\Northwind.WinUI.Forms.FormListCategory.resources

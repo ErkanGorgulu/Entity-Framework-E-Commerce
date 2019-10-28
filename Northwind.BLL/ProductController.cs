@@ -31,5 +31,11 @@ namespace Northwind.BLL
             bool isUpdated = productManagement.UpdateProduct(products);
             return isUpdated;
         }
+
+        public bool DeleteProduct(Products products)
+        {
+            bool isDeleted = productManagement.DeleteProduct(products);
+            return isDeleted;
+        }
     }
 }

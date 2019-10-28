@@ -76,7 +76,6 @@ namespace Northwind.DAL
         }
 
         //addproduct
-
         public bool AddProduct(Products products)
         {
             string sqlQuery = "INSERT INTO Products (ProductName,SupplierID,CategoryID,QuantityPerUnit,UnitPrice,UnitsInStock,UnitsOnOrder,ReorderLevel,Discontinued) VALUES(@productname, @supplierid, @categoryid, @quantityperunit, @unitprice, @unitsinstock, @unitsonorder, @reorderlevel, @discontinued)";
@@ -102,8 +101,8 @@ namespace Northwind.DAL
 
             return isAdded;
         }
-        //updateproduct
 
+        //updateproduct
         public bool UpdateProduct(Products products)
         {
             string sqlQuery = "EXEC SP_UpdateProduct @productname, @supplierId, @categoryid, @quantityperunit, @unitprice, @unitsinstock, @unitsonorder, @reorderlevel, @discontinued, @productid";
@@ -130,6 +129,22 @@ namespace Northwind.DAL
 
             return isUpdated;
         }
+
         //deleteproduct
+        public bool DeleteProduct(Products products)
+        {
+            string sqlQuery = "EXEC SP_DeleteProduct @productid";
+            SqlCommand sqlCommand = new SqlCommand(sqlQuery, sqlConnection);
+            sqlCommand.CommandType = System.Data.CommandType.StoredProcedure;
+            sqlCommand.CommandText = "SP_DeleteProduct";
+            sqlCommand.Parameters.AddWithValue("@productid", products.ProductId);
+            if(sqlConnection.State == System.Data.ConnectionState.Closed)
+            {
+                sqlConnection.Open();
+            }
+            bool isDeleted = sqlCommand.ExecuteNonQuery() > 0 ? true : false;
+            sqlConnection.Close();
+            return isDeleted;
+        }
     }
 }

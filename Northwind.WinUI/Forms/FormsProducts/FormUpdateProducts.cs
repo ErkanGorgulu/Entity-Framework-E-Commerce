@@ -22,12 +22,13 @@ namespace Northwind.WinUI.Forms.FormsProducts
         ProductController productController = new ProductController();
         CategoryController categoryController = new CategoryController();
         SqlConnection sqlConnection = new SqlConnection(Helpers.ConnectionTools.ConnectionString);
-        
+        List<Products> productList = new List<Products>();
+
         private void FormUpdateProducts_Load(object sender, EventArgs e)
         {
             #region Fill Product List
 
-            List<Products> productList = productController.GetProducts();
+            productList = productController.GetProducts();
             cmbProductsList.DisplayMember = "ProductName";
             cmbProductsList.ValueMember = "ProductId";
             cmbProductsList.DataSource = productList;
@@ -104,9 +105,15 @@ namespace Northwind.WinUI.Forms.FormsProducts
 
         private void btnUpdateProduct_Click(object sender, EventArgs e)
         {
+            productList = productController.GetProducts();
             Products product = new Products();
             product.ProductId = Convert.ToInt32(cmbProductsList.SelectedValue);
-            product.ProductName = cmbProductsList.DisplayMember;
+            
+            foreach (Products item in productList)
+            {
+                if (item.ProductId == Convert.ToInt32(cmbProductsList.SelectedValue))
+                    product.ProductName = item.ProductName;
+            }
             product.SupplierId = Convert.ToInt32(cmbSuppliers.SelectedValue);
             product.CategoryId = Convert.ToInt32(cmbCategories.SelectedValue);
             product.QuantityPerUnit = txtQuantityOfUnit.Text;
