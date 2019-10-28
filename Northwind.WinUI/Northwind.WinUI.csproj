@@ -46,11 +46,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Forms\FormCategory.cs">
+    <Compile Include="Forms\FormCategories\FormAddCategory.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FormCategory.Designer.cs">
-      <DependentUpon>FormCategory.cs</DependentUpon>
+    <Compile Include="Forms\FormCategories\FormAddCategory.Designer.cs">
+      <DependentUpon>FormAddCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormCategories\FormListCategory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormCategories\FormListCategory.Designer.cs">
+      <DependentUpon>FormListCategory.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\FormsProducts\FormAddProduct.cs">
       <SubType>Form</SubType>
@@ -64,6 +70,18 @@
     <Compile Include="Forms\FormsProducts\FormListProducts.Designer.cs">
       <DependentUpon>FormListProducts.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\FormsProducts\FormProductDelete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormsProducts\FormProductDelete.Designer.cs">
+      <DependentUpon>FormProductDelete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormsProducts\FormUpdateProducts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormsProducts\FormUpdateProducts.Designer.cs">
+      <DependentUpon>FormUpdateProducts.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -72,14 +90,23 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Forms\FormCategory.resx">
-      <DependentUpon>FormCategory.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\FormCategories\FormAddCategory.resx">
+      <DependentUpon>FormAddCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormCategories\FormListCategory.resx">
+      <DependentUpon>FormListCategory.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormsProducts\FormAddProduct.resx">
       <DependentUpon>FormAddProduct.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormsProducts\FormListProducts.resx">
       <DependentUpon>FormListProducts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormsProducts\FormProductDelete.resx">
+      <DependentUpon>FormProductDelete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormsProducts\FormUpdateProducts.resx">
+      <DependentUpon>FormUpdateProducts.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
