@@ -1,4 +1,5 @@
 ﻿using Northwind.WinUI.Forms.FormCategories;
+using Northwind.WinUI.Forms.FormEmployees;
 using Northwind.WinUI.Forms.FormsProducts;
 using System;
 using System.Collections.Generic;
@@ -79,6 +80,23 @@ namespace Northwind.WinUI.Forms
             FormDeleteCategory formDeleteCategory = new FormDeleteCategory();
             formDeleteCategory.MdiParent = this;
             formDeleteCategory.Show();
+        }
+
+        private void listEmployeesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormListEmployees formListEmployees = new FormListEmployees();
+            formListEmployees.MdiParent = this;
+            formListEmployees.Show();
+        }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Maximized;
+        }
+
+        private void addEmployeeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

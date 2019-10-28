@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Northwind.DAL;
+using Northwind.BLL;
 
 namespace Northwind.WinUI.Forms.FormEmployees
 {
@@ -18,10 +19,12 @@ namespace Northwind.WinUI.Forms.FormEmployees
         {
             InitializeComponent();
         }
-        EmployeeManagement employeeManagement = new EmployeeManagement();
+        EmployeeController employeeController = new EmployeeController();
         private void FormListEmployees_Load(object sender, EventArgs e)
         {
-            employeeManagement.GetEmployees();
+            dataGridEmployees.DataSource = employeeController.GetEmployees();
+            dataGridEmployees.Columns["ReportsTo"].Visible = false;
+            dataGridEmployees.Columns["Notes"].Width = 150;
         }
     }
 }

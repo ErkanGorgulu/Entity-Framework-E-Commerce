@@ -48,20 +48,37 @@ namespace Northwind.DAL
             }
             SqlDataReader dataReader = sqlCommand.ExecuteReader();
             List<Employee> employees = new List<Employee>();
-            Employee employee = new Employee();
             if (dataReader.HasRows)
             {
                 while (dataReader.Read())
                 {
+                    Employee employee = new Employee();
                     employee.EmployeeID = Convert.ToInt32(dataReader["EmployeeID"].ToString());
                     employee.FirstName = dataReader["FirstName"].ToString();
                     employee.LastName = dataReader["LastName"].ToString();
                     employee.Title = dataReader["Title"].ToString();
                     employee.TitleOfCourtesy = dataReader["TitleOfCourtesy"].ToString();
-                    var dateFormat = Convert.ToString(dataReader["BirthDate"]);
-                    //employee.BirthDate = (DateTime)(dataReader["BirthDate"].ToString());
+                    var dateFormat = dataReader["BirthDate"];
+                    employee.BirthDate = (DateTime)dateFormat;
+                    dateFormat = dataReader["HireDate"];
+                    employee.HireDate = (DateTime)dateFormat;
+                    employee.Adress = dataReader["Address"].ToString();
+                    employee.City = dataReader["City"].ToString();
+                    employee.Region = dataReader["Region"].ToString();
+                    employee.PostalCode = dataReader["PostalCode"].ToString();
+                    employee.Country = dataReader["Country"].ToString();
+                    employee.HomePhone = dataReader["HomePhone"].ToString();
+                    employee.Extension = dataReader["Extension"].ToString();
+                    employee.Notes = dataReader["Notes"].ToString();
+                    int reportsToValue;
+                    Int32.TryParse(dataReader["ReportsTo"].ToString(),out reportsToValue);
+                    employee.ReportsTo = reportsToValue;
+                    //Index 16 is ReportsToText value for ReportsTo
+                    employee.ReportsToText = dataReader[16].ToString();
+                    employees.Add(employee);
                 }
             }
+            sqlConnection.Close();
 
             return employees;
         }

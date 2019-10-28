@@ -36,8 +36,9 @@
             // 
             // dataGridEmployees
             // 
-            this.dataGridEmployees.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.dataGridEmployees.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dataGridEmployees.AllowUserToAddRows = false;
+            this.dataGridEmployees.AllowUserToDeleteRows = false;
+            this.dataGridEmployees.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -49,6 +50,7 @@
             this.dataGridEmployees.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridEmployees.Location = new System.Drawing.Point(13, 13);
             this.dataGridEmployees.Name = "dataGridEmployees";
+            this.dataGridEmployees.ReadOnly = true;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -58,14 +60,14 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridEmployees.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridEmployees.RowHeadersVisible = false;
-            this.dataGridEmployees.Size = new System.Drawing.Size(820, 461);
+            this.dataGridEmployees.Size = new System.Drawing.Size(1859, 541);
             this.dataGridEmployees.TabIndex = 0;
             // 
             // FormListEmployees
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(845, 486);
+            this.ClientSize = new System.Drawing.Size(1884, 566);
             this.Controls.Add(this.dataGridEmployees);
             this.Name = "FormListEmployees";
             this.Text = "FormListEmployees";
