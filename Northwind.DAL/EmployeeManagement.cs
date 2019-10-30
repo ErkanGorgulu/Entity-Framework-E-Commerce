@@ -116,5 +116,39 @@ namespace Northwind.DAL
             sqlConnection.Close();
             return isAdded;
         }
+
+        public bool UpdateEmployee(Employee employee)
+        {
+            string sqlQuery = @"UPDATE Employees
+            SET FirstName = @firstname, LastName = @lastname, Title = @title, TitleOfCourtesy = @titleofcourtesy, BirthDate = @birthdate, HireDate = @hiredate, Address = @address,City =  @city,
+            Region = @region,PostalCode = @postalcode,Country =  @country,HomePhone = @homephone,Extension =  @extension,Notes = @notes,ReportsTo = @reportsto
+            WHERE EmployeeID = @employeeid";
+            SqlCommand sqlCommand = new SqlCommand(sqlQuery, sqlConnection);
+            sqlCommand.Parameters.AddWithValue("@employeeid", employee.EmployeeID);
+            sqlCommand.Parameters.AddWithValue("@firstname", employee.FirstName);
+            sqlCommand.Parameters.AddWithValue("@lastname", employee.LastName);
+            sqlCommand.Parameters.AddWithValue("@title", employee.Title);
+            sqlCommand.Parameters.AddWithValue("@titleofcourtesy", employee.TitleOfCourtesy);
+            sqlCommand.Parameters.AddWithValue("@birthdate", employee.BirthDate);
+            sqlCommand.Parameters.AddWithValue("@hiredate", employee.HireDate);
+            sqlCommand.Parameters.AddWithValue("@address", employee.Address);
+            sqlCommand.Parameters.AddWithValue("@city", employee.City);
+            sqlCommand.Parameters.AddWithValue("@region", employee.Region);
+            sqlCommand.Parameters.AddWithValue("@postalcode", employee.PostalCode);
+            sqlCommand.Parameters.AddWithValue("@country", employee.Country);
+            sqlCommand.Parameters.AddWithValue("@homephone", employee.HomePhone);
+            sqlCommand.Parameters.AddWithValue("@extension", employee.Extension);
+            sqlCommand.Parameters.AddWithValue("@notes", employee.Notes);
+            sqlCommand.Parameters.AddWithValue("@reportsto", employee.ReportsTo);
+
+            if (sqlConnection.State == System.Data.ConnectionState.Closed)
+            {
+                sqlConnection.Open();
+            }
+
+            bool isUpdated = sqlCommand.ExecuteNonQuery() > 0 ? true : false;
+            sqlConnection.Close();
+            return isUpdated;
+        }
     }
 }

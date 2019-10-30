@@ -63,7 +63,7 @@ namespace Northwind.WinUI.Forms.FormsProducts
         }
         private void BtnAddProduct_Click(object sender, EventArgs e)
         {
-            Products products = new Products
+            Product products = new Product
             {
 
                 ProductName = txtProductName.Text,

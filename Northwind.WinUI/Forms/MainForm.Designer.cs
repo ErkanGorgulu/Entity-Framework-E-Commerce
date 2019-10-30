@@ -160,7 +160,7 @@
             // listEmployeesToolStripMenuItem
             // 
             this.listEmployeesToolStripMenuItem.Name = "listEmployeesToolStripMenuItem";
-            this.listEmployeesToolStripMenuItem.Size = new System.Drawing.Size(167, 22);
+            this.listEmployeesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.listEmployeesToolStripMenuItem.Text = "List Employees";
             this.listEmployeesToolStripMenuItem.Click += new System.EventHandler(this.listEmployeesToolStripMenuItem_Click);
             // 
@@ -174,13 +174,14 @@
             // updateEmployeeToolStripMenuItem
             // 
             this.updateEmployeeToolStripMenuItem.Name = "updateEmployeeToolStripMenuItem";
-            this.updateEmployeeToolStripMenuItem.Size = new System.Drawing.Size(167, 22);
+            this.updateEmployeeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.updateEmployeeToolStripMenuItem.Text = "Update Employee";
+            this.updateEmployeeToolStripMenuItem.Click += new System.EventHandler(this.updateEmployeeToolStripMenuItem_Click);
             // 
             // deleteEmployeeToolStripMenuItem
             // 
             this.deleteEmployeeToolStripMenuItem.Name = "deleteEmployeeToolStripMenuItem";
-            this.deleteEmployeeToolStripMenuItem.Size = new System.Drawing.Size(167, 22);
+            this.deleteEmployeeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.deleteEmployeeToolStripMenuItem.Text = "Delete Employee";
             // 
             // suppliersToolStripMenuItem

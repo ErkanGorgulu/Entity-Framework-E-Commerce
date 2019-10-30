@@ -17,9 +17,9 @@ namespace Northwind.DAL
         }
 
         //getProducts
-        public List<Products> GetProducts()
+        public List<Product> GetProducts()
         {
-            List<Products> productsList = new List<Products>();
+            List<Product> productsList = new List<Product>();
             string sqlQuery = "EXEC SP_GetProducts";
             #region With Select Query
             /* 
@@ -53,7 +53,7 @@ namespace Northwind.DAL
             {
                 while (sql.Read())
                 {
-                    Products products = new Products
+                    Product products = new Product
                     {
                         ProductId = Convert.ToInt32(sql["ProductID"]),
                         ProductName = sql["ProductName"].ToString(),
@@ -76,7 +76,7 @@ namespace Northwind.DAL
         }
 
         //addproduct
-        public bool AddProduct(Products products)
+        public bool AddProduct(Product products)
         {
             string sqlQuery = "INSERT INTO Products (ProductName,SupplierID,CategoryID,QuantityPerUnit,UnitPrice,UnitsInStock,UnitsOnOrder,ReorderLevel,Discontinued) VALUES(@productname, @supplierid, @categoryid, @quantityperunit, @unitprice, @unitsinstock, @unitsonorder, @reorderlevel, @discontinued)";
             SqlCommand sqlCommand = new SqlCommand(sqlQuery, sqlConnection);
@@ -103,7 +103,7 @@ namespace Northwind.DAL
         }
 
         //updateproduct
-        public bool UpdateProduct(Products products)
+        public bool UpdateProduct(Product products)
         {
             string sqlQuery = "EXEC SP_UpdateProduct @productname, @supplierId, @categoryid, @quantityperunit, @unitprice, @unitsinstock, @unitsonorder, @reorderlevel, @discontinued, @productid";
             SqlCommand sqlCommand = new SqlCommand(sqlQuery, sqlConnection);
@@ -131,7 +131,7 @@ namespace Northwind.DAL
         }
 
         //deleteproduct
-        public bool DeleteProduct(Products products)
+        public bool DeleteProduct(Product products)
         {
             string sqlQuery = "EXEC SP_DeleteProduct @productid";
             SqlCommand sqlCommand = new SqlCommand(sqlQuery, sqlConnection);

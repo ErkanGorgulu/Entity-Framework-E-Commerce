@@ -22,7 +22,7 @@ namespace Northwind.WinUI.Forms.FormsProducts
         ProductController productController = new ProductController();
         CategoryController categoryController = new CategoryController();
         SqlConnection sqlConnection = new SqlConnection(Helpers.ConnectionTools.ConnectionString);
-        List<Products> productList = new List<Products>();
+        List<Product> productList = new List<Product>();
 
         private void FormUpdateProducts_Load(object sender, EventArgs e)
         {
@@ -74,7 +74,7 @@ namespace Northwind.WinUI.Forms.FormsProducts
 
         private void btnShowProductDetails_Click(object sender, EventArgs e)
         {
-            List<Products> productList = productController.GetProducts();
+            List<Product> productList = productController.GetProducts();
             //find the selected product
             foreach (var item in productList)
             {
@@ -106,7 +106,7 @@ namespace Northwind.WinUI.Forms.FormsProducts
         private void btnUpdateProduct_Click(object sender, EventArgs e)
         {
             productList = productController.GetProducts();
-            Products product = new Products();
+            Product product = new Product();
             product.ProductId = Convert.ToInt32(cmbProductsList.SelectedValue);
             product.ProductName = cmbProductsList.GetItemText(cmbProductsList.SelectedItem);
             product.SupplierId = Convert.ToInt32(cmbSuppliers.SelectedValue);
