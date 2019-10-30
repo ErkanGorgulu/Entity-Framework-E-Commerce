@@ -55,6 +55,10 @@
             this.lblEmployeeNotes = new System.Windows.Forms.Label();
             this.txtNotes = new System.Windows.Forms.TextBox();
             this.btnAddEmployee = new System.Windows.Forms.Button();
+            this.lblBirthDate = new System.Windows.Forms.Label();
+            this.lblHireDate = new System.Windows.Forms.Label();
+            this.dateBirth = new System.Windows.Forms.DateTimePicker();
+            this.dateHire = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
             // lblName
@@ -265,23 +269,58 @@
             this.txtNotes.Location = new System.Drawing.Point(131, 224);
             this.txtNotes.Multiline = true;
             this.txtNotes.Name = "txtNotes";
-            this.txtNotes.Size = new System.Drawing.Size(247, 137);
+            this.txtNotes.Size = new System.Drawing.Size(247, 118);
             this.txtNotes.TabIndex = 1;
             // 
             // btnAddEmployee
             // 
-            this.btnAddEmployee.Location = new System.Drawing.Point(492, 277);
+            this.btnAddEmployee.Location = new System.Drawing.Point(492, 417);
             this.btnAddEmployee.Name = "btnAddEmployee";
             this.btnAddEmployee.Size = new System.Drawing.Size(238, 65);
             this.btnAddEmployee.TabIndex = 3;
             this.btnAddEmployee.Text = "Add Employee";
             this.btnAddEmployee.UseVisualStyleBackColor = true;
+            this.btnAddEmployee.Click += new System.EventHandler(this.btnAddEmployee_Click);
+            // 
+            // lblBirthDate
+            // 
+            this.lblBirthDate.AutoSize = true;
+            this.lblBirthDate.Location = new System.Drawing.Point(397, 271);
+            this.lblBirthDate.Name = "lblBirthDate";
+            this.lblBirthDate.Size = new System.Drawing.Size(58, 13);
+            this.lblBirthDate.TabIndex = 0;
+            this.lblBirthDate.Text = "Birthdate : ";
+            // 
+            // lblHireDate
+            // 
+            this.lblHireDate.AutoSize = true;
+            this.lblHireDate.Location = new System.Drawing.Point(397, 315);
+            this.lblHireDate.Name = "lblHireDate";
+            this.lblHireDate.Size = new System.Drawing.Size(61, 13);
+            this.lblHireDate.TabIndex = 0;
+            this.lblHireDate.Text = "Hire Date : ";
+            // 
+            // dateBirth
+            // 
+            this.dateBirth.Location = new System.Drawing.Point(492, 271);
+            this.dateBirth.Name = "dateBirth";
+            this.dateBirth.Size = new System.Drawing.Size(238, 20);
+            this.dateBirth.TabIndex = 4;
+            // 
+            // dateHire
+            // 
+            this.dateHire.Location = new System.Drawing.Point(492, 309);
+            this.dateHire.Name = "dateHire";
+            this.dateHire.Size = new System.Drawing.Size(238, 20);
+            this.dateHire.TabIndex = 4;
             // 
             // FormAddEmployee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(760, 391);
+            this.ClientSize = new System.Drawing.Size(760, 506);
+            this.Controls.Add(this.dateHire);
+            this.Controls.Add(this.dateBirth);
             this.Controls.Add(this.btnAddEmployee);
             this.Controls.Add(this.cmbReportsToList);
             this.Controls.Add(this.txtNotes);
@@ -302,6 +341,8 @@
             this.Controls.Add(this.lblTitleOfCourtesy);
             this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.lblSurname);
+            this.Controls.Add(this.lblHireDate);
+            this.Controls.Add(this.lblBirthDate);
             this.Controls.Add(this.lblHomePhone);
             this.Controls.Add(this.lblCountry);
             this.Controls.Add(this.lblPostalCode);
@@ -346,5 +387,9 @@
         private System.Windows.Forms.Label lblEmployeeNotes;
         private System.Windows.Forms.TextBox txtNotes;
         private System.Windows.Forms.Button btnAddEmployee;
+        private System.Windows.Forms.Label lblBirthDate;
+        private System.Windows.Forms.Label lblHireDate;
+        private System.Windows.Forms.DateTimePicker dateBirth;
+        private System.Windows.Forms.DateTimePicker dateHire;
     }
 }

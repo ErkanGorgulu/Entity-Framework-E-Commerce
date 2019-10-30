@@ -20,5 +20,11 @@ namespace Northwind.BLL
             List<Employee> employees = employeeManagement.GetEmployees();
             return employees;
         }
+
+        public bool AddEmployee(Employee employee)
+        {
+            bool isAdded = employeeManagement.AddEmployee(employee);
+            return isAdded;
+        }
     }
 }

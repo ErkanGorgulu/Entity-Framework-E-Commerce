@@ -64,7 +64,7 @@ namespace Northwind.DAL
                     employee.BirthDate = (DateTime)dateFormat;
                     dateFormat = dataReader["HireDate"];
                     employee.HireDate = (DateTime)dateFormat;
-                    employee.Adress = dataReader["Address"].ToString();
+                    employee.Address = dataReader["Address"].ToString();
                     employee.City = dataReader["City"].ToString();
                     employee.Region = dataReader["Region"].ToString();
                     employee.PostalCode = dataReader["PostalCode"].ToString();
@@ -84,6 +84,37 @@ namespace Northwind.DAL
             sqlConnection.Close();
 
             return employees;
+        }
+
+        public bool AddEmployee(Employee employee)
+        {
+            string sqlQuery = @"INSERT INTO Employees (FirstName,LastName,Title,TitleOfCourtesy,BirthDate,HireDate,Address,City,Region,PostalCode,Country,HomePhone,Extension,Notes,ReportsTo)
+	            VALUES (@firstname,@lastname,@title,@titleofcourtesy,@birthdate,@hiredate,@address,@city,@region,@postalcode,@country,@homephone,@extension,@notes,@reportsto)";
+            SqlCommand sqlCommand = new SqlCommand(sqlQuery, sqlConnection);
+            sqlCommand.Parameters.AddWithValue("@firstname", employee.FirstName);
+            sqlCommand.Parameters.AddWithValue("@lastname", employee.LastName);
+            sqlCommand.Parameters.AddWithValue("@title", employee.Title);
+            sqlCommand.Parameters.AddWithValue("@titleofcourtesy", employee.TitleOfCourtesy);
+            sqlCommand.Parameters.AddWithValue("@birthdate", employee.BirthDate);
+            sqlCommand.Parameters.AddWithValue("@hiredate", employee.HireDate);
+            sqlCommand.Parameters.AddWithValue("@address", employee.Address);
+            sqlCommand.Parameters.AddWithValue("@city", employee.City);
+            sqlCommand.Parameters.AddWithValue("@region", employee.Region);
+            sqlCommand.Parameters.AddWithValue("@postalcode", employee.PostalCode);
+            sqlCommand.Parameters.AddWithValue("@country", employee.Country);
+            sqlCommand.Parameters.AddWithValue("@homephone", employee.HomePhone);
+            sqlCommand.Parameters.AddWithValue("@extension", employee.Extension);
+            sqlCommand.Parameters.AddWithValue("@notes", employee.Notes);
+            sqlCommand.Parameters.AddWithValue("@reportsto", employee.ReportsTo);
+
+            if(sqlConnection.State == System.Data.ConnectionState.Closed)
+            {
+                sqlConnection.Open();
+            }
+
+            bool isAdded = sqlCommand.ExecuteNonQuery() > 0 ? true : false;
+            sqlConnection.Close();
+            return isAdded;
         }
     }
 }
