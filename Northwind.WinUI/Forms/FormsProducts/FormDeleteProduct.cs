@@ -21,7 +21,7 @@ namespace Northwind.WinUI.Forms.FormsProducts
         ProductController productController = new ProductController();
         private void FormProductDelete_Load(object sender, EventArgs e)
         {
-            List<Products> productList = productController.GetProducts();
+            List<Product> productList = productController.GetProducts();
             cmbProductList.DataSource = productList;
             cmbProductList.DisplayMember = "ProductName";
             cmbProductList.ValueMember = "ProductId";
@@ -29,7 +29,7 @@ namespace Northwind.WinUI.Forms.FormsProducts
 
         private void btnDeleteProduct_Click(object sender, EventArgs e)
         {
-            Products products = new Products();
+            Product products = new Product();
             products.ProductId = Convert.ToInt32(cmbProductList.SelectedValue);
             bool isDeleted = productController.DeleteProduct(products);
             if (isDeleted)

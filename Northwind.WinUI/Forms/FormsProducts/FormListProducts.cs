@@ -24,7 +24,7 @@ namespace Northwind.WinUI.Forms
         private void FormProducts_Load(object sender, EventArgs e)
         {
             #region fill products table                       
-            List<Products> productList = productController.GetProducts();
+            List<Product> productList = productController.GetProducts();
             dataGridProducts.DataSource = productList;
             dataGridProducts.Columns["CategoryId"].Visible = false;
             dataGridProducts.Columns["SupplierId"].Visible = false;

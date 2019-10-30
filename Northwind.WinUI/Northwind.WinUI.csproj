@@ -70,6 +70,30 @@
     <Compile Include="Forms\FormCategories\FormUpdateCategory.Designer.cs">
       <DependentUpon>FormUpdateCategory.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\FormEmployees\FormAddEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormEmployees\FormAddEmployee.Designer.cs">
+      <DependentUpon>FormAddEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormEmployees\FormDeleteEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormEmployees\FormDeleteEmployee.Designer.cs">
+      <DependentUpon>FormDeleteEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormEmployees\FormListEmployees.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormEmployees\FormListEmployees.Designer.cs">
+      <DependentUpon>FormListEmployees.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormEmployees\FormUpdateEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormEmployees\FormUpdateEmployee.Designer.cs">
+      <DependentUpon>FormUpdateEmployee.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FormsProducts\FormAddProduct.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -114,6 +138,18 @@
     <EmbeddedResource Include="Forms\FormCategories\FormUpdateCategory.resx">
       <DependentUpon>FormUpdateCategory.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormEmployees\FormAddEmployee.resx">
+      <DependentUpon>FormAddEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormEmployees\FormDeleteEmployee.resx">
+      <DependentUpon>FormDeleteEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormEmployees\FormListEmployees.resx">
+      <DependentUpon>FormListEmployees.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormEmployees\FormUpdateEmployee.resx">
+      <DependentUpon>FormUpdateEmployee.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormsProducts\FormAddProduct.resx">
       <DependentUpon>FormAddProduct.cs</DependentUpon>
     </EmbeddedResource>
@@ -155,6 +191,10 @@
     <ProjectReference Include="..\Northwind.BLL\Northwind.BLL.csproj">
       <Project>{dd557ecc-b16e-4707-a9fb-078afbc83981}</Project>
       <Name>Northwind.BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Northwind.DAL\Northwind.DAL.csproj">
+      <Project>{2C505C4C-5A16-43F6-8116-B44EA33DD58E}</Project>
+      <Name>Northwind.DAL</Name>
     </ProjectReference>
     <ProjectReference Include="..\Northwind.Entities\Northwind.Entities.csproj">
       <Project>{5b4037fa-5749-4eab-be37-c601728a5ce7}</Project>

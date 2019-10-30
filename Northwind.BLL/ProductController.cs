@@ -14,25 +14,25 @@ namespace Northwind.BLL
         ProductManagement productManagement = new ProductManagement();
 
 
-        public List<Products> GetProducts()
+        public List<Product> GetProducts()
         {
-            List<Products> products = productManagement.GetProducts();
+            List<Product> products = productManagement.GetProducts();
             return products;
         }
 
-        public bool AddProduct(Products products)
+        public bool AddProduct(Product products)
         {
             bool isAdded = productManagement.AddProduct(products);
             return isAdded;
         }
 
-        public bool UpdateProduct(Products products)
+        public bool UpdateProduct(Product products)
         {
             bool isUpdated = productManagement.UpdateProduct(products);
             return isUpdated;
         }
 
-        public bool DeleteProduct(Products products)
+        public bool DeleteProduct(Product products)
         {
             bool isDeleted = productManagement.DeleteProduct(products);
             return isDeleted;
