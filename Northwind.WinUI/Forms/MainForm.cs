@@ -107,5 +107,12 @@ namespace Northwind.WinUI.Forms
             formUpdateEmployee.MdiParent = this;
             formUpdateEmployee.Show();
         }
+
+        private void deleteEmployeeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormDeleteEmployee formDeleteEmployee = new FormDeleteEmployee();
+            formDeleteEmployee.MdiParent = this;
+            formDeleteEmployee.Show();
+        }
     }
 }

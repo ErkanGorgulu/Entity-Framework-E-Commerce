@@ -32,5 +32,11 @@ namespace Northwind.BLL
             bool isUpdated = employeeManagement.UpdateEmployee(employee);
             return isUpdated;
         }
+
+        public bool DeleteEmployee(Employee employee)
+        {
+            bool isDeleted = employeeManagement.DeleteEmployee(employee);
+            return isDeleted;
+        }
     }
 }

@@ -150,5 +150,19 @@ namespace Northwind.DAL
             sqlConnection.Close();
             return isUpdated;
         }
+
+        public bool DeleteEmployee(Employee employee)
+        {
+            string sqlQuery = @"DELETE FROM Employees WHERE EmployeeID = @employeeid";
+            SqlCommand sqlCommand = new SqlCommand(sqlQuery, sqlConnection);
+            sqlCommand.Parameters.AddWithValue("@employeeid", employee.EmployeeID);
+            if(sqlConnection.State == System.Data.ConnectionState.Closed)
+            {
+                sqlConnection.Open();
+            }
+
+            bool isDeleted = sqlCommand.ExecuteNonQuery() > 0 ? true : false;
+            return isDeleted;
+        }
     }
 }

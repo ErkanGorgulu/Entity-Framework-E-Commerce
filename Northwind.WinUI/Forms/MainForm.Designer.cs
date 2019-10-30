@@ -183,6 +183,7 @@
             this.deleteEmployeeToolStripMenuItem.Name = "deleteEmployeeToolStripMenuItem";
             this.deleteEmployeeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.deleteEmployeeToolStripMenuItem.Text = "Delete Employee";
+            this.deleteEmployeeToolStripMenuItem.Click += new System.EventHandler(this.deleteEmployeeToolStripMenuItem_Click);
             // 
             // suppliersToolStripMenuItem
             // 
