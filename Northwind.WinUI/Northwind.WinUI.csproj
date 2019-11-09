@@ -58,18 +58,6 @@
     <Compile Include="Forms\FormCategories\FormCategoryTable.Designer.cs">
       <DependentUpon>FormCategoryTable.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FormCategories\FormDeleteCategory.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\FormCategories\FormDeleteCategory.Designer.cs">
-      <DependentUpon>FormDeleteCategory.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\FormCategories\FormListCategory.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\FormCategories\FormListCategory.Designer.cs">
-      <DependentUpon>FormListCategory.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forms\FormCategories\FormUpdateCategory.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -137,12 +125,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormCategories\FormCategoryTable.resx">
       <DependentUpon>FormCategoryTable.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FormCategories\FormDeleteCategory.resx">
-      <DependentUpon>FormDeleteCategory.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FormCategories\FormListCategory.resx">
-      <DependentUpon>FormListCategory.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormCategories\FormUpdateCategory.resx">
       <DependentUpon>FormUpdateCategory.cs</DependentUpon>

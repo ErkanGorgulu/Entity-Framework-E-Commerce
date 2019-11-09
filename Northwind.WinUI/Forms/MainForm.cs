@@ -20,16 +20,7 @@ namespace Northwind.WinUI.Forms
             InitializeComponent();
         }
 
-        private void categoryToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            
-        }
-        private void listCategoriesToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            FormListCategory formCategory = new FormListCategory();
-            formCategory.MdiParent = this;
-            formCategory.Show();
-        }
+
 
         private void addCategoryToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -45,12 +36,6 @@ namespace Northwind.WinUI.Forms
             formUpdateCategory.Show();
         }
 
-        private void deleteCategoryToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            FormDeleteCategory formDeleteCategory = new FormDeleteCategory();
-            formDeleteCategory.MdiParent = this;
-            formDeleteCategory.Show();
-        }
 
         private void listEmployeesToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -84,17 +69,24 @@ namespace Northwind.WinUI.Forms
             formDeleteEmployee.MdiParent = this;
             formDeleteEmployee.Show();
         }
-
+        FormProductTable formProductTable = new FormProductTable();
         private void productToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FormProductTable formProductTable = new FormProductTable();
+            if (formProductTable.IsDisposed)
+            {
+                formProductTable = new FormProductTable();
+            }
             formProductTable.MdiParent = this;
             formProductTable.Show();
         }
+        FormCategoryTable formCategoryTable = new FormCategoryTable();
 
         private void categoryToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
-            FormCategoryTable formCategoryTable = new FormCategoryTable();
+            if (formCategoryTable.IsDisposed)
+            {
+                formCategoryTable = new FormCategoryTable();                
+            }
             formCategoryTable.MdiParent = this;
             formCategoryTable.Show();
         }

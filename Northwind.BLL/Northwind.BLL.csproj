@@ -55,6 +55,10 @@
       <Project>{5B4037FA-5749-4EAB-BE37-C601728A5CE7}</Project>
       <Name>Northwind.Entities</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Northwind.Helpers\Northwind.Helpers.csproj">
+      <Project>{5B7B2AF6-A9F8-45EB-9721-E1126027F04B}</Project>
+      <Name>Northwind.Helpers</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

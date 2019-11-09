@@ -8,7 +8,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Northwind.DAL;
 using Northwind.BLL;
 
 namespace Northwind.WinUI.Forms.FormEmployees

@@ -33,14 +33,16 @@
             this.lblCategoryDescription = new System.Windows.Forms.Label();
             this.txtCategoryName = new System.Windows.Forms.TextBox();
             this.lblCategoryName = new System.Windows.Forms.Label();
+            this.grpControls = new System.Windows.Forms.GroupBox();
+            this.grpControls.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnAddCategory
             // 
-            this.btnAddCategory.Location = new System.Drawing.Point(322, 126);
+            this.btnAddCategory.Location = new System.Drawing.Point(207, 158);
             this.btnAddCategory.Margin = new System.Windows.Forms.Padding(1, 2, 1, 2);
             this.btnAddCategory.Name = "btnAddCategory";
-            this.btnAddCategory.Size = new System.Drawing.Size(93, 25);
+            this.btnAddCategory.Size = new System.Drawing.Size(130, 42);
             this.btnAddCategory.TabIndex = 19;
             this.btnAddCategory.Text = "Add Category";
             this.btnAddCategory.UseVisualStyleBackColor = true;
@@ -48,7 +50,7 @@
             // 
             // txtCategoryDescription
             // 
-            this.txtCategoryDescription.Location = new System.Drawing.Point(146, 86);
+            this.txtCategoryDescription.Location = new System.Drawing.Point(115, 44);
             this.txtCategoryDescription.Margin = new System.Windows.Forms.Padding(1, 2, 1, 2);
             this.txtCategoryDescription.Multiline = true;
             this.txtCategoryDescription.Name = "txtCategoryDescription";
@@ -58,7 +60,7 @@
             // lblCategoryDescription
             // 
             this.lblCategoryDescription.AutoSize = true;
-            this.lblCategoryDescription.Location = new System.Drawing.Point(27, 87);
+            this.lblCategoryDescription.Location = new System.Drawing.Point(13, 48);
             this.lblCategoryDescription.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.lblCategoryDescription.Name = "lblCategoryDescription";
             this.lblCategoryDescription.Size = new System.Drawing.Size(60, 13);
@@ -67,7 +69,7 @@
             // 
             // txtCategoryName
             // 
-            this.txtCategoryName.Location = new System.Drawing.Point(146, 60);
+            this.txtCategoryName.Location = new System.Drawing.Point(115, 18);
             this.txtCategoryName.Margin = new System.Windows.Forms.Padding(1, 2, 1, 2);
             this.txtCategoryName.Name = "txtCategoryName";
             this.txtCategoryName.Size = new System.Drawing.Size(164, 20);
@@ -76,27 +78,38 @@
             // lblCategoryName
             // 
             this.lblCategoryName.AutoSize = true;
-            this.lblCategoryName.Location = new System.Drawing.Point(27, 60);
+            this.lblCategoryName.Location = new System.Drawing.Point(13, 21);
             this.lblCategoryName.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.lblCategoryName.Name = "lblCategoryName";
             this.lblCategoryName.Size = new System.Drawing.Size(80, 13);
             this.lblCategoryName.TabIndex = 15;
             this.lblCategoryName.Text = "Category Name";
             // 
+            // grpControls
+            // 
+            this.grpControls.Controls.Add(this.txtCategoryName);
+            this.grpControls.Controls.Add(this.txtCategoryDescription);
+            this.grpControls.Controls.Add(this.lblCategoryDescription);
+            this.grpControls.Controls.Add(this.lblCategoryName);
+            this.grpControls.Location = new System.Drawing.Point(12, 12);
+            this.grpControls.Name = "grpControls";
+            this.grpControls.Size = new System.Drawing.Size(325, 139);
+            this.grpControls.TabIndex = 20;
+            this.grpControls.TabStop = false;
+            // 
             // FormAddCategory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(479, 211);
+            this.ClientSize = new System.Drawing.Size(362, 211);
+            this.Controls.Add(this.grpControls);
             this.Controls.Add(this.btnAddCategory);
-            this.Controls.Add(this.txtCategoryDescription);
-            this.Controls.Add(this.lblCategoryDescription);
-            this.Controls.Add(this.txtCategoryName);
-            this.Controls.Add(this.lblCategoryName);
             this.Name = "FormAddCategory";
             this.Text = "Form Add Category";
+            this.Load += new System.EventHandler(this.FormAddCategory_Load);
+            this.grpControls.ResumeLayout(false);
+            this.grpControls.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -107,5 +120,6 @@
         private System.Windows.Forms.Label lblCategoryDescription;
         private System.Windows.Forms.TextBox txtCategoryName;
         private System.Windows.Forms.Label lblCategoryName;
+        private System.Windows.Forms.GroupBox grpControls;
     }
 }

@@ -48,6 +48,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Configuration.settings</DependentUpon>
     </Compile>
+    <Compile Include="ReturnMessage.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

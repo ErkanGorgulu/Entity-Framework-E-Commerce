@@ -1,5 +1,6 @@
 ﻿using Northwind.BLL;
 using Northwind.Entities;
+using Northwind.Helpers;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -27,10 +28,23 @@ namespace Northwind.WinUI.Forms.FormCategories
                 CategoryDescription = txtCategoryDescription.Text
             };
 
-            bool isAdded = categoryController.AddCategory(category);
+            ReturnMessage message = categoryController.AddCategory(category);
 
-            if(isAdded)
-            MessageBox.Show("Successfully Added");
+            MessageBox.Show(message.Value);
+            foreach (Control control in grpControls.Controls)
+                {
+                    if(control is TextBox)
+                    {
+                        TextBox textBox = control as TextBox;
+                        textBox.Text = string.Empty;
+                    }
+                }
+            
+        }
+
+        private void FormAddCategory_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

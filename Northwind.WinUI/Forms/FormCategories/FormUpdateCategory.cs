@@ -1,5 +1,6 @@
 ﻿using Northwind.BLL;
 using Northwind.Entities;
+using Northwind.Helpers;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -20,11 +21,48 @@ namespace Northwind.WinUI.Forms.FormCategories
         }
         CategoryController categoryController = new CategoryController();
         List<Category> categories = new List<Category>();
+
         private void FormUpdateCategory_Load(object sender, EventArgs e)
         {
             FetchCategoryList();
+        }     
+        
+        private void btnUpdateCategory_Click(object sender, EventArgs e)
+        {
+            Category category = new Category();
+            category.CategoryId = Convert.ToInt32(cmbCategoryList.SelectedValue);
+            category.CategoryName = txtCategoryName.Text;
+            category.CategoryDescription = txtCategoryDescription.Text;
+            ReturnMessage message = categoryController.UpdateCategory(category);
+            MessageBox.Show(message.Value);
+                // after updating refresh category list and clear textboxes
+            FetchCategoryList();
+            ClearTextBoxes();            
+        }        
+
+        private void btnDeleteCategory_Click(object sender, EventArgs e)
+        {
+            Category category = new Category();
+            category.CategoryId = Convert.ToInt32(cmbCategoryList.SelectedValue);
+            category.CategoryName = cmbCategoryList.GetItemText(cmbCategoryList.SelectedItem);
+            ReturnMessage message = categoryController.DeleteCategory(category);
+            MessageBox.Show(message.Value);
+                // after updating refresh category list and clear textboxes
+            FetchCategoryList();
+            ClearTextBoxes();            
         }
 
+        private void cmbCategoryList_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            foreach (var item in categories)
+            {
+                if (item.CategoryId == Convert.ToInt32(cmbCategoryList.SelectedValue))
+                {
+                    txtCategoryName.Text = item.CategoryName;
+                    txtCategoryDescription.Text = item.CategoryDescription;
+                }
+            }
+        }
         private void FetchCategoryList()
         {
             cmbCategoryList.DataSource = null;
@@ -33,48 +71,17 @@ namespace Northwind.WinUI.Forms.FormCategories
             cmbCategoryList.DisplayMember = "CategoryName";
             cmbCategoryList.ValueMember = "CategoryId";
         }
-
-        private void btnShowCategoryDetails_Click(object sender, EventArgs e)
+        private void ClearTextBoxes()
         {
-            foreach (var item in categories)
+            foreach (Control control in grpCategoryUpdateOrDelete.Controls)
             {
-                if(item.CategoryId == Convert.ToInt32(cmbCategoryList.SelectedValue))
+                if (control is TextBox)
                 {
-                    txtCategoryName.Text = item.CategoryName;
-                    txtCategoryDescription.Text = item.CategoryDescription;
-                }
-            }
-            
-        }
-        private void btnUpdateCategory_Click(object sender, EventArgs e)
-        {
-            Category category = new Category();
-            category.CategoryId = Convert.ToInt32(cmbCategoryList.SelectedValue);
-            category.CategoryName = txtCategoryName.Text;
-            category.CategoryDescription = txtCategoryDescription.Text;
-            bool isUpdated = categoryController.UpdateCategory(category);
-            if (isUpdated)
-            {
-                MessageBox.Show("Successfully Updated");
-            }
-        }
-
-        private void btnDeleteCategory_Click(object sender, EventArgs e)
-        {
-            Category category = new Category();
-            category.CategoryId = Convert.ToInt32(cmbCategoryList.SelectedValue);
-            bool isDeleted = categoryController.DeleteCategory(category);
-            if (isDeleted)
-            {
-                string message = string.Format("{0} Successfully Deleted", cmbCategoryList.GetItemText(cmbCategoryList.SelectedItem));
-                MessageBox.Show(message);
-                FetchCategoryList();
-                foreach (var item in Controls)
-                {
-                    //TODO
-                    //Control.Text
+                    TextBox textBox = control as TextBox;
+                    textBox.Text = string.Empty;
                 }
             }
         }
     }
-}
+    }
+
