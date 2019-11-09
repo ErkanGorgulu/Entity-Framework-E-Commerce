@@ -28,10 +28,7 @@ namespace Northwind.WinUI.Forms.FormsProducts
         {
             #region Fill Product List
 
-            productList = productController.GetProducts();
-            cmbProductsList.DisplayMember = "ProductName";
-            cmbProductsList.ValueMember = "ProductId";
-            cmbProductsList.DataSource = productList;
+            FillProductList();
             #endregion
 
             #region Fill Category List
@@ -72,6 +69,15 @@ namespace Northwind.WinUI.Forms.FormsProducts
 
         }
 
+        private void FillProductList()
+        {
+            cmbProductsList.DataSource = null;
+            productList = productController.GetProducts();
+            cmbProductsList.DataSource = productList;
+            cmbProductsList.DisplayMember = "ProductName";
+            cmbProductsList.ValueMember = "ProductId";            
+        }
+
         private void btnShowProductDetails_Click(object sender, EventArgs e)
         {
             List<Product> productList = productController.GetProducts();
@@ -91,16 +97,32 @@ namespace Northwind.WinUI.Forms.FormsProducts
                         chckDiscontinued.Checked = true;
 
                     //enabling all controls to permit the user to update
-                    cmbSuppliers.Enabled = true;
-                    cmbCategories.Enabled = true;
-                    txtQuantityOfUnit.Enabled = true;
-                    txtUnitPrice.Enabled = true;
-                    txtUnitsInStock.Enabled = true;
-                    txtUnitsOnOrder.Enabled = true;
-                    txtReorderLevel.Enabled = true;
-                    chckDiscontinued.Enabled = true;
+                    EnableControls();
                 }
             }
+        }
+
+        private void EnableControls()
+        {
+            cmbSuppliers.Enabled = true;
+            cmbCategories.Enabled = true;
+            txtQuantityOfUnit.Enabled = true;
+            txtUnitPrice.Enabled = true;
+            txtUnitsInStock.Enabled = true;
+            txtUnitsOnOrder.Enabled = true;
+            txtReorderLevel.Enabled = true;
+            chckDiscontinued.Enabled = true;
+        }
+        private void DisableControls()
+        {
+            cmbSuppliers.Enabled = false;
+            cmbCategories.Enabled = false;
+            txtQuantityOfUnit.Enabled = false;
+            txtUnitPrice.Enabled = false;
+            txtUnitsInStock.Enabled = false;
+            txtUnitsOnOrder.Enabled = false;
+            txtReorderLevel.Enabled = false;
+            chckDiscontinued.Enabled = false;
         }
 
         private void btnUpdateProduct_Click(object sender, EventArgs e)
@@ -120,6 +142,20 @@ namespace Northwind.WinUI.Forms.FormsProducts
             bool isUpdated = productController.UpdateProduct(product);
             if(isUpdated)
             MessageBox.Show("Updated");
+            DisableControls();
+        }
+
+        private void btnDeleteProduct_Click(object sender, EventArgs e)
+        {
+            Product product = new Product();
+            product.ProductId = Convert.ToInt32(cmbProductsList.SelectedValue);
+            bool isDeleted = productController.DeleteProduct(product);
+            if (isDeleted)
+            {
+                MessageBox.Show("Successfully Deleted");
+                FillProductList();
+                DisableControls();
+            }
         }
     }
 }

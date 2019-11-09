@@ -76,19 +76,19 @@ namespace Northwind.DAL
         }
 
         //addproduct
-        public bool AddProduct(Product products)
+        public bool AddProduct(Product product)
         {
             string sqlQuery = "INSERT INTO Products (ProductName,SupplierID,CategoryID,QuantityPerUnit,UnitPrice,UnitsInStock,UnitsOnOrder,ReorderLevel,Discontinued) VALUES(@productname, @supplierid, @categoryid, @quantityperunit, @unitprice, @unitsinstock, @unitsonorder, @reorderlevel, @discontinued)";
             SqlCommand sqlCommand = new SqlCommand(sqlQuery, sqlConnection);
-            sqlCommand.Parameters.AddWithValue("@productname", products.ProductName);
-            sqlCommand.Parameters.AddWithValue("@supplierid", products.SupplierId);
-            sqlCommand.Parameters.AddWithValue("@categoryid", products.CategoryId);
-            sqlCommand.Parameters.AddWithValue("@quantityperunit", products.QuantityPerUnit);
-            sqlCommand.Parameters.AddWithValue("@unitprice", products.UnitPrice);
-            sqlCommand.Parameters.AddWithValue("@unitsinstock", products.UnitsInStock);
-            sqlCommand.Parameters.AddWithValue("@unitsonorder", products.UnitsOnOrder);
-            sqlCommand.Parameters.AddWithValue("@reorderlevel", products.ReorderLevel);
-            if(products.Discontinued)
+            sqlCommand.Parameters.AddWithValue("@productname", product.ProductName);
+            sqlCommand.Parameters.AddWithValue("@supplierid", product.SupplierId);
+            sqlCommand.Parameters.AddWithValue("@categoryid", product.CategoryId);
+            sqlCommand.Parameters.AddWithValue("@quantityperunit", product.QuantityPerUnit);
+            sqlCommand.Parameters.AddWithValue("@unitprice", product.UnitPrice);
+            sqlCommand.Parameters.AddWithValue("@unitsinstock", product.UnitsInStock);
+            sqlCommand.Parameters.AddWithValue("@unitsonorder", product.UnitsOnOrder);
+            sqlCommand.Parameters.AddWithValue("@reorderlevel", product.ReorderLevel);
+            if(product.Discontinued)
                 sqlCommand.Parameters.AddWithValue("@discontinued", 1);
             else
                 sqlCommand.Parameters.AddWithValue("@discontinued", 0);
@@ -103,20 +103,20 @@ namespace Northwind.DAL
         }
 
         //updateproduct
-        public bool UpdateProduct(Product products)
+        public bool UpdateProduct(Product product)
         {
             string sqlQuery = "EXEC SP_UpdateProduct @productname, @supplierId, @categoryid, @quantityperunit, @unitprice, @unitsinstock, @unitsonorder, @reorderlevel, @discontinued, @productid";
             SqlCommand sqlCommand = new SqlCommand(sqlQuery, sqlConnection);
-            sqlCommand.Parameters.AddWithValue("@productid", products.ProductId);
-            sqlCommand.Parameters.AddWithValue("@productname", products.ProductName);
-            sqlCommand.Parameters.AddWithValue("@supplierid", products.SupplierId);
-            sqlCommand.Parameters.AddWithValue("@categoryid", products.CategoryId);
-            sqlCommand.Parameters.AddWithValue("@quantityperunit", products.QuantityPerUnit);
-            sqlCommand.Parameters.AddWithValue("@unitprice", products.UnitPrice);
-            sqlCommand.Parameters.AddWithValue("@unitsinstock", products.UnitsInStock);
-            sqlCommand.Parameters.AddWithValue("@unitsonorder", products.UnitsOnOrder);
-            sqlCommand.Parameters.AddWithValue("@reorderlevel", products.ReorderLevel);
-            if (products.Discontinued)
+            sqlCommand.Parameters.AddWithValue("@productid", product.ProductId);
+            sqlCommand.Parameters.AddWithValue("@productname", product.ProductName);
+            sqlCommand.Parameters.AddWithValue("@supplierid", product.SupplierId);
+            sqlCommand.Parameters.AddWithValue("@categoryid", product.CategoryId);
+            sqlCommand.Parameters.AddWithValue("@quantityperunit", product.QuantityPerUnit);
+            sqlCommand.Parameters.AddWithValue("@unitprice", product.UnitPrice);
+            sqlCommand.Parameters.AddWithValue("@unitsinstock", product.UnitsInStock);
+            sqlCommand.Parameters.AddWithValue("@unitsonorder", product.UnitsOnOrder);
+            sqlCommand.Parameters.AddWithValue("@reorderlevel", product.ReorderLevel);
+            if (product.Discontinued)
                 sqlCommand.Parameters.AddWithValue("@discontinued", 1);
             else
                 sqlCommand.Parameters.AddWithValue("@discontinued", 0);
@@ -131,13 +131,13 @@ namespace Northwind.DAL
         }
 
         //deleteproduct
-        public bool DeleteProduct(Product products)
+        public bool DeleteProduct(Product product)
         {
             string sqlQuery = "EXEC SP_DeleteProduct @productid";
             SqlCommand sqlCommand = new SqlCommand(sqlQuery, sqlConnection);
             sqlCommand.CommandType = System.Data.CommandType.StoredProcedure;
             sqlCommand.CommandText = "SP_DeleteProduct";
-            sqlCommand.Parameters.AddWithValue("@productid", products.ProductId);
+            sqlCommand.Parameters.AddWithValue("@productid", product.ProductId);
             if(sqlConnection.State == System.Data.ConnectionState.Closed)
             {
                 sqlConnection.Open();

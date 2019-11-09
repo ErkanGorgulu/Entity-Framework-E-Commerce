@@ -42,7 +42,7 @@
             this.btnAddCategory.Name = "btnAddCategory";
             this.btnAddCategory.Size = new System.Drawing.Size(93, 25);
             this.btnAddCategory.TabIndex = 19;
-            this.btnAddCategory.Text = "Kategori Ekle";
+            this.btnAddCategory.Text = "Add Category";
             this.btnAddCategory.UseVisualStyleBackColor = true;
             this.btnAddCategory.Click += new System.EventHandler(this.btnAddCategory_Click);
             // 
@@ -61,9 +61,9 @@
             this.lblCategoryDescription.Location = new System.Drawing.Point(27, 87);
             this.lblCategoryDescription.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.lblCategoryDescription.Name = "lblCategoryDescription";
-            this.lblCategoryDescription.Size = new System.Drawing.Size(92, 13);
+            this.lblCategoryDescription.Size = new System.Drawing.Size(60, 13);
             this.lblCategoryDescription.TabIndex = 17;
-            this.lblCategoryDescription.Text = "Kategori Açıklama";
+            this.lblCategoryDescription.Text = "Description";
             // 
             // txtCategoryName
             // 
@@ -76,12 +76,12 @@
             // lblCategoryName
             // 
             this.lblCategoryName.AutoSize = true;
-            this.lblCategoryName.Location = new System.Drawing.Point(62, 62);
+            this.lblCategoryName.Location = new System.Drawing.Point(27, 60);
             this.lblCategoryName.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.lblCategoryName.Name = "lblCategoryName";
-            this.lblCategoryName.Size = new System.Drawing.Size(64, 13);
+            this.lblCategoryName.Size = new System.Drawing.Size(80, 13);
             this.lblCategoryName.TabIndex = 15;
-            this.lblCategoryName.Text = "Kategori Adı";
+            this.lblCategoryName.Text = "Category Name";
             // 
             // FormAddCategory
             // 

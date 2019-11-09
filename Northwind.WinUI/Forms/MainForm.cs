@@ -24,36 +24,6 @@ namespace Northwind.WinUI.Forms
         {
             
         }
-
-
-        private void ListProductsToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            FormListProducts formProducts = new FormListProducts();
-            formProducts.MdiParent = this;
-            formProducts.Show();
-        }
-
-        private void AddNewProductToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            FormAddProduct formAddProduct = new FormAddProduct();
-            formAddProduct.MdiParent = this;
-            formAddProduct.Show();
-        }
-
-        private void updateProductToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            FormUpdateProducts formUpdateProducts = new FormUpdateProducts();
-            formUpdateProducts.MdiParent = this;
-            formUpdateProducts.Show();
-        }
-
-        private void deleteProductToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            FormDeleteProduct formProductDelete = new FormDeleteProduct();
-            formProductDelete.MdiParent = this;
-            formProductDelete.Show();
-        }
-
         private void listCategoriesToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FormListCategory formCategory = new FormListCategory();
@@ -113,6 +83,20 @@ namespace Northwind.WinUI.Forms
             FormDeleteEmployee formDeleteEmployee = new FormDeleteEmployee();
             formDeleteEmployee.MdiParent = this;
             formDeleteEmployee.Show();
+        }
+
+        private void productToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormProductTable formProductTable = new FormProductTable();
+            formProductTable.MdiParent = this;
+            formProductTable.Show();
+        }
+
+        private void categoryToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            FormCategoryTable formCategoryTable = new FormCategoryTable();
+            formCategoryTable.MdiParent = this;
+            formCategoryTable.Show();
         }
     }
 }

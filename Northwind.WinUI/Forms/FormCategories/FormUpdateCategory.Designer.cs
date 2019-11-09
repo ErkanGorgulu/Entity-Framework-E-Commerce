@@ -35,6 +35,7 @@
             this.txtCategoryName = new System.Windows.Forms.TextBox();
             this.txtCategoryDescription = new System.Windows.Forms.TextBox();
             this.btnUpdateCategory = new System.Windows.Forms.Button();
+            this.btnDeleteCategory = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // cmbCategoryList
@@ -90,19 +91,30 @@
             // 
             // btnUpdateCategory
             // 
-            this.btnUpdateCategory.Location = new System.Drawing.Point(468, 144);
+            this.btnUpdateCategory.Location = new System.Drawing.Point(468, 125);
             this.btnUpdateCategory.Name = "btnUpdateCategory";
-            this.btnUpdateCategory.Size = new System.Drawing.Size(138, 70);
+            this.btnUpdateCategory.Size = new System.Drawing.Size(140, 44);
             this.btnUpdateCategory.TabIndex = 4;
-            this.btnUpdateCategory.Text = "Update Category";
+            this.btnUpdateCategory.Text = "Update Selected Category";
             this.btnUpdateCategory.UseVisualStyleBackColor = true;
             this.btnUpdateCategory.Click += new System.EventHandler(this.btnUpdateCategory_Click);
+            // 
+            // btnDeleteCategory
+            // 
+            this.btnDeleteCategory.Location = new System.Drawing.Point(468, 179);
+            this.btnDeleteCategory.Name = "btnDeleteCategory";
+            this.btnDeleteCategory.Size = new System.Drawing.Size(140, 44);
+            this.btnDeleteCategory.TabIndex = 4;
+            this.btnDeleteCategory.Text = "Delete Selected Category";
+            this.btnDeleteCategory.UseVisualStyleBackColor = true;
+            this.btnDeleteCategory.Click += new System.EventHandler(this.btnDeleteCategory_Click);
             // 
             // FormUpdateCategory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(665, 238);
+            this.Controls.Add(this.btnDeleteCategory);
             this.Controls.Add(this.btnUpdateCategory);
             this.Controls.Add(this.txtCategoryDescription);
             this.Controls.Add(this.txtCategoryName);
@@ -127,5 +139,6 @@
         private System.Windows.Forms.TextBox txtCategoryName;
         private System.Windows.Forms.TextBox txtCategoryDescription;
         private System.Windows.Forms.Button btnUpdateCategory;
+        private System.Windows.Forms.Button btnDeleteCategory;
     }
 }

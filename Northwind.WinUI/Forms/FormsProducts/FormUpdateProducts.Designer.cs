@@ -48,6 +48,7 @@
             this.btnShowProductDetails = new System.Windows.Forms.Button();
             this.btnUpdateProduct = new System.Windows.Forms.Button();
             this.lblInfo = new System.Windows.Forms.Label();
+            this.btnDeleteProduct = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // cmbProductsList
@@ -211,7 +212,7 @@
             // 
             // btnUpdateProduct
             // 
-            this.btnUpdateProduct.Location = new System.Drawing.Point(730, 208);
+            this.btnUpdateProduct.Location = new System.Drawing.Point(572, 208);
             this.btnUpdateProduct.Name = "btnUpdateProduct";
             this.btnUpdateProduct.Size = new System.Drawing.Size(131, 56);
             this.btnUpdateProduct.TabIndex = 8;
@@ -228,12 +229,23 @@
             this.lblInfo.TabIndex = 9;
             this.lblInfo.Text = "Select the product you would like to update";
             // 
+            // btnDeleteProduct
+            // 
+            this.btnDeleteProduct.Location = new System.Drawing.Point(916, 208);
+            this.btnDeleteProduct.Name = "btnDeleteProduct";
+            this.btnDeleteProduct.Size = new System.Drawing.Size(131, 56);
+            this.btnDeleteProduct.TabIndex = 8;
+            this.btnDeleteProduct.Text = "Delete Product";
+            this.btnDeleteProduct.UseVisualStyleBackColor = true;
+            this.btnDeleteProduct.Click += new System.EventHandler(this.btnDeleteProduct_Click);
+            // 
             // FormUpdateProducts
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1225, 322);
             this.Controls.Add(this.lblInfo);
+            this.Controls.Add(this.btnDeleteProduct);
             this.Controls.Add(this.btnUpdateProduct);
             this.Controls.Add(this.btnShowProductDetails);
             this.Controls.Add(this.chckDiscontinued);
@@ -283,5 +295,6 @@
         private System.Windows.Forms.Button btnShowProductDetails;
         private System.Windows.Forms.Button btnUpdateProduct;
         private System.Windows.Forms.Label lblInfo;
+        private System.Windows.Forms.Button btnDeleteProduct;
     }
 }
