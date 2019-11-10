@@ -7,11 +7,11 @@ namespace Northwind.BLL
 {
     public class CategoryController
     {
-        CategoryManagement categoryManagment = new CategoryManagement();
+        CategoryManagement categoryManagement = new CategoryManagement();
 
         public List<Category> GetCategories()
         {
-            List<Category> categories = categoryManagment.GetCategoryList();
+            List<Category> categories = categoryManagement.GetCategoryList();
 
             return categories;
         }
@@ -21,11 +21,11 @@ namespace Northwind.BLL
             ReturnMessage message = new ReturnMessage();
             if (isCategoryNameInvalid(category))
             {
-                message.Value = InvalidCategoryName();
+                message.Value = InvalidCategoryNameMessage();
                 return message;
             }
             else {
-                bool isAdded = categoryManagment.AddCategory(category);
+                bool isAdded = categoryManagement.AddCategory(category);
                 if (isAdded) {
                 message.Value = $"{category.CategoryName} is successfully added.";
                     return message;
@@ -42,12 +42,12 @@ namespace Northwind.BLL
             ReturnMessage message = new ReturnMessage();
             if (isCategoryNameInvalid(category))
             {
-                message.Value = InvalidCategoryName();
+                message.Value = InvalidCategoryNameMessage();
                 return message;
             }
             else
             {
-                bool isUpdated = categoryManagment.UpdateCategory(category);
+                bool isUpdated = categoryManagement.UpdateCategory(category);
                 if(isUpdated)
                 {
                     message.Value = $"{category.CategoryName} is successfully updated.";
@@ -65,7 +65,7 @@ namespace Northwind.BLL
         {
             ReturnMessage message = new ReturnMessage();
             string categoryName = category.CategoryName;
-            bool isDeleted = categoryManagment.DeleteCategory(category);
+            bool isDeleted = categoryManagement.DeleteCategory(category);
             if (isDeleted)
             {
                 message.Value = $"{categoryName} is successfully deleted.";
@@ -89,7 +89,7 @@ namespace Northwind.BLL
         {
             return "Something went wrong with database.";
         }
-        string InvalidCategoryName()
+        string InvalidCategoryNameMessage()
         {
             return "Category name cannot have more than 15 characters or be empty.";
         }

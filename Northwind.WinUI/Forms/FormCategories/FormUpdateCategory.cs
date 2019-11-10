@@ -1,4 +1,5 @@
 ﻿using Northwind.BLL;
+using Northwind.DAL;
 using Northwind.Entities;
 using Northwind.Helpers;
 using System;
@@ -30,9 +31,9 @@ namespace Northwind.WinUI.Forms.FormCategories
         private void btnUpdateCategory_Click(object sender, EventArgs e)
         {
             Category category = new Category();
-            category.CategoryId = Convert.ToInt32(cmbCategoryList.SelectedValue);
+            category.CategoryID = Convert.ToInt32(cmbCategoryList.SelectedValue);
             category.CategoryName = txtCategoryName.Text;
-            category.CategoryDescription = txtCategoryDescription.Text;
+            category.Description = txtCategoryDescription.Text;
             ReturnMessage message = categoryController.UpdateCategory(category);
             MessageBox.Show(message.Value);
                 // after updating refresh category list and clear textboxes
@@ -43,7 +44,7 @@ namespace Northwind.WinUI.Forms.FormCategories
         private void btnDeleteCategory_Click(object sender, EventArgs e)
         {
             Category category = new Category();
-            category.CategoryId = Convert.ToInt32(cmbCategoryList.SelectedValue);
+            category.CategoryID = Convert.ToInt32(cmbCategoryList.SelectedValue);
             category.CategoryName = cmbCategoryList.GetItemText(cmbCategoryList.SelectedItem);
             ReturnMessage message = categoryController.DeleteCategory(category);
             MessageBox.Show(message.Value);
@@ -54,12 +55,13 @@ namespace Northwind.WinUI.Forms.FormCategories
 
         private void cmbCategoryList_SelectionChangeCommitted(object sender, EventArgs e)
         {
+            
             foreach (var item in categories)
             {
-                if (item.CategoryId == Convert.ToInt32(cmbCategoryList.SelectedValue))
+                if (item.CategoryID == Convert.ToInt32(cmbCategoryList.SelectedValue))
                 {
                     txtCategoryName.Text = item.CategoryName;
-                    txtCategoryDescription.Text = item.CategoryDescription;
+                    txtCategoryDescription.Text = item.Description;
                 }
             }
         }
@@ -69,7 +71,7 @@ namespace Northwind.WinUI.Forms.FormCategories
             categories = categoryController.GetCategories();
             cmbCategoryList.DataSource = categories;
             cmbCategoryList.DisplayMember = "CategoryName";
-            cmbCategoryList.ValueMember = "CategoryId";
+            cmbCategoryList.ValueMember = "CategoryID";
         }
         private void ClearTextBoxes()
         {

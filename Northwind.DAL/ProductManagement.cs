@@ -55,18 +55,18 @@ namespace Northwind.DAL
                 {
                     Product products = new Product
                     {
-                        ProductId = Convert.ToInt32(sql["ProductID"]),
+                        ProductID = Convert.ToInt32(sql["ProductID"]),
                         ProductName = sql["ProductName"].ToString(),
                         SupplierName = sql["SupplierName"].ToString(),
                         CategoryName = sql["CategoryName"].ToString(),
                         QuantityPerUnit = sql["QuantityPerUnit"].ToString(),
                         UnitPrice = Convert.ToDecimal(sql["UnitPrice"]),
-                        UnitsInStock = Convert.ToInt32(sql["UnitsInStock"]),
-                        UnitsOnOrder = Convert.ToInt32(sql["UnitsOnOrder"]),
-                        ReorderLevel = Convert.ToInt32(sql["ReorderLevel"]),
+                        UnitsInStock = Convert.ToInt16(sql["UnitsInStock"]),
+                        UnitsOnOrder = Convert.ToInt16(sql["UnitsOnOrder"]),
+                        ReorderLevel = Convert.ToInt16(sql["ReorderLevel"]),
                         Discontinued = Convert.ToByte(sql["Discontinued"]) == 1 ? true : false,
-                        CategoryId = Convert.ToInt32(sql["CategoryID"]),
-                        SupplierId = Convert.ToInt32(sql["SupplierID"])
+                        CategoryID = Convert.ToInt32(sql["CategoryID"]),
+                        SupplierID = Convert.ToInt32(sql["SupplierID"])
                     };
                     productsList.Add(products);
                 }
@@ -81,8 +81,8 @@ namespace Northwind.DAL
             string sqlQuery = "INSERT INTO Products (ProductName,SupplierID,CategoryID,QuantityPerUnit,UnitPrice,UnitsInStock,UnitsOnOrder,ReorderLevel,Discontinued) VALUES(@productname, @supplierid, @categoryid, @quantityperunit, @unitprice, @unitsinstock, @unitsonorder, @reorderlevel, @discontinued)";
             SqlCommand sqlCommand = new SqlCommand(sqlQuery, sqlConnection);
             sqlCommand.Parameters.AddWithValue("@productname", product.ProductName);
-            sqlCommand.Parameters.AddWithValue("@supplierid", product.SupplierId);
-            sqlCommand.Parameters.AddWithValue("@categoryid", product.CategoryId);
+            sqlCommand.Parameters.AddWithValue("@supplierid", product.SupplierID);
+            sqlCommand.Parameters.AddWithValue("@categoryid", product.CategoryID);
             sqlCommand.Parameters.AddWithValue("@quantityperunit", product.QuantityPerUnit);
             sqlCommand.Parameters.AddWithValue("@unitprice", product.UnitPrice);
             sqlCommand.Parameters.AddWithValue("@unitsinstock", product.UnitsInStock);
@@ -107,10 +107,10 @@ namespace Northwind.DAL
         {
             string sqlQuery = "EXEC SP_UpdateProduct @productname, @supplierId, @categoryid, @quantityperunit, @unitprice, @unitsinstock, @unitsonorder, @reorderlevel, @discontinued, @productid";
             SqlCommand sqlCommand = new SqlCommand(sqlQuery, sqlConnection);
-            sqlCommand.Parameters.AddWithValue("@productid", product.ProductId);
+            sqlCommand.Parameters.AddWithValue("@productid", product.ProductID);
             sqlCommand.Parameters.AddWithValue("@productname", product.ProductName);
-            sqlCommand.Parameters.AddWithValue("@supplierid", product.SupplierId);
-            sqlCommand.Parameters.AddWithValue("@categoryid", product.CategoryId);
+            sqlCommand.Parameters.AddWithValue("@supplierid", product.SupplierID);
+            sqlCommand.Parameters.AddWithValue("@categoryid", product.CategoryID);
             sqlCommand.Parameters.AddWithValue("@quantityperunit", product.QuantityPerUnit);
             sqlCommand.Parameters.AddWithValue("@unitprice", product.UnitPrice);
             sqlCommand.Parameters.AddWithValue("@unitsinstock", product.UnitsInStock);
@@ -137,7 +137,7 @@ namespace Northwind.DAL
             SqlCommand sqlCommand = new SqlCommand(sqlQuery, sqlConnection);
             sqlCommand.CommandType = System.Data.CommandType.StoredProcedure;
             sqlCommand.CommandText = "SP_DeleteProduct";
-            sqlCommand.Parameters.AddWithValue("@productid", product.ProductId);
+            sqlCommand.Parameters.AddWithValue("@productid", product.ProductID);
             if(sqlConnection.State == System.Data.ConnectionState.Closed)
             {
                 sqlConnection.Open();

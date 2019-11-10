@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Northwind.Entities
 {
-    public class Employee
+    class Employee
     {
         public int EmployeeID { get; set; }
         public string LastName { get; set; }

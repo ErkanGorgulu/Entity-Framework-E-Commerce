@@ -1,4 +1,5 @@
 ﻿using Northwind.BLL;
+using Northwind.DAL;
 using Northwind.Entities;
 using System;
 using System.Collections.Generic;
@@ -84,10 +85,10 @@ namespace Northwind.WinUI.Forms.FormsProducts
             //find the selected product
             foreach (var item in productList)
             {
-                if(Convert.ToInt32(cmbProductsList.SelectedValue) == item.ProductId)
+                if(Convert.ToInt32(cmbProductsList.SelectedValue) == item.ProductID)
                 {
-                    cmbSuppliers.SelectedValue = item.SupplierId;
-                    cmbCategories.SelectedValue = item.CategoryId;
+                    cmbSuppliers.SelectedValue = item.SupplierID;
+                    cmbCategories.SelectedValue = item.CategoryID;
                     txtQuantityOfUnit.Text = item.QuantityPerUnit;
                     txtUnitPrice.Text = item.UnitPrice.ToString();
                     txtUnitsInStock.Text = item.UnitsInStock.ToString();
@@ -129,15 +130,15 @@ namespace Northwind.WinUI.Forms.FormsProducts
         {
             productList = productController.GetProducts();
             Product product = new Product();
-            product.ProductId = Convert.ToInt32(cmbProductsList.SelectedValue);
+            product.ProductID = Convert.ToInt32(cmbProductsList.SelectedValue);
             product.ProductName = cmbProductsList.GetItemText(cmbProductsList.SelectedItem);
-            product.SupplierId = Convert.ToInt32(cmbSuppliers.SelectedValue);
-            product.CategoryId = Convert.ToInt32(cmbCategories.SelectedValue);
+            product.SupplierID = Convert.ToInt32(cmbSuppliers.SelectedValue);
+            product.CategoryID = Convert.ToInt32(cmbCategories.SelectedValue);
             product.QuantityPerUnit = txtQuantityOfUnit.Text;
             product.UnitPrice = Convert.ToDecimal(txtUnitPrice.Text);
-            product.UnitsInStock = Convert.ToInt32(txtUnitsInStock.Text);
-            product.UnitsOnOrder = Convert.ToInt32(txtUnitsOnOrder.Text);
-            product.ReorderLevel = Convert.ToInt32(txtReorderLevel.Text);
+            product.UnitsInStock = Convert.ToInt16(txtUnitsInStock.Text);
+            product.UnitsOnOrder = Convert.ToInt16(txtUnitsOnOrder.Text);
+            product.ReorderLevel = Convert.ToInt16(txtReorderLevel.Text);
             product.Discontinued = chckDiscontinued.Checked;
             bool isUpdated = productController.UpdateProduct(product);
             if(isUpdated)
@@ -148,7 +149,7 @@ namespace Northwind.WinUI.Forms.FormsProducts
         private void btnDeleteProduct_Click(object sender, EventArgs e)
         {
             Product product = new Product();
-            product.ProductId = Convert.ToInt32(cmbProductsList.SelectedValue);
+            product.ProductID = Convert.ToInt32(cmbProductsList.SelectedValue);
             bool isDeleted = productController.DeleteProduct(product);
             if (isDeleted)
             {

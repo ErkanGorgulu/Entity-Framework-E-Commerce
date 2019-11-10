@@ -69,3 +69,8 @@ C:\Users\erkan\Desktop\Northwind E-Commerce\Northwind.WinUI\obj\Debug\Northwind.
 C:\Users\erkan\Desktop\Northwind E-Commerce\Northwind.WinUI\obj\Debug\Northwind.WinUI.Forms.FormEmployees.FormDeleteEmployee.resources
 C:\Users\erkan\Desktop\Northwind E-Commerce\Northwind.WinUI\obj\Debug\Northwind.WinUI.Forms.FormsProducts.FormProductTable.resources
 C:\Users\erkan\Desktop\Northwind E-Commerce\Northwind.WinUI\obj\Debug\Northwind.WinUI.Forms.FormCategories.FormCategoryTable.resources
+C:\Users\erkan\Desktop\Northwind E-Commerce\Northwind.WinUI\bin\Debug\EntityFramework.dll
+C:\Users\erkan\Desktop\Northwind E-Commerce\Northwind.WinUI\bin\Debug\Northwind.DAL.dll.config
+C:\Users\erkan\Desktop\Northwind E-Commerce\Northwind.WinUI\bin\Debug\EntityFramework.xml
+C:\Users\erkan\Desktop\Northwind E-Commerce\Northwind.WinUI\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\erkan\Desktop\Northwind E-Commerce\Northwind.WinUI\bin\Debug\EntityFramework.SqlServer.xml

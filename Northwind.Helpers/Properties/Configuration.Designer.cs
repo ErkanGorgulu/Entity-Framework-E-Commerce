@@ -26,8 +26,8 @@ namespace Northwind.Helpers.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-8EEUQ9G\\SQLEXPRESS;Initial Catalog=NBUY_REF;Integrated Securi" +
-            "ty=True")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-8EEUQ9G\\SQLEXPRESS;Initial Catalog=Northwind;Integrated Secur" +
+            "ity=True")]
         public string ConnectionPath {
             get {
                 return ((string)(this["ConnectionPath"]));

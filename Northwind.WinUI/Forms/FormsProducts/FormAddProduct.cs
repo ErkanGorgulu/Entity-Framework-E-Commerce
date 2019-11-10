@@ -1,4 +1,5 @@
 ﻿using Northwind.BLL;
+using Northwind.DAL;
 using Northwind.Entities;
 using System;
 using System.Collections.Generic;
@@ -67,13 +68,13 @@ namespace Northwind.WinUI.Forms.FormsProducts
             {
 
                 ProductName = txtProductName.Text,
-                SupplierId = Convert.ToInt32(cmbSuppliers.SelectedValue),
-                CategoryId = Convert.ToInt32(cmbCategories.SelectedValue),
+                SupplierID = Convert.ToInt32(cmbSuppliers.SelectedValue),
+                CategoryID = Convert.ToInt32(cmbCategories.SelectedValue),
                 QuantityPerUnit = txtQuantityPerUnit.Text,
                 UnitPrice = Convert.ToDecimal(txtUnitPrice.Text),
-                UnitsInStock = Convert.ToInt32(txtUnitsInStock.Text),
-                UnitsOnOrder = Convert.ToInt32(txtUnitsOnOrder.Text),
-                ReorderLevel = Convert.ToInt32(txtReorderLevel.Text),
+                UnitsInStock = Convert.ToInt16(txtUnitsInStock.Text),
+                UnitsOnOrder = Convert.ToInt16(txtUnitsOnOrder.Text),
+                ReorderLevel = Convert.ToInt16(txtReorderLevel.Text),
                 Discontinued = chckDiscontinued.Checked
             };
             bool isAdded = productController.AddProduct(products);

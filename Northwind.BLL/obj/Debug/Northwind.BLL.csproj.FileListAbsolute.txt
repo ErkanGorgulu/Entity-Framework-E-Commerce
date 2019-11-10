@@ -36,3 +36,6 @@ C:\Users\erkan\Desktop\Northwind E-Commerce\Northwind.BLL\obj\Debug\Northwind.BL
 C:\Users\erkan\Desktop\Northwind E-Commerce\Northwind.BLL\obj\Debug\Northwind.BLL.dll
 C:\Users\erkan\Desktop\Northwind E-Commerce\Northwind.BLL\obj\Debug\Northwind.BLL.pdb
 C:\Users\erkan\Desktop\Northwind E-Commerce\Northwind.BLL\bin\Debug\Northwind.Helpers.dll.config
+C:\Users\erkan\Desktop\Northwind E-Commerce\Northwind.BLL\bin\Debug\EntityFramework.dll
+C:\Users\erkan\Desktop\Northwind E-Commerce\Northwind.BLL\bin\Debug\Northwind.DAL.dll.config
+C:\Users\erkan\Desktop\Northwind E-Commerce\Northwind.BLL\bin\Debug\EntityFramework.xml

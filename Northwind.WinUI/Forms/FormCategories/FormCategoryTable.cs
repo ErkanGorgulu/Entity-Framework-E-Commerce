@@ -1,4 +1,5 @@
 ﻿using Northwind.BLL;
+using Northwind.DAL;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,9 +19,11 @@ namespace Northwind.WinUI.Forms.FormCategories
             InitializeComponent();
         }
         CategoryController categoryController = new CategoryController();
+        
         private void FormCategoryTable_Load(object sender, EventArgs e)
         {
             dataGridCategories.DataSource = categoryController.GetCategories();
+            dataGridCategories.Columns["Products"].Visible = false;
         }
 
         private void btnAddNewCategory_Click(object sender, EventArgs e)

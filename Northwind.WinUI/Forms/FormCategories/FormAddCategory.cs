@@ -1,4 +1,5 @@
 ﻿using Northwind.BLL;
+using Northwind.DAL;
 using Northwind.Entities;
 using Northwind.Helpers;
 using System;
@@ -25,7 +26,7 @@ namespace Northwind.WinUI.Forms.FormCategories
             Category category = new Category
             {
                 CategoryName = txtCategoryName.Text,
-                CategoryDescription = txtCategoryDescription.Text
+                Description = txtCategoryDescription.Text
             };
 
             ReturnMessage message = categoryController.AddCategory(category);

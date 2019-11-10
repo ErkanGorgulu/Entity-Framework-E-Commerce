@@ -30,3 +30,8 @@ C:\Users\erkan\Desktop\Northwind E-Commerce\Northwind.DAL\obj\Debug\Northwind.DA
 C:\Users\erkan\Desktop\Northwind E-Commerce\Northwind.DAL\obj\Debug\Northwind.DAL.dll
 C:\Users\erkan\Desktop\Northwind E-Commerce\Northwind.DAL\obj\Debug\Northwind.DAL.pdb
 C:\Users\erkan\Desktop\Northwind E-Commerce\Northwind.DAL\bin\Debug\Northwind.Helpers.dll.config
+C:\Users\erkan\Desktop\Northwind E-Commerce\Northwind.DAL\bin\Debug\Northwind.DAL.dll.config
+C:\Users\erkan\Desktop\Northwind E-Commerce\Northwind.DAL\bin\Debug\EntityFramework.dll
+C:\Users\erkan\Desktop\Northwind E-Commerce\Northwind.DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\erkan\Desktop\Northwind E-Commerce\Northwind.DAL\bin\Debug\EntityFramework.xml
+C:\Users\erkan\Desktop\Northwind E-Commerce\Northwind.DAL\bin\Debug\EntityFramework.SqlServer.xml

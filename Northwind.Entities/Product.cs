@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Northwind.Entities
 {
-    public class Product
+    class Product
     {
         public int ProductId { get; set; }
         public string ProductName { get; set; }

@@ -40,6 +40,8 @@
             this.dataGridCategories.AllowUserToAddRows = false;
             this.dataGridCategories.AllowUserToDeleteRows = false;
             this.dataGridCategories.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dataGridCategories.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dataGridCategories.BackgroundColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -55,12 +57,12 @@
             this.dataGridCategories.ReadOnly = true;
             this.dataGridCategories.RowHeadersVisible = false;
             this.dataGridCategories.RowHeadersWidth = 150;
-            this.dataGridCategories.Size = new System.Drawing.Size(418, 353);
+            this.dataGridCategories.Size = new System.Drawing.Size(1047, 610);
             this.dataGridCategories.TabIndex = 15;
             // 
             // btnAddNewCategory
             // 
-            this.btnAddNewCategory.Location = new System.Drawing.Point(120, 21);
+            this.btnAddNewCategory.Location = new System.Drawing.Point(377, 26);
             this.btnAddNewCategory.Name = "btnAddNewCategory";
             this.btnAddNewCategory.Size = new System.Drawing.Size(141, 55);
             this.btnAddNewCategory.TabIndex = 16;
@@ -70,7 +72,7 @@
             // 
             // btnUpdateOrDeleteCategory
             // 
-            this.btnUpdateOrDeleteCategory.Location = new System.Drawing.Point(282, 21);
+            this.btnUpdateOrDeleteCategory.Location = new System.Drawing.Point(539, 26);
             this.btnUpdateOrDeleteCategory.Name = "btnUpdateOrDeleteCategory";
             this.btnUpdateOrDeleteCategory.Size = new System.Drawing.Size(146, 55);
             this.btnUpdateOrDeleteCategory.TabIndex = 16;
@@ -82,7 +84,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(438, 466);
+            this.ClientSize = new System.Drawing.Size(1067, 723);
             this.Controls.Add(this.btnUpdateOrDeleteCategory);
             this.Controls.Add(this.btnAddNewCategory);
             this.Controls.Add(this.dataGridCategories);

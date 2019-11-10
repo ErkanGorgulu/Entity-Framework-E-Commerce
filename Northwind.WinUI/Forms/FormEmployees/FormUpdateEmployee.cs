@@ -1,4 +1,5 @@
 ﻿using Northwind.BLL;
+using Northwind.DAL;
 using Northwind.Entities;
 using System;
 using System.Collections.Generic;
@@ -53,8 +54,8 @@ namespace Northwind.WinUI.Forms.FormEmployees
                     txtPostalCode.Text = employee.PostalCode;
                     txtCountry.Text = employee.Country;
                     txtHomePhone.Text = employee.HomePhone;
-                    dateBirth.Value = employee.BirthDate;
-                    dateHire.Value = employee.HireDate;
+                    dateBirth.Value = (DateTime)employee.BirthDate;
+                    dateHire.Value = (DateTime)employee.HireDate;
                 }
             }
             txtName.Enabled = true;

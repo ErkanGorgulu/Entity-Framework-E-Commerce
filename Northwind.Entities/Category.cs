@@ -1,6 +1,6 @@
 ﻿namespace Northwind.Entities
 {
-    public class Category
+    class Category
     {
         public int CategoryId { get; set; }
 
