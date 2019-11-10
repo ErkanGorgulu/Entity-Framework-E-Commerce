@@ -37,6 +37,8 @@ namespace Northwind.DAL
             List<Category> categories = northwind.Set<Category>().ToList();
             northwind.SaveChanges();
             return categories;
+            #region Ado.net option
+
             //List<Category> categories = new List<Category>();
 
             //SqlCommand sqlCommand = new SqlCommand("SELECT * FROM Categories", sqlConnection);
@@ -63,6 +65,8 @@ namespace Northwind.DAL
             //}
             //sqlConnection.Close();
             //return categories;
+            #endregion
+
         }
 
         public bool AddCategory(Category category)
@@ -150,6 +154,14 @@ namespace Northwind.DAL
             //bool isDeleted = sqlCommand.ExecuteNonQuery() > 0 ? true : false;
             //sqlConnection.Close();
             //return isDeleted;
+        }
+        public bool IsCategoryContained(Category category)
+        {
+            var isCategoryContained = northwind.Set<Category>().FirstOrDefault(cat => cat.CategoryName == category.CategoryName);
+            if (isCategoryContained == null)
+                return false;
+            else
+                return true;
         }
 
     }

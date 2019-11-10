@@ -28,8 +28,10 @@ namespace Northwind.WinUI.Forms.FormsProducts
             dataGridProducts.DataSource = productList;
             dataGridProducts.Columns["CategoryId"].Visible = false;
             dataGridProducts.Columns["SupplierId"].Visible = false;
+            dataGridProducts.Columns["Supplier"].Visible = false;
+            dataGridProducts.Columns["Category"].Visible = false;
+            dataGridProducts.Columns["Order_Details"].Visible = false;
             #endregion
-
         }
 
         private void btnAddProduct_Click(object sender, EventArgs e)

@@ -52,6 +52,7 @@
             // 
             this.txtCategoryDescription.Location = new System.Drawing.Point(115, 44);
             this.txtCategoryDescription.Margin = new System.Windows.Forms.Padding(1, 2, 1, 2);
+            this.txtCategoryDescription.MaxLength = 300;
             this.txtCategoryDescription.Multiline = true;
             this.txtCategoryDescription.Name = "txtCategoryDescription";
             this.txtCategoryDescription.Size = new System.Drawing.Size(164, 68);
@@ -71,6 +72,7 @@
             // 
             this.txtCategoryName.Location = new System.Drawing.Point(115, 18);
             this.txtCategoryName.Margin = new System.Windows.Forms.Padding(1, 2, 1, 2);
+            this.txtCategoryName.MaxLength = 15;
             this.txtCategoryName.Name = "txtCategoryName";
             this.txtCategoryName.Size = new System.Drawing.Size(164, 20);
             this.txtCategoryName.TabIndex = 16;

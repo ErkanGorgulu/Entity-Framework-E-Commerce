@@ -56,12 +56,12 @@ namespace Northwind.WinUI.Forms.FormCategories
         private void cmbCategoryList_SelectionChangeCommitted(object sender, EventArgs e)
         {
             
-            foreach (var item in categories)
+            foreach (Category category in categories)
             {
-                if (item.CategoryID == Convert.ToInt32(cmbCategoryList.SelectedValue))
+                if (category.CategoryID == Convert.ToInt32(cmbCategoryList.SelectedValue))
                 {
-                    txtCategoryName.Text = item.CategoryName;
-                    txtCategoryDescription.Text = item.Description;
+                    txtCategoryName.Text = category.CategoryName;
+                    txtCategoryDescription.Text = category.Description;
                 }
             }
         }

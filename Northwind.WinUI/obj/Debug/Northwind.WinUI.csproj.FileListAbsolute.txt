@@ -52,7 +52,6 @@ C:\Users\erkan\Desktop\Northwind E-Commerce\Northwind.WinUI\bin\Debug\Northwind.
 C:\Users\erkan\Desktop\Northwind E-Commerce\Northwind.WinUI\bin\Debug\Northwind.DAL.pdb
 C:\Users\erkan\Desktop\Northwind E-Commerce\Northwind.WinUI\obj\Debug\Northwind.WinUI.csprojAssemblyReference.cache
 C:\Users\erkan\Desktop\Northwind E-Commerce\Northwind.WinUI\obj\Debug\Northwind.WinUI.Forms.FormsProducts.FormAddProduct.resources
-C:\Users\erkan\Desktop\Northwind E-Commerce\Northwind.WinUI\obj\Debug\Northwind.WinUI.Forms.FormListProducts.resources
 C:\Users\erkan\Desktop\Northwind E-Commerce\Northwind.WinUI\obj\Debug\Northwind.WinUI.Forms.MainForm.resources
 C:\Users\erkan\Desktop\Northwind E-Commerce\Northwind.WinUI\obj\Debug\Northwind.WinUI.Properties.Resources.resources
 C:\Users\erkan\Desktop\Northwind E-Commerce\Northwind.WinUI\obj\Debug\Northwind.WinUI.csproj.GenerateResource.cache

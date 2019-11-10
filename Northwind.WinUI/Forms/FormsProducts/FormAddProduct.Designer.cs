@@ -71,20 +71,23 @@
             // txtUnitsInStock
             // 
             this.txtUnitsInStock.Location = new System.Drawing.Point(117, 153);
+            this.txtUnitsInStock.MaxLength = 5;
             this.txtUnitsInStock.Name = "txtUnitsInStock";
             this.txtUnitsInStock.Size = new System.Drawing.Size(170, 20);
             this.txtUnitsInStock.TabIndex = 22;
             // 
             // txtReorderLevel
             // 
-            this.txtReorderLevel.Location = new System.Drawing.Point(390, 152);
+            this.txtReorderLevel.Location = new System.Drawing.Point(400, 152);
+            this.txtReorderLevel.MaxLength = 5;
             this.txtReorderLevel.Name = "txtReorderLevel";
             this.txtReorderLevel.Size = new System.Drawing.Size(170, 20);
             this.txtReorderLevel.TabIndex = 21;
             // 
             // txtUnitsOnOrder
             // 
-            this.txtUnitsOnOrder.Location = new System.Drawing.Point(390, 126);
+            this.txtUnitsOnOrder.Location = new System.Drawing.Point(400, 126);
+            this.txtUnitsOnOrder.MaxLength = 5;
             this.txtUnitsOnOrder.Name = "txtUnitsOnOrder";
             this.txtUnitsOnOrder.Size = new System.Drawing.Size(170, 20);
             this.txtUnitsOnOrder.TabIndex = 20;
@@ -92,20 +95,23 @@
             // txtUnitPrice
             // 
             this.txtUnitPrice.Location = new System.Drawing.Point(117, 127);
+            this.txtUnitPrice.MaxLength = 13;
             this.txtUnitPrice.Name = "txtUnitPrice";
             this.txtUnitPrice.Size = new System.Drawing.Size(170, 20);
             this.txtUnitPrice.TabIndex = 19;
             // 
             // cmbCategories
             // 
+            this.cmbCategories.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbCategories.FormattingEnabled = true;
-            this.cmbCategories.Location = new System.Drawing.Point(390, 48);
+            this.cmbCategories.Location = new System.Drawing.Point(400, 48);
             this.cmbCategories.Name = "cmbCategories";
             this.cmbCategories.Size = new System.Drawing.Size(170, 21);
             this.cmbCategories.TabIndex = 17;
             // 
             // cmbSuppliers
             // 
+            this.cmbSuppliers.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbSuppliers.FormattingEnabled = true;
             this.cmbSuppliers.Location = new System.Drawing.Point(118, 51);
             this.cmbSuppliers.Name = "cmbSuppliers";
@@ -114,7 +120,7 @@
             // 
             // txtQuantityPerUnit
             // 
-            this.txtQuantityPerUnit.Location = new System.Drawing.Point(390, 23);
+            this.txtQuantityPerUnit.Location = new System.Drawing.Point(400, 23);
             this.txtQuantityPerUnit.MaxLength = 20;
             this.txtQuantityPerUnit.Name = "txtQuantityPerUnit";
             this.txtQuantityPerUnit.Size = new System.Drawing.Size(170, 20);
@@ -140,7 +146,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(293, 51);
+            this.label1.Location = new System.Drawing.Point(303, 51);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(58, 13);
             this.label1.TabIndex = 12;
@@ -149,7 +155,7 @@
             // lblUnitsInStock
             // 
             this.lblUnitsInStock.AutoSize = true;
-            this.lblUnitsInStock.Location = new System.Drawing.Point(35, 155);
+            this.lblUnitsInStock.Location = new System.Drawing.Point(28, 155);
             this.lblUnitsInStock.Name = "lblUnitsInStock";
             this.lblUnitsInStock.Size = new System.Drawing.Size(80, 13);
             this.lblUnitsInStock.TabIndex = 11;
@@ -158,7 +164,7 @@
             // lblReorderLevel
             // 
             this.lblReorderLevel.AutoSize = true;
-            this.lblReorderLevel.Location = new System.Drawing.Point(301, 154);
+            this.lblReorderLevel.Location = new System.Drawing.Point(303, 155);
             this.lblReorderLevel.Name = "lblReorderLevel";
             this.lblReorderLevel.Size = new System.Drawing.Size(77, 13);
             this.lblReorderLevel.TabIndex = 10;
@@ -167,7 +173,7 @@
             // lblUnitsOnOrder
             // 
             this.lblUnitsOnOrder.AutoSize = true;
-            this.lblUnitsOnOrder.Location = new System.Drawing.Point(301, 126);
+            this.lblUnitsOnOrder.Location = new System.Drawing.Point(303, 130);
             this.lblUnitsOnOrder.Name = "lblUnitsOnOrder";
             this.lblUnitsOnOrder.Size = new System.Drawing.Size(83, 13);
             this.lblUnitsOnOrder.TabIndex = 9;
@@ -176,7 +182,7 @@
             // lblUnitPrice
             // 
             this.lblUnitPrice.AutoSize = true;
-            this.lblUnitPrice.Location = new System.Drawing.Point(35, 130);
+            this.lblUnitPrice.Location = new System.Drawing.Point(28, 130);
             this.lblUnitPrice.Name = "lblUnitPrice";
             this.lblUnitPrice.Size = new System.Drawing.Size(62, 13);
             this.lblUnitPrice.TabIndex = 8;
@@ -185,7 +191,7 @@
             // lblQuantityPerUnit
             // 
             this.lblQuantityPerUnit.AutoSize = true;
-            this.lblQuantityPerUnit.Location = new System.Drawing.Point(293, 26);
+            this.lblQuantityPerUnit.Location = new System.Drawing.Point(303, 26);
             this.lblQuantityPerUnit.Name = "lblQuantityPerUnit";
             this.lblQuantityPerUnit.Size = new System.Drawing.Size(96, 13);
             this.lblQuantityPerUnit.TabIndex = 14;

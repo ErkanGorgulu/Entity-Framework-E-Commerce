@@ -1,6 +1,7 @@
 ﻿using Northwind.BLL;
 using Northwind.DAL;
 using Northwind.Entities;
+using Northwind.Helpers;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -21,67 +22,86 @@ namespace Northwind.WinUI.Forms.FormsProducts
             InitializeComponent();
         }
         ProductController productController = new ProductController();
-        SqlConnection sqlConnection = new SqlConnection(Helpers.ConnectionTools.ConnectionString);
+        CategoryController categoryController = new CategoryController();
+        SupplierController supplierController = new SupplierController();
+        //SqlConnection sqlConnection = new SqlConnection(Helpers.ConnectionTools.ConnectionString);
         private void FormAddProduct_Load(object sender, EventArgs e)
         {
-            #region fill category combobox
-
-            CategoryController categoryController = new CategoryController();
+            //fetch category list            
             List<Category> categories = categoryController.GetCategories();
             cmbCategories.DataSource = categories;
-            cmbCategories.ValueMember = "CategoryId";
+            cmbCategories.ValueMember = "CategoryID";
             cmbCategories.DisplayMember = "CategoryName";
-            #endregion
-
-            #region fill suppliers combobox
-
-            string sqlQuery = "SELECT * FROM Suppliers";
-            SqlCommand sqlCommand = new SqlCommand(sqlQuery, sqlConnection);
-            if (sqlConnection.State == ConnectionState.Closed)
-            {
-                sqlConnection.Open();
-            }
-            List<Suppliers> suppliersList = new List<Suppliers>();
-            SqlDataReader sqlData = sqlCommand.ExecuteReader();
-            if (sqlData.HasRows)
-            {
-                while (sqlData.Read())
-                {
-                    Suppliers suppliers = new Suppliers
-                    {
-                        SupplierId = Convert.ToInt32(sqlData["SupplierId"]),
-                        CompanyName = sqlData["CompanyName"].ToString()
-                    };
-                    suppliersList.Add(suppliers);
-                }
-            }
+            //fetch supplier list
+            List<Supplier> suppliersList = supplierController.GetSuppliers();
             cmbSuppliers.DataSource = suppliersList;
-            cmbSuppliers.ValueMember = "SupplierId";
+            cmbSuppliers.ValueMember = "SupplierID";
             cmbSuppliers.DisplayMember = "CompanyName";
-            sqlConnection.Close();
+
+            #region ADO.NET option for supplier list
+
+            //string sqlQuery = "SELECT * FROM Suppliers";
+            //SqlCommand sqlCommand = new SqlCommand(sqlQuery, sqlConnection);
+            //if (sqlConnection.State == ConnectionState.Closed)
+            //{
+            //    sqlConnection.Open();
+            //}
+            //List<Suppliers> suppliersList = new List<Suppliers>();
+            //SqlDataReader sqlData = sqlCommand.ExecuteReader();
+            //if (sqlData.HasRows)
+            //{
+            //    while (sqlData.Read())
+            //    {
+            //        Suppliers suppliers = new Suppliers
+            //        {
+            //            SupplierId = Convert.ToInt32(sqlData["SupplierId"]),
+            //            CompanyName = sqlData["CompanyName"].ToString()
+            //        };
+            //        suppliersList.Add(suppliers);
+            //    }
+            //}
+            //cmbSuppliers.DataSource = suppliersList;
+            //cmbSuppliers.ValueMember = "SupplierId";
+            //cmbSuppliers.DisplayMember = "CompanyName";
+            //sqlConnection.Close();
             #endregion
 
         }
         private void BtnAddProduct_Click(object sender, EventArgs e)
-        {
-            Product products = new Product
+        {            
+            try
             {
-
-                ProductName = txtProductName.Text,
-                SupplierID = Convert.ToInt32(cmbSuppliers.SelectedValue),
-                CategoryID = Convert.ToInt32(cmbCategories.SelectedValue),
-                QuantityPerUnit = txtQuantityPerUnit.Text,
-                UnitPrice = Convert.ToDecimal(txtUnitPrice.Text),
-                UnitsInStock = Convert.ToInt16(txtUnitsInStock.Text),
-                UnitsOnOrder = Convert.ToInt16(txtUnitsOnOrder.Text),
-                ReorderLevel = Convert.ToInt16(txtReorderLevel.Text),
-                Discontinued = chckDiscontinued.Checked
-            };
-            bool isAdded = productController.AddProduct(products);
-            if (isAdded)
-            {
-                MessageBox.Show("Eklendi");
+                decimal tempDecimal = 0;
+                tempDecimal = Convert.ToDecimal(txtUnitPrice.Text);
+                Int16 tempShort = 0;
+                tempShort = Convert.ToInt16(txtUnitsInStock.Text);
+                tempShort = Convert.ToInt16(txtUnitsOnOrder.Text);
+                tempShort = Convert.ToInt16(txtReorderLevel.Text);
+                Product product = new Product
+                {
+                    ProductName = txtProductName.Text,
+                    SupplierID = Convert.ToInt32(cmbSuppliers.SelectedValue),
+                    CategoryID = Convert.ToInt32(cmbCategories.SelectedValue),
+                    QuantityPerUnit = txtQuantityPerUnit.Text,
+                    UnitPrice = Convert.ToDecimal(txtUnitPrice.Text),
+                    UnitsInStock = Convert.ToInt16(txtUnitsInStock.Text),
+                    UnitsOnOrder = Convert.ToInt16(txtUnitsOnOrder.Text),
+                    ReorderLevel = Convert.ToInt16(txtReorderLevel.Text),
+                    Discontinued = chckDiscontinued.Checked
+                };
+                ReturnMessage message = productController.AddProduct(product);
+                MessageBox.Show(message.Value);
+                foreach (Control control in Controls)
+                {
+                    if (control is TextBox)
+                        control.Text = string.Empty;
+                }
             }
+            catch (Exception)
+            {
+                MessageBox.Show("Invalid numbers for Unit Price, Units In Stock, Units On Order, Reorder Level.");
+            }         
+            
         }
 
 

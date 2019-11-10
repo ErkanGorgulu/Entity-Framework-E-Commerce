@@ -171,6 +171,7 @@
     <Compile Include="Supplier.cs">
       <DependentUpon>NorthwindDatabase.tt</DependentUpon>
     </Compile>
+    <Compile Include="SupplierManagement.cs" />
     <Compile Include="sysdiagram.cs">
       <DependentUpon>NorthwindDatabase.tt</DependentUpon>
     </Compile>

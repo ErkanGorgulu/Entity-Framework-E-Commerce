@@ -24,18 +24,25 @@ namespace Northwind.BLL
                 message.Value = InvalidCategoryNameMessage();
                 return message;
             }
-            else {
+            bool isCategoryContained = categoryManagement.IsCategoryContained(category);
+            if (!isCategoryContained)
+            {
                 bool isAdded = categoryManagement.AddCategory(category);
-                if (isAdded) {
-                message.Value = $"{category.CategoryName} is successfully added.";
-                    return message;
+                if (isAdded)
+                {
+                    message.Value = $"{category.CategoryName} is successfully added.";
                 }
                 else
                 {
                     message.Value = DatabaseErrorMessage();
-                    return message;
-                }  
-            }          
+                }
+                return message;
+            }
+            else
+            {
+                message.Value = AlreadyExists();
+                return message;
+            }         
         }
         public ReturnMessage UpdateCategory(Category category)
         {
@@ -92,6 +99,10 @@ namespace Northwind.BLL
         string InvalidCategoryNameMessage()
         {
             return "Category name cannot have more than 15 characters or be empty.";
+        }
+        private string AlreadyExists()
+        {
+            return "Category already exists.";
         }
     }
 }
