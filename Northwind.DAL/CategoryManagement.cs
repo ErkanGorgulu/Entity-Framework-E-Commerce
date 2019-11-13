@@ -142,6 +142,8 @@ namespace Northwind.DAL
                 return true;
             else
                 return false;
+            #region ADO.NET option
+
             //string sqlQuery = "EXEC SP_DeleteCategory @categoryid";
             //SqlCommand sqlCommand = new SqlCommand(sqlQuery, sqlConnection);
             //sqlCommand.CommandText = "SP_DeleteCategory";
@@ -154,6 +156,8 @@ namespace Northwind.DAL
             //bool isDeleted = sqlCommand.ExecuteNonQuery() > 0 ? true : false;
             //sqlConnection.Close();
             //return isDeleted;
+            #endregion
+
         }
         public bool IsCategoryContained(Category category)
         {

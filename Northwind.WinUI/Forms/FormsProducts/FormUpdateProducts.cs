@@ -22,6 +22,7 @@ namespace Northwind.WinUI.Forms.FormsProducts
         }
         ProductController productController = new ProductController();
         CategoryController categoryController = new CategoryController();
+        SupplierController supplierController = new SupplierController();
         SqlConnection sqlConnection = new SqlConnection(Helpers.ConnectionTools.ConnectionString);
         List<Product> productList = new List<Product>();
 
@@ -42,32 +43,34 @@ namespace Northwind.WinUI.Forms.FormsProducts
 
             #region Fill Supplier List
 
-            string sqlQuery = "SELECT * FROM Suppliers";
-            SqlCommand sqlCommand = new SqlCommand(sqlQuery, sqlConnection);
-            if (sqlConnection.State == ConnectionState.Closed)
-            {
-                sqlConnection.Open();
-            }
-            List<Suppliers> suppliersList = new List<Suppliers>();
-            SqlDataReader sqlData = sqlCommand.ExecuteReader();
-            if (sqlData.HasRows)
-            {
-                while (sqlData.Read())
-                {
-                    Suppliers suppliers = new Suppliers
-                    {
-                        SupplierId = Convert.ToInt32(sqlData["SupplierId"]),
-                        CompanyName = sqlData["CompanyName"].ToString()
-                    };
-                    suppliersList.Add(suppliers);
-                }
-            }
-            cmbSuppliers.DataSource = suppliersList;
+            //string sqlQuery = "SELECT * FROM Suppliers";
+            //SqlCommand sqlCommand = new SqlCommand(sqlQuery, sqlConnection);
+            //if (sqlConnection.State == ConnectionState.Closed)
+            //{
+            //    sqlConnection.Open();
+            //}
+            //List<Suppliers> suppliersList = new List<Suppliers>();
+            //SqlDataReader sqlData = sqlCommand.ExecuteReader();
+            //if (sqlData.HasRows)
+            //{
+            //    while (sqlData.Read())
+            //    {
+            //        Suppliers suppliers = new Suppliers
+            //        {
+            //            SupplierId = Convert.ToInt32(sqlData["SupplierId"]),
+            //            CompanyName = sqlData["CompanyName"].ToString()
+            //        };
+            //        suppliersList.Add(suppliers);
+            //    }
+            //}
+            //cmbSuppliers.DataSource = suppliersList;
+            //cmbSuppliers.ValueMember = "SupplierId";
+            //cmbSuppliers.DisplayMember = "CompanyName";
+            //sqlConnection.Close();
+            #endregion
+            cmbSuppliers.DataSource = supplierController.GetSuppliers();
             cmbSuppliers.ValueMember = "SupplierId";
             cmbSuppliers.DisplayMember = "CompanyName";
-            sqlConnection.Close();
-            #endregion
-
         }
 
         private void FillProductList()
@@ -156,6 +159,30 @@ namespace Northwind.WinUI.Forms.FormsProducts
                 MessageBox.Show("Successfully Deleted");
                 FillProductList();
                 DisableControls();
+            }
+        }
+        //occurs when a product is selected from the ComboBox
+        private void CmbProductsList_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            List<Product> productList = productController.GetProducts();
+            //find the selected product
+            foreach (var item in productList)
+            {
+                if (Convert.ToInt32(cmbProductsList.SelectedValue) == item.ProductID)
+                {
+                    cmbSuppliers.SelectedValue = item.SupplierID;
+                    cmbCategories.SelectedValue = item.CategoryID;
+                    txtQuantityOfUnit.Text = item.QuantityPerUnit;
+                    txtUnitPrice.Text = item.UnitPrice.ToString();
+                    txtUnitsInStock.Text = item.UnitsInStock.ToString();
+                    txtUnitsOnOrder.Text = item.UnitsOnOrder.ToString();
+                    txtReorderLevel.Text = item.ReorderLevel.ToString();
+                    if (item.Discontinued)
+                        chckDiscontinued.Checked = true;
+
+                    //enabling all controls to permit the user to update
+                    EnableControls();
+                }
             }
         }
     }

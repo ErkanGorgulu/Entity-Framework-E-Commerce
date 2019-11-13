@@ -53,11 +53,13 @@
             // 
             // cmbProductsList
             // 
+            this.cmbProductsList.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbProductsList.FormattingEnabled = true;
             this.cmbProductsList.Location = new System.Drawing.Point(96, 44);
             this.cmbProductsList.Name = "cmbProductsList";
             this.cmbProductsList.Size = new System.Drawing.Size(240, 21);
             this.cmbProductsList.TabIndex = 0;
+            this.cmbProductsList.SelectionChangeCommitted += new System.EventHandler(this.CmbProductsList_SelectionChangeCommitted);
             // 
             // lblProducts
             // 
@@ -88,6 +90,7 @@
             // 
             // cmbSuppliers
             // 
+            this.cmbSuppliers.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbSuppliers.Enabled = false;
             this.cmbSuppliers.FormattingEnabled = true;
             this.cmbSuppliers.Location = new System.Drawing.Point(96, 93);
@@ -97,6 +100,7 @@
             // 
             // cmbCategories
             // 
+            this.cmbCategories.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbCategories.Enabled = false;
             this.cmbCategories.FormattingEnabled = true;
             this.cmbCategories.Location = new System.Drawing.Point(96, 137);
