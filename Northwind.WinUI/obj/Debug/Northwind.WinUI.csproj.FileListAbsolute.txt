@@ -73,3 +73,38 @@ C:\Users\erkan\Desktop\Northwind E-Commerce\Northwind.WinUI\bin\Debug\Northwind.
 C:\Users\erkan\Desktop\Northwind E-Commerce\Northwind.WinUI\bin\Debug\EntityFramework.xml
 C:\Users\erkan\Desktop\Northwind E-Commerce\Northwind.WinUI\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\erkan\Desktop\Northwind E-Commerce\Northwind.WinUI\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\erkan.gorgulu\Desktop\N-Tier\Northwind.WinUI\bin\Debug\Northwind.WinUI.exe.config
+C:\Users\erkan.gorgulu\Desktop\N-Tier\Northwind.WinUI\bin\Debug\Northwind.WinUI.exe
+C:\Users\erkan.gorgulu\Desktop\N-Tier\Northwind.WinUI\bin\Debug\Northwind.WinUI.pdb
+C:\Users\erkan.gorgulu\Desktop\N-Tier\Northwind.WinUI\bin\Debug\EntityFramework.dll
+C:\Users\erkan.gorgulu\Desktop\N-Tier\Northwind.WinUI\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\erkan.gorgulu\Desktop\N-Tier\Northwind.WinUI\bin\Debug\Northwind.BLL.dll
+C:\Users\erkan.gorgulu\Desktop\N-Tier\Northwind.WinUI\bin\Debug\Northwind.DAL.dll
+C:\Users\erkan.gorgulu\Desktop\N-Tier\Northwind.WinUI\bin\Debug\Northwind.Entities.dll
+C:\Users\erkan.gorgulu\Desktop\N-Tier\Northwind.WinUI\bin\Debug\Northwind.Helpers.dll
+C:\Users\erkan.gorgulu\Desktop\N-Tier\Northwind.WinUI\bin\Debug\Northwind.BLL.pdb
+C:\Users\erkan.gorgulu\Desktop\N-Tier\Northwind.WinUI\bin\Debug\Northwind.DAL.pdb
+C:\Users\erkan.gorgulu\Desktop\N-Tier\Northwind.WinUI\bin\Debug\Northwind.DAL.dll.config
+C:\Users\erkan.gorgulu\Desktop\N-Tier\Northwind.WinUI\bin\Debug\Northwind.Entities.pdb
+C:\Users\erkan.gorgulu\Desktop\N-Tier\Northwind.WinUI\bin\Debug\Northwind.Helpers.pdb
+C:\Users\erkan.gorgulu\Desktop\N-Tier\Northwind.WinUI\bin\Debug\Northwind.Helpers.dll.config
+C:\Users\erkan.gorgulu\Desktop\N-Tier\Northwind.WinUI\bin\Debug\EntityFramework.xml
+C:\Users\erkan.gorgulu\Desktop\N-Tier\Northwind.WinUI\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\erkan.gorgulu\Desktop\N-Tier\Northwind.WinUI\obj\Debug\Northwind.WinUI.csprojAssemblyReference.cache
+C:\Users\erkan.gorgulu\Desktop\N-Tier\Northwind.WinUI\obj\Debug\Northwind.WinUI.Forms.FormCategories.FormAddCategory.resources
+C:\Users\erkan.gorgulu\Desktop\N-Tier\Northwind.WinUI\obj\Debug\Northwind.WinUI.Forms.FormCategories.FormCategoryTable.resources
+C:\Users\erkan.gorgulu\Desktop\N-Tier\Northwind.WinUI\obj\Debug\Northwind.WinUI.Forms.FormCategories.FormUpdateCategory.resources
+C:\Users\erkan.gorgulu\Desktop\N-Tier\Northwind.WinUI\obj\Debug\Northwind.WinUI.Forms.FormEmployees.FormAddEmployee.resources
+C:\Users\erkan.gorgulu\Desktop\N-Tier\Northwind.WinUI\obj\Debug\Northwind.WinUI.Forms.FormEmployees.FormDeleteEmployee.resources
+C:\Users\erkan.gorgulu\Desktop\N-Tier\Northwind.WinUI\obj\Debug\Northwind.WinUI.Forms.FormEmployees.FormListEmployees.resources
+C:\Users\erkan.gorgulu\Desktop\N-Tier\Northwind.WinUI\obj\Debug\Northwind.WinUI.Forms.FormEmployees.FormUpdateEmployee.resources
+C:\Users\erkan.gorgulu\Desktop\N-Tier\Northwind.WinUI\obj\Debug\Northwind.WinUI.Forms.FormsProducts.FormAddProduct.resources
+C:\Users\erkan.gorgulu\Desktop\N-Tier\Northwind.WinUI\obj\Debug\Northwind.WinUI.Forms.FormsProducts.FormProductTable.resources
+C:\Users\erkan.gorgulu\Desktop\N-Tier\Northwind.WinUI\obj\Debug\Northwind.WinUI.Forms.FormsProducts.FormUpdateProducts.resources
+C:\Users\erkan.gorgulu\Desktop\N-Tier\Northwind.WinUI\obj\Debug\Northwind.WinUI.Forms.MainForm.resources
+C:\Users\erkan.gorgulu\Desktop\N-Tier\Northwind.WinUI\obj\Debug\Northwind.WinUI.Properties.Resources.resources
+C:\Users\erkan.gorgulu\Desktop\N-Tier\Northwind.WinUI\obj\Debug\Northwind.WinUI.csproj.GenerateResource.cache
+C:\Users\erkan.gorgulu\Desktop\N-Tier\Northwind.WinUI\obj\Debug\Northwind.WinUI.csproj.CoreCompileInputs.cache
+C:\Users\erkan.gorgulu\Desktop\N-Tier\Northwind.WinUI\obj\Debug\Northwind.WinUI.csproj.CopyComplete
+C:\Users\erkan.gorgulu\Desktop\N-Tier\Northwind.WinUI\obj\Debug\Northwind.WinUI.exe
+C:\Users\erkan.gorgulu\Desktop\N-Tier\Northwind.WinUI\obj\Debug\Northwind.WinUI.pdb

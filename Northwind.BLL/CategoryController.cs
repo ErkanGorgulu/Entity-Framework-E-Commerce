@@ -52,7 +52,8 @@ namespace Northwind.BLL
                 message.Value = InvalidCategoryNameMessage();
                 return message;
             }
-            else
+            bool isCategoryContained = categoryManagement.IsCategoryContained(category);
+            if(!isCategoryContained)
             {
                 bool isUpdated = categoryManagement.UpdateCategory(category);
                 if(isUpdated)
@@ -65,6 +66,11 @@ namespace Northwind.BLL
                     message.Value = DatabaseErrorMessage();
                     return message;
                 }
+            }
+            else
+            {
+                message.Value = AlreadyExists();
+                return message;
             }
         }
 

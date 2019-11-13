@@ -39,3 +39,20 @@ C:\Users\erkan\Desktop\Northwind E-Commerce\Northwind.BLL\bin\Debug\Northwind.He
 C:\Users\erkan\Desktop\Northwind E-Commerce\Northwind.BLL\bin\Debug\EntityFramework.dll
 C:\Users\erkan\Desktop\Northwind E-Commerce\Northwind.BLL\bin\Debug\Northwind.DAL.dll.config
 C:\Users\erkan\Desktop\Northwind E-Commerce\Northwind.BLL\bin\Debug\EntityFramework.xml
+C:\Users\erkan.gorgulu\Desktop\N-Tier\Northwind.BLL\bin\Debug\Northwind.BLL.dll
+C:\Users\erkan.gorgulu\Desktop\N-Tier\Northwind.BLL\bin\Debug\Northwind.BLL.pdb
+C:\Users\erkan.gorgulu\Desktop\N-Tier\Northwind.BLL\bin\Debug\Northwind.DAL.dll
+C:\Users\erkan.gorgulu\Desktop\N-Tier\Northwind.BLL\bin\Debug\Northwind.Entities.dll
+C:\Users\erkan.gorgulu\Desktop\N-Tier\Northwind.BLL\bin\Debug\Northwind.Helpers.dll
+C:\Users\erkan.gorgulu\Desktop\N-Tier\Northwind.BLL\bin\Debug\EntityFramework.dll
+C:\Users\erkan.gorgulu\Desktop\N-Tier\Northwind.BLL\bin\Debug\Northwind.DAL.pdb
+C:\Users\erkan.gorgulu\Desktop\N-Tier\Northwind.BLL\bin\Debug\Northwind.DAL.dll.config
+C:\Users\erkan.gorgulu\Desktop\N-Tier\Northwind.BLL\bin\Debug\Northwind.Entities.pdb
+C:\Users\erkan.gorgulu\Desktop\N-Tier\Northwind.BLL\bin\Debug\Northwind.Helpers.pdb
+C:\Users\erkan.gorgulu\Desktop\N-Tier\Northwind.BLL\bin\Debug\Northwind.Helpers.dll.config
+C:\Users\erkan.gorgulu\Desktop\N-Tier\Northwind.BLL\bin\Debug\EntityFramework.xml
+C:\Users\erkan.gorgulu\Desktop\N-Tier\Northwind.BLL\obj\Debug\Northwind.BLL.csprojAssemblyReference.cache
+C:\Users\erkan.gorgulu\Desktop\N-Tier\Northwind.BLL\obj\Debug\Northwind.BLL.csproj.CoreCompileInputs.cache
+C:\Users\erkan.gorgulu\Desktop\N-Tier\Northwind.BLL\obj\Debug\Northwind.BLL.csproj.CopyComplete
+C:\Users\erkan.gorgulu\Desktop\N-Tier\Northwind.BLL\obj\Debug\Northwind.BLL.dll
+C:\Users\erkan.gorgulu\Desktop\N-Tier\Northwind.BLL\obj\Debug\Northwind.BLL.pdb
