@@ -36,9 +36,6 @@
             this.addEmployeeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.updateEmployeeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deleteEmployeeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.suppliersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.customersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.shippersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ordersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.stripMainMenu.SuspendLayout();
             this.SuspendLayout();
@@ -50,9 +47,6 @@
             this.categoryToolStripMenuItem,
             this.productToolStripMenuItem,
             this.employeeToolStripMenuItem,
-            this.suppliersToolStripMenuItem,
-            this.customersToolStripMenuItem,
-            this.shippersToolStripMenuItem,
             this.ordersToolStripMenuItem});
             this.stripMainMenu.Location = new System.Drawing.Point(0, 0);
             this.stripMainMenu.Name = "stripMainMenu";
@@ -113,35 +107,18 @@
             this.deleteEmployeeToolStripMenuItem.Text = "Delete Employee";
             this.deleteEmployeeToolStripMenuItem.Click += new System.EventHandler(this.deleteEmployeeToolStripMenuItem_Click);
             // 
-            // suppliersToolStripMenuItem
-            // 
-            this.suppliersToolStripMenuItem.Name = "suppliersToolStripMenuItem";
-            this.suppliersToolStripMenuItem.Size = new System.Drawing.Size(67, 20);
-            this.suppliersToolStripMenuItem.Text = "Suppliers";
-            // 
-            // customersToolStripMenuItem
-            // 
-            this.customersToolStripMenuItem.Name = "customersToolStripMenuItem";
-            this.customersToolStripMenuItem.Size = new System.Drawing.Size(76, 20);
-            this.customersToolStripMenuItem.Text = "Customers";
-            // 
-            // shippersToolStripMenuItem
-            // 
-            this.shippersToolStripMenuItem.Name = "shippersToolStripMenuItem";
-            this.shippersToolStripMenuItem.Size = new System.Drawing.Size(64, 20);
-            this.shippersToolStripMenuItem.Text = "Shippers";
-            // 
             // ordersToolStripMenuItem
             // 
             this.ordersToolStripMenuItem.Name = "ordersToolStripMenuItem";
             this.ordersToolStripMenuItem.Size = new System.Drawing.Size(54, 20);
             this.ordersToolStripMenuItem.Text = "Orders";
+            this.ordersToolStripMenuItem.Click += new System.EventHandler(this.ordersToolStripMenuItem_Click);
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(984, 961);
+            this.ClientSize = new System.Drawing.Size(984, 749);
             this.Controls.Add(this.stripMainMenu);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.IsMdiContainer = true;
@@ -160,9 +137,6 @@
         private System.Windows.Forms.MenuStrip stripMainMenu;
         private System.Windows.Forms.ToolStripMenuItem categoryToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem employeeToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem suppliersToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem customersToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem shippersToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ordersToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem listEmployeesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem addEmployeeToolStripMenuItem;

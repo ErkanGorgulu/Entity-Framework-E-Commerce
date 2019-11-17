@@ -1,6 +1,7 @@
 ﻿using Northwind.BLL;
 using Northwind.DAL;
 using Northwind.Entities;
+using Northwind.Helpers;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -23,7 +24,7 @@ namespace Northwind.WinUI.Forms.FormsProducts
         ProductController productController = new ProductController();
         CategoryController categoryController = new CategoryController();
         SupplierController supplierController = new SupplierController();
-        SqlConnection sqlConnection = new SqlConnection(Helpers.ConnectionTools.ConnectionString);
+        //SqlConnection sqlConnection = new SqlConnection(Helpers.ConnectionTools.ConnectionString);
         List<Product> productList = new List<Product>();
 
         private void FormUpdateProducts_Load(object sender, EventArgs e)
@@ -41,7 +42,7 @@ namespace Northwind.WinUI.Forms.FormsProducts
             cmbCategories.DataSource = categoriesList;
             #endregion
 
-            #region Fill Supplier List
+            #region Fill Supplier List ADO.NET option
 
             //string sqlQuery = "SELECT * FROM Suppliers";
             //SqlCommand sqlCommand = new SqlCommand(sqlQuery, sqlConnection);
@@ -73,22 +74,77 @@ namespace Northwind.WinUI.Forms.FormsProducts
             cmbSuppliers.DisplayMember = "CompanyName";
         }
 
-        private void FillProductList()
+
+        private void btnUpdateProduct_Click(object sender, EventArgs e)
         {
-            cmbProductsList.DataSource = null;
-            productList = productController.GetProducts();
-            cmbProductsList.DataSource = productList;
-            cmbProductsList.DisplayMember = "ProductName";
-            cmbProductsList.ValueMember = "ProductId";            
+            decimal unitPrice;
+            short unitsInStock, unitsOnOrder, reorderLevel;
+            bool isUnitPriceValid = Decimal.TryParse(txtUnitPrice.Text, out unitPrice);
+            if (!isUnitPriceValid)
+                unitPrice = -1;
+            bool isUnitsInStockValid = short.TryParse(txtUnitsInStock.Text, out unitsInStock);
+            if (!isUnitsInStockValid)
+                unitsInStock = -1;
+            bool isUnitsOnOrderValid = short.TryParse(txtUnitsOnOrder.Text, out unitsOnOrder);
+            if (!isUnitsOnOrderValid)
+                unitsOnOrder = -1;
+            bool isReorderLevelValid = short.TryParse(txtReorderLevel.Text, out reorderLevel);
+            if (!isReorderLevelValid)
+                reorderLevel = -1;
+
+
+            Product product = productController.GetProductById(Convert.ToInt32(cmbProductsList.SelectedValue));
+
+            product.SupplierID = Convert.ToInt32(cmbSuppliers.SelectedValue);
+            product.CategoryID = Convert.ToInt32(cmbCategories.SelectedValue);
+            product.QuantityPerUnit = txtQuantityOfUnit.Text;
+            product.UnitPrice = unitPrice;
+            product.UnitsInStock = unitsInStock;
+            product.UnitsOnOrder = unitsOnOrder;
+            product.ReorderLevel = reorderLevel;
+            product.Discontinued = chckDiscontinued.Checked;
+            ReturnMessage isUpdated = productController.UpdateProduct(product);
+            MessageBox.Show(isUpdated.Value);
+            if (isUpdated.isSuccessful)
+            {
+                DisableControls();
+                //clear every textbox if updating is successful
+                ClearTextBoxes();
+            }
+            }
+
+        private void ClearTextBoxes()
+        {
+            foreach (Control control in Controls)
+            {
+                if (control is TextBox)
+                    control.Text = string.Empty;
+            }
         }
 
-        private void btnShowProductDetails_Click(object sender, EventArgs e)
+        private void btnDeleteProduct_Click(object sender, EventArgs e)
+        {
+            Product product = new Product();
+            product.ProductID = Convert.ToInt32(cmbProductsList.SelectedValue);
+            ReturnMessage isDeleted = productController.DeleteProduct(product);
+            
+            MessageBox.Show(isDeleted.Value);
+            if (isDeleted.isSuccessful)
+            {
+                ClearTextBoxes();
+                FillProductList();
+                DisableControls();
+            }
+            
+        }
+        //fetches product details when a product is selected from the ComboBox
+        private void CmbProductsList_SelectionChangeCommitted(object sender, EventArgs e)
         {
             List<Product> productList = productController.GetProducts();
             //find the selected product
             foreach (var item in productList)
             {
-                if(Convert.ToInt32(cmbProductsList.SelectedValue) == item.ProductID)
+                if (Convert.ToInt32(cmbProductsList.SelectedValue) == item.ProductID)
                 {
                     cmbSuppliers.SelectedValue = item.SupplierID;
                     cmbCategories.SelectedValue = item.CategoryID;
@@ -99,13 +155,22 @@ namespace Northwind.WinUI.Forms.FormsProducts
                     txtReorderLevel.Text = item.ReorderLevel.ToString();
                     if (item.Discontinued)
                         chckDiscontinued.Checked = true;
+                    else
+                        chckDiscontinued.Checked = false;                    
 
                     //enabling all controls to permit the user to update
                     EnableControls();
                 }
             }
-        }
-
+        }        
+        private void FillProductList()
+        {
+            cmbProductsList.DataSource = null;
+            productList = productController.GetProducts();
+            cmbProductsList.DataSource = productList;
+            cmbProductsList.DisplayMember = "ProductName";
+            cmbProductsList.ValueMember = "ProductId";            
+        }        
         private void EnableControls()
         {
             cmbSuppliers.Enabled = true;
@@ -129,61 +194,5 @@ namespace Northwind.WinUI.Forms.FormsProducts
             chckDiscontinued.Enabled = false;
         }
 
-        private void btnUpdateProduct_Click(object sender, EventArgs e)
-        {
-            productList = productController.GetProducts();
-            Product product = new Product();
-            product.ProductID = Convert.ToInt32(cmbProductsList.SelectedValue);
-            product.ProductName = cmbProductsList.GetItemText(cmbProductsList.SelectedItem);
-            product.SupplierID = Convert.ToInt32(cmbSuppliers.SelectedValue);
-            product.CategoryID = Convert.ToInt32(cmbCategories.SelectedValue);
-            product.QuantityPerUnit = txtQuantityOfUnit.Text;
-            product.UnitPrice = Convert.ToDecimal(txtUnitPrice.Text);
-            product.UnitsInStock = Convert.ToInt16(txtUnitsInStock.Text);
-            product.UnitsOnOrder = Convert.ToInt16(txtUnitsOnOrder.Text);
-            product.ReorderLevel = Convert.ToInt16(txtReorderLevel.Text);
-            product.Discontinued = chckDiscontinued.Checked;
-            bool isUpdated = productController.UpdateProduct(product);
-            if(isUpdated)
-            MessageBox.Show("Updated");
-            DisableControls();
-        }
-
-        private void btnDeleteProduct_Click(object sender, EventArgs e)
-        {
-            Product product = new Product();
-            product.ProductID = Convert.ToInt32(cmbProductsList.SelectedValue);
-            bool isDeleted = productController.DeleteProduct(product);
-            if (isDeleted)
-            {
-                MessageBox.Show("Successfully Deleted");
-                FillProductList();
-                DisableControls();
-            }
-        }
-        //occurs when a product is selected from the ComboBox
-        private void CmbProductsList_SelectionChangeCommitted(object sender, EventArgs e)
-        {
-            List<Product> productList = productController.GetProducts();
-            //find the selected product
-            foreach (var item in productList)
-            {
-                if (Convert.ToInt32(cmbProductsList.SelectedValue) == item.ProductID)
-                {
-                    cmbSuppliers.SelectedValue = item.SupplierID;
-                    cmbCategories.SelectedValue = item.CategoryID;
-                    txtQuantityOfUnit.Text = item.QuantityPerUnit;
-                    txtUnitPrice.Text = item.UnitPrice.ToString();
-                    txtUnitsInStock.Text = item.UnitsInStock.ToString();
-                    txtUnitsOnOrder.Text = item.UnitsOnOrder.ToString();
-                    txtReorderLevel.Text = item.ReorderLevel.ToString();
-                    if (item.Discontinued)
-                        chckDiscontinued.Checked = true;
-
-                    //enabling all controls to permit the user to update
-                    EnableControls();
-                }
-            }
-        }
     }
 }

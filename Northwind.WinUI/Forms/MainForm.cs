@@ -90,5 +90,10 @@ namespace Northwind.WinUI.Forms
             formCategoryTable.MdiParent = this;
             formCategoryTable.Show();
         }
+
+        private void ordersToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

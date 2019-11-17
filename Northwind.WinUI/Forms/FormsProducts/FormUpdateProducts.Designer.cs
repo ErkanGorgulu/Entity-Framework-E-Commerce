@@ -45,7 +45,6 @@
             this.lblReorderLevel = new System.Windows.Forms.Label();
             this.txtReorderLevel = new System.Windows.Forms.TextBox();
             this.chckDiscontinued = new System.Windows.Forms.CheckBox();
-            this.btnShowProductDetails = new System.Windows.Forms.Button();
             this.btnUpdateProduct = new System.Windows.Forms.Button();
             this.lblInfo = new System.Windows.Forms.Label();
             this.btnDeleteProduct = new System.Windows.Forms.Button();
@@ -204,16 +203,6 @@
             this.chckDiscontinued.Text = "Discontinued";
             this.chckDiscontinued.UseVisualStyleBackColor = true;
             // 
-            // btnShowProductDetails
-            // 
-            this.btnShowProductDetails.Location = new System.Drawing.Point(205, 208);
-            this.btnShowProductDetails.Name = "btnShowProductDetails";
-            this.btnShowProductDetails.Size = new System.Drawing.Size(131, 56);
-            this.btnShowProductDetails.TabIndex = 8;
-            this.btnShowProductDetails.Text = "Show Product Details";
-            this.btnShowProductDetails.UseVisualStyleBackColor = true;
-            this.btnShowProductDetails.Click += new System.EventHandler(this.btnShowProductDetails_Click);
-            // 
             // btnUpdateProduct
             // 
             this.btnUpdateProduct.Location = new System.Drawing.Point(572, 208);
@@ -251,7 +240,6 @@
             this.Controls.Add(this.lblInfo);
             this.Controls.Add(this.btnDeleteProduct);
             this.Controls.Add(this.btnUpdateProduct);
-            this.Controls.Add(this.btnShowProductDetails);
             this.Controls.Add(this.chckDiscontinued);
             this.Controls.Add(this.txtUnitsInStock);
             this.Controls.Add(this.txtUnitPrice);
@@ -296,7 +284,6 @@
         private System.Windows.Forms.Label lblReorderLevel;
         private System.Windows.Forms.TextBox txtReorderLevel;
         private System.Windows.Forms.CheckBox chckDiscontinued;
-        private System.Windows.Forms.Button btnShowProductDetails;
         private System.Windows.Forms.Button btnUpdateProduct;
         private System.Windows.Forms.Label lblInfo;
         private System.Windows.Forms.Button btnDeleteProduct;

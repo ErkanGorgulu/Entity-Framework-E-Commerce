@@ -70,20 +70,20 @@ namespace Northwind.WinUI.Forms.FormsProducts
         private void BtnAddProduct_Click(object sender, EventArgs e)
         {
             
-            decimal unitPrice = 0;
+            decimal unitPrice;
             short unitsInStock, unitsOnOrder, reorderLevel;
             bool isUnitPriceValid = Decimal.TryParse(txtUnitPrice.Text, out unitPrice);
             if (!isUnitPriceValid)
                 unitPrice = -1;
             bool isUnitsInStockValid = short.TryParse(txtUnitsInStock.Text, out unitsInStock);
             if (!isUnitsInStockValid)
-                unitPrice = -1;
+                unitsInStock = -1;
             bool isUnitsOnOrderValid = short.TryParse(txtUnitsOnOrder.Text, out unitsOnOrder);
             if (!isUnitsOnOrderValid)
-                unitPrice = -1;
+                unitsOnOrder = -1;
             bool isReorderLevelValid = short.TryParse(txtReorderLevel.Text, out reorderLevel);
             if (!isReorderLevelValid)
-                unitPrice = -1;
+                reorderLevel = -1;
             Product product = new Product
                 {
                     ProductName = txtProductName.Text,

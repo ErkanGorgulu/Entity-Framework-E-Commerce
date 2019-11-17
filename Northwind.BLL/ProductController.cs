@@ -14,7 +14,11 @@ namespace Northwind.BLL
               
         ProductManagement productManagement = new ProductManagement();
 
-        ReturnMessage message = new ReturnMessage();
+        ReturnMessage message = new ReturnMessage
+        {
+            isSuccessful = false,
+            Value = string.Empty
+        };
         public List<Product> GetProducts()
         {
             List<Product> products = productManagement.GetProducts();
@@ -99,16 +103,74 @@ namespace Northwind.BLL
             return "Something went wrong with database.";
         }
 
-        public bool UpdateProduct(Product products)
+        public ReturnMessage UpdateProduct(Product product)
         {
-            bool isUpdated = productManagement.UpdateProduct(products);
-            return isUpdated;
+            int quantityPerUnitMaxLength = 20;
+            if (product.QuantityPerUnit.Length > quantityPerUnitMaxLength
+                || string.IsNullOrWhiteSpace(product.QuantityPerUnit))
+            {
+                message.Value = ValueTooLongOrEmptyMessage(quantityPerUnitMaxLength, "Quantity Per Unit");
+                return message;
+            }
+            else if (product.UnitPrice < 0)
+            {
+                message.Value = InvalidNumber("Unit Price");
+                return message;
+            }
+            else if (product.UnitsInStock < 0)
+            {
+                message.Value = InvalidNumber("Units In Stock");
+                return message;
+            }
+            else if (product.UnitsOnOrder < 0)
+            {
+                message.Value = InvalidNumber("Units On Order");
+                return message;
+            }
+            else if (product.ReorderLevel < 0)
+            {
+                message.Value = InvalidNumber("Reorder Level");
+                return message;
+            }
+            else
+            {
+                bool isUpdated = productManagement.UpdateProduct(product);
+                if (isUpdated)
+                {
+                    message.Value = $"{product.ProductName} is successfully updated.";
+                    message.isSuccessful = true;
+                }
+                else
+                {
+                    message.Value = DatabaseErrorMessage();
+                    message.isSuccessful = false;
+                }
+                return message;
+            }            
+            
         }
 
-        public bool DeleteProduct(Product products)
+        public ReturnMessage DeleteProduct(Product product)
         {
-            bool isDeleted = productManagement.DeleteProduct(products);
-            return isDeleted;
+            ReturnMessage message = new ReturnMessage();
+            string productName = product.ProductName;
+            bool isDeleted = productManagement.DeleteProduct(product);
+            if (isDeleted)
+            {
+                message.Value = $"{productName} is successfully deleted.";
+                message.isSuccessful = true;
+                return message;
+            }
+            else
+            {
+                message.Value = DatabaseErrorMessage();
+                message.isSuccessful = false;
+                return message;
+            }
+        }
+        public Product GetProductById(int productId)
+        {
+            return productManagement.GetProductById(productId);
         }
     }
 }

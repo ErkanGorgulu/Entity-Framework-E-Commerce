@@ -134,10 +134,12 @@ namespace Northwind.DAL
         public bool DeleteCategory(Category category)
         {
             var deletedCategory = northwind.Set<Category>().Find(category.CategoryID);
-            if(deletedCategory != null)
+            if (deletedCategory != null)
             {
                 northwind.Set<Category>().Remove(deletedCategory);
             }
+            else
+                return false;
             int isDeleted = CategorySaveChanges();
             if (isDeleted > 0)
                 return true;

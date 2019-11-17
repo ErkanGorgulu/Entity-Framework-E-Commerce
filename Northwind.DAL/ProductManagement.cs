@@ -135,7 +135,11 @@ namespace Northwind.DAL
         //updateproduct
         public bool UpdateProduct(Product product)
         {
-            return false;
+            northwind.Entry<Product>(product).State = System.Data.Entity.EntityState.Modified;
+            int isUpdated = northwind.SaveChanges();
+            return isUpdated > 0 ? true : false;
+            #region ADO.NET option
+
             //string sqlQuery = "EXEC SP_UpdateProduct @productname, @supplierId, @categoryid, @quantityperunit, @unitprice, @unitsinstock, @unitsonorder, @reorderlevel, @discontinued, @productid";
             //SqlCommand sqlCommand = new SqlCommand(sqlQuery, sqlConnection);
             //sqlCommand.Parameters.AddWithValue("@productid", product.ProductID);
@@ -159,12 +163,27 @@ namespace Northwind.DAL
             //bool isUpdated = sqlCommand.ExecuteNonQuery() > 0 ? true : false;
 
             //return isUpdated;
+            #endregion
+
         }
 
         //deleteproduct
         public bool DeleteProduct(Product product)
         {
-            return false;
+            var deletedProduct = northwind.Set<Product>().FirstOrDefault(prod => prod.ProductID == product.ProductID);
+            if (deletedProduct != null)
+            {
+                northwind.Set<Product>().Remove(deletedProduct);
+            }
+            else
+                return false;
+
+            int isDeleted = northwind.SaveChanges();
+            
+            return isDeleted > 0 ? true : false;
+            
+            #region ADO.NET option
+
             //string sqlQuery = "EXEC SP_DeleteProduct @productid";
             //SqlCommand sqlCommand = new SqlCommand(sqlQuery, sqlConnection);
             //sqlCommand.CommandType = System.Data.CommandType.StoredProcedure;
@@ -177,6 +196,13 @@ namespace Northwind.DAL
             //bool isDeleted = sqlCommand.ExecuteNonQuery() > 0 ? true : false;
             //sqlConnection.Close();
             //return isDeleted;
+            #endregion
+
+        }
+
+        public Product GetProductById(int productId)
+        {
+            return northwind.Set<Product>().FirstOrDefault(prod => prod.ProductID == productId);
         }
         public bool IsProductContained(Product product)
         {
