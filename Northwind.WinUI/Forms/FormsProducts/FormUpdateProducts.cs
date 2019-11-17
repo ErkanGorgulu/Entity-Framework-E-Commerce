@@ -126,6 +126,7 @@ namespace Northwind.WinUI.Forms.FormsProducts
         {
             Product product = new Product();
             product.ProductID = Convert.ToInt32(cmbProductsList.SelectedValue);
+            product.ProductName = cmbProductsList.GetItemText(cmbProductsList.SelectedItem);
             ReturnMessage isDeleted = productController.DeleteProduct(product);
             
             MessageBox.Show(isDeleted.Value);
