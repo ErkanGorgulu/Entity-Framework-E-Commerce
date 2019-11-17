@@ -68,40 +68,44 @@ namespace Northwind.WinUI.Forms.FormsProducts
 
         }
         private void BtnAddProduct_Click(object sender, EventArgs e)
-        {            
-            try
-            {
-                decimal tempDecimal = 0;
-                tempDecimal = Convert.ToDecimal(txtUnitPrice.Text);
-                Int16 tempShort = 0;
-                tempShort = Convert.ToInt16(txtUnitsInStock.Text);
-                tempShort = Convert.ToInt16(txtUnitsOnOrder.Text);
-                tempShort = Convert.ToInt16(txtReorderLevel.Text);
-                Product product = new Product
+        {
+            
+            decimal unitPrice = 0;
+            short unitsInStock, unitsOnOrder, reorderLevel;
+            bool isUnitPriceValid = Decimal.TryParse(txtUnitPrice.Text, out unitPrice);
+            if (!isUnitPriceValid)
+                unitPrice = -1;
+            bool isUnitsInStockValid = short.TryParse(txtUnitsInStock.Text, out unitsInStock);
+            if (!isUnitsInStockValid)
+                unitPrice = -1;
+            bool isUnitsOnOrderValid = short.TryParse(txtUnitsOnOrder.Text, out unitsOnOrder);
+            if (!isUnitsOnOrderValid)
+                unitPrice = -1;
+            bool isReorderLevelValid = short.TryParse(txtReorderLevel.Text, out reorderLevel);
+            if (!isReorderLevelValid)
+                unitPrice = -1;
+            Product product = new Product
                 {
                     ProductName = txtProductName.Text,
                     SupplierID = Convert.ToInt32(cmbSuppliers.SelectedValue),
                     CategoryID = Convert.ToInt32(cmbCategories.SelectedValue),
                     QuantityPerUnit = txtQuantityPerUnit.Text,
-                    UnitPrice = Convert.ToDecimal(txtUnitPrice.Text),
-                    UnitsInStock = Convert.ToInt16(txtUnitsInStock.Text),
-                    UnitsOnOrder = Convert.ToInt16(txtUnitsOnOrder.Text),
-                    ReorderLevel = Convert.ToInt16(txtReorderLevel.Text),
+                    UnitPrice = unitPrice,
+                    UnitsInStock = unitsInStock,
+                    UnitsOnOrder = unitsOnOrder,
+                    ReorderLevel = reorderLevel,
                     Discontinued = chckDiscontinued.Checked
                 };
                 ReturnMessage message = productController.AddProduct(product);
                 MessageBox.Show(message.Value);
+            if (message.isSuccessful)
+            {
                 foreach (Control control in Controls)
                 {
                     if (control is TextBox)
                         control.Text = string.Empty;
                 }
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Invalid numbers for Unit Price, Units In Stock, Units On Order, Reorder Level.");
-            }         
-            
+            }   
         }
 
 

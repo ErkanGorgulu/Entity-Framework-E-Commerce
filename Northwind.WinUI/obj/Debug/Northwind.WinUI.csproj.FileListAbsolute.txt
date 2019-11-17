@@ -108,3 +108,37 @@ C:\Users\erkan.gorgulu\Desktop\N-Tier\Northwind.WinUI\obj\Debug\Northwind.WinUI.
 C:\Users\erkan.gorgulu\Desktop\N-Tier\Northwind.WinUI\obj\Debug\Northwind.WinUI.csproj.CopyComplete
 C:\Users\erkan.gorgulu\Desktop\N-Tier\Northwind.WinUI\obj\Debug\Northwind.WinUI.exe
 C:\Users\erkan.gorgulu\Desktop\N-Tier\Northwind.WinUI\obj\Debug\Northwind.WinUI.pdb
+C:\Users\erdig\Desktop\Northwind E-Commerce\Northwind.WinUI\bin\Debug\Northwind.WinUI.exe.config
+C:\Users\erdig\Desktop\Northwind E-Commerce\Northwind.WinUI\bin\Debug\Northwind.WinUI.exe
+C:\Users\erdig\Desktop\Northwind E-Commerce\Northwind.WinUI\bin\Debug\Northwind.WinUI.pdb
+C:\Users\erdig\Desktop\Northwind E-Commerce\Northwind.WinUI\bin\Debug\EntityFramework.dll
+C:\Users\erdig\Desktop\Northwind E-Commerce\Northwind.WinUI\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\erdig\Desktop\Northwind E-Commerce\Northwind.WinUI\bin\Debug\Northwind.BLL.dll
+C:\Users\erdig\Desktop\Northwind E-Commerce\Northwind.WinUI\bin\Debug\Northwind.DAL.dll
+C:\Users\erdig\Desktop\Northwind E-Commerce\Northwind.WinUI\bin\Debug\Northwind.Entities.dll
+C:\Users\erdig\Desktop\Northwind E-Commerce\Northwind.WinUI\bin\Debug\Northwind.Helpers.dll
+C:\Users\erdig\Desktop\Northwind E-Commerce\Northwind.WinUI\bin\Debug\Northwind.BLL.pdb
+C:\Users\erdig\Desktop\Northwind E-Commerce\Northwind.WinUI\bin\Debug\Northwind.DAL.pdb
+C:\Users\erdig\Desktop\Northwind E-Commerce\Northwind.WinUI\bin\Debug\Northwind.DAL.dll.config
+C:\Users\erdig\Desktop\Northwind E-Commerce\Northwind.WinUI\bin\Debug\Northwind.Entities.pdb
+C:\Users\erdig\Desktop\Northwind E-Commerce\Northwind.WinUI\bin\Debug\Northwind.Helpers.pdb
+C:\Users\erdig\Desktop\Northwind E-Commerce\Northwind.WinUI\bin\Debug\Northwind.Helpers.dll.config
+C:\Users\erdig\Desktop\Northwind E-Commerce\Northwind.WinUI\bin\Debug\EntityFramework.xml
+C:\Users\erdig\Desktop\Northwind E-Commerce\Northwind.WinUI\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\erdig\Desktop\Northwind E-Commerce\Northwind.WinUI\obj\Debug\Northwind.WinUI.csprojAssemblyReference.cache
+C:\Users\erdig\Desktop\Northwind E-Commerce\Northwind.WinUI\obj\Debug\Northwind.WinUI.Forms.FormCategories.FormAddCategory.resources
+C:\Users\erdig\Desktop\Northwind E-Commerce\Northwind.WinUI\obj\Debug\Northwind.WinUI.Forms.FormCategories.FormCategoryTable.resources
+C:\Users\erdig\Desktop\Northwind E-Commerce\Northwind.WinUI\obj\Debug\Northwind.WinUI.Forms.FormCategories.FormUpdateCategory.resources
+C:\Users\erdig\Desktop\Northwind E-Commerce\Northwind.WinUI\obj\Debug\Northwind.WinUI.Forms.FormEmployees.FormAddEmployee.resources
+C:\Users\erdig\Desktop\Northwind E-Commerce\Northwind.WinUI\obj\Debug\Northwind.WinUI.Forms.FormEmployees.FormDeleteEmployee.resources
+C:\Users\erdig\Desktop\Northwind E-Commerce\Northwind.WinUI\obj\Debug\Northwind.WinUI.Forms.FormEmployees.FormListEmployees.resources
+C:\Users\erdig\Desktop\Northwind E-Commerce\Northwind.WinUI\obj\Debug\Northwind.WinUI.Forms.FormEmployees.FormUpdateEmployee.resources
+C:\Users\erdig\Desktop\Northwind E-Commerce\Northwind.WinUI\obj\Debug\Northwind.WinUI.Forms.FormsProducts.FormAddProduct.resources
+C:\Users\erdig\Desktop\Northwind E-Commerce\Northwind.WinUI\obj\Debug\Northwind.WinUI.Forms.FormsProducts.FormProductTable.resources
+C:\Users\erdig\Desktop\Northwind E-Commerce\Northwind.WinUI\obj\Debug\Northwind.WinUI.Forms.FormsProducts.FormUpdateProducts.resources
+C:\Users\erdig\Desktop\Northwind E-Commerce\Northwind.WinUI\obj\Debug\Northwind.WinUI.Forms.MainForm.resources
+C:\Users\erdig\Desktop\Northwind E-Commerce\Northwind.WinUI\obj\Debug\Northwind.WinUI.Properties.Resources.resources
+C:\Users\erdig\Desktop\Northwind E-Commerce\Northwind.WinUI\obj\Debug\Northwind.WinUI.csproj.GenerateResource.cache
+C:\Users\erdig\Desktop\Northwind E-Commerce\Northwind.WinUI\obj\Debug\Northwind.WinUI.csproj.CopyComplete
+C:\Users\erdig\Desktop\Northwind E-Commerce\Northwind.WinUI\obj\Debug\Northwind.WinUI.exe
+C:\Users\erdig\Desktop\Northwind E-Commerce\Northwind.WinUI\obj\Debug\Northwind.WinUI.pdb

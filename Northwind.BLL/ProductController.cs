@@ -40,22 +40,22 @@ namespace Northwind.BLL
             }
             else if (product.UnitPrice < 0 )
             {
-                message.Value = ValuesSmallerThanZero("Unit Price");
+                message.Value = InvalidNumber("Unit Price");
                 return message;
             }
             else if (product.UnitsInStock < 0)
             {
-                message.Value = ValuesSmallerThanZero("Units In Stock");
+                message.Value = InvalidNumber("Units In Stock");
                 return message;
             }
             else if (product.UnitsOnOrder < 0)
             {
-                message.Value = ValuesSmallerThanZero("Units On Order");
+                message.Value = InvalidNumber("Units On Order");
                 return message;
             }
             else if (product.ReorderLevel < 0)
             {
-                message.Value = ValuesSmallerThanZero("Reorder Level");
+                message.Value = InvalidNumber("Reorder Level");
                 return message;
             }
             bool isProductContained = productManagement.IsProductContained(product);
@@ -65,6 +65,7 @@ namespace Northwind.BLL
                 if(isAdded)
                 {
                     message.Value = $"{product.ProductName} is successfully added.";
+                    message.isSuccessful = true;
                 }
                 else
                 {
@@ -83,9 +84,9 @@ namespace Northwind.BLL
         {
             return "Product already exists.";
         }
-        private string ValuesSmallerThanZero(string property)
+        private string InvalidNumber(string property)
         {
-            return $"{property} cannot be below 0";
+            return $"Invalid number for {property}";
         }
 
         private string ValueTooLongOrEmptyMessage(int length, string property)

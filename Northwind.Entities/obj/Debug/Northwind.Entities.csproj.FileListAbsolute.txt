@@ -14,3 +14,8 @@ C:\Users\erkan\Desktop\Northwind E-Commerce\Northwind.Entities\bin\Debug\Northwi
 C:\Users\erkan\Desktop\Northwind E-Commerce\Northwind.Entities\obj\Debug\Northwind.Entities.csprojAssemblyReference.cache
 C:\Users\erkan\Desktop\Northwind E-Commerce\Northwind.Entities\obj\Debug\Northwind.Entities.dll
 C:\Users\erkan\Desktop\Northwind E-Commerce\Northwind.Entities\obj\Debug\Northwind.Entities.pdb
+C:\Users\erdig\Desktop\Northwind E-Commerce\Northwind.Entities\bin\Debug\Northwind.Entities.dll
+C:\Users\erdig\Desktop\Northwind E-Commerce\Northwind.Entities\bin\Debug\Northwind.Entities.pdb
+C:\Users\erdig\Desktop\Northwind E-Commerce\Northwind.Entities\obj\Debug\Northwind.Entities.csprojAssemblyReference.cache
+C:\Users\erdig\Desktop\Northwind E-Commerce\Northwind.Entities\obj\Debug\Northwind.Entities.dll
+C:\Users\erdig\Desktop\Northwind E-Commerce\Northwind.Entities\obj\Debug\Northwind.Entities.pdb

@@ -9,5 +9,6 @@ namespace Northwind.Helpers
     public class ReturnMessage
     {
         public string Value { get; set; }
+        public bool isSuccessful { get; set; }
     }
 }

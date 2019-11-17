@@ -52,3 +52,19 @@ C:\Users\erkan.gorgulu\Desktop\N-Tier\Northwind.DAL\obj\Debug\Northwind.DAL.cspr
 C:\Users\erkan.gorgulu\Desktop\N-Tier\Northwind.DAL\obj\Debug\Northwind.DAL.csproj.CopyComplete
 C:\Users\erkan.gorgulu\Desktop\N-Tier\Northwind.DAL\obj\Debug\Northwind.DAL.dll
 C:\Users\erkan.gorgulu\Desktop\N-Tier\Northwind.DAL\obj\Debug\Northwind.DAL.pdb
+C:\Users\erdig\Desktop\Northwind E-Commerce\Northwind.DAL\bin\Debug\Northwind.DAL.dll.config
+C:\Users\erdig\Desktop\Northwind E-Commerce\Northwind.DAL\bin\Debug\Northwind.DAL.dll
+C:\Users\erdig\Desktop\Northwind E-Commerce\Northwind.DAL\bin\Debug\Northwind.DAL.pdb
+C:\Users\erdig\Desktop\Northwind E-Commerce\Northwind.DAL\bin\Debug\EntityFramework.dll
+C:\Users\erdig\Desktop\Northwind E-Commerce\Northwind.DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\erdig\Desktop\Northwind E-Commerce\Northwind.DAL\bin\Debug\Northwind.Entities.dll
+C:\Users\erdig\Desktop\Northwind E-Commerce\Northwind.DAL\bin\Debug\Northwind.Helpers.dll
+C:\Users\erdig\Desktop\Northwind E-Commerce\Northwind.DAL\bin\Debug\Northwind.Entities.pdb
+C:\Users\erdig\Desktop\Northwind E-Commerce\Northwind.DAL\bin\Debug\Northwind.Helpers.pdb
+C:\Users\erdig\Desktop\Northwind E-Commerce\Northwind.DAL\bin\Debug\Northwind.Helpers.dll.config
+C:\Users\erdig\Desktop\Northwind E-Commerce\Northwind.DAL\bin\Debug\EntityFramework.xml
+C:\Users\erdig\Desktop\Northwind E-Commerce\Northwind.DAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\erdig\Desktop\Northwind E-Commerce\Northwind.DAL\obj\Debug\Northwind.DAL.csprojAssemblyReference.cache
+C:\Users\erdig\Desktop\Northwind E-Commerce\Northwind.DAL\obj\Debug\Northwind.DAL.csproj.CopyComplete
+C:\Users\erdig\Desktop\Northwind E-Commerce\Northwind.DAL\obj\Debug\Northwind.DAL.dll
+C:\Users\erdig\Desktop\Northwind E-Commerce\Northwind.DAL\obj\Debug\Northwind.DAL.pdb
