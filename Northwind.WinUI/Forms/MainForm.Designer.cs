@@ -76,34 +76,34 @@
             this.updateEmployeeToolStripMenuItem,
             this.deleteEmployeeToolStripMenuItem});
             this.employeeToolStripMenuItem.Name = "employeeToolStripMenuItem";
-            this.employeeToolStripMenuItem.Size = new System.Drawing.Size(76, 20);
-            this.employeeToolStripMenuItem.Text = "Employees";
+            this.employeeToolStripMenuItem.Size = new System.Drawing.Size(155, 20);
+            this.employeeToolStripMenuItem.Text = "Employees(outdated,ado)";
             // 
             // listEmployeesToolStripMenuItem
             // 
             this.listEmployeesToolStripMenuItem.Name = "listEmployeesToolStripMenuItem";
-            this.listEmployeesToolStripMenuItem.Size = new System.Drawing.Size(167, 22);
+            this.listEmployeesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.listEmployeesToolStripMenuItem.Text = "List Employees";
             this.listEmployeesToolStripMenuItem.Click += new System.EventHandler(this.listEmployeesToolStripMenuItem_Click);
             // 
             // addEmployeeToolStripMenuItem
             // 
             this.addEmployeeToolStripMenuItem.Name = "addEmployeeToolStripMenuItem";
-            this.addEmployeeToolStripMenuItem.Size = new System.Drawing.Size(167, 22);
+            this.addEmployeeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.addEmployeeToolStripMenuItem.Text = "Add Employee";
             this.addEmployeeToolStripMenuItem.Click += new System.EventHandler(this.addEmployeeToolStripMenuItem_Click);
             // 
             // updateEmployeeToolStripMenuItem
             // 
             this.updateEmployeeToolStripMenuItem.Name = "updateEmployeeToolStripMenuItem";
-            this.updateEmployeeToolStripMenuItem.Size = new System.Drawing.Size(167, 22);
+            this.updateEmployeeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.updateEmployeeToolStripMenuItem.Text = "Update Employee";
             this.updateEmployeeToolStripMenuItem.Click += new System.EventHandler(this.updateEmployeeToolStripMenuItem_Click);
             // 
             // deleteEmployeeToolStripMenuItem
             // 
             this.deleteEmployeeToolStripMenuItem.Name = "deleteEmployeeToolStripMenuItem";
-            this.deleteEmployeeToolStripMenuItem.Size = new System.Drawing.Size(167, 22);
+            this.deleteEmployeeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.deleteEmployeeToolStripMenuItem.Text = "Delete Employee";
             this.deleteEmployeeToolStripMenuItem.Click += new System.EventHandler(this.deleteEmployeeToolStripMenuItem_Click);
             // 

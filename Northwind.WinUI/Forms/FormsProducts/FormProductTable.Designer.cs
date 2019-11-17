@@ -46,12 +46,12 @@
             this.dataGridProducts.ReadOnly = true;
             this.dataGridProducts.RowHeadersVisible = false;
             this.dataGridProducts.RowHeadersWidth = 100;
-            this.dataGridProducts.Size = new System.Drawing.Size(1132, 616);
+            this.dataGridProducts.Size = new System.Drawing.Size(1124, 616);
             this.dataGridProducts.TabIndex = 1;
             // 
             // btnAddProduct
             // 
-            this.btnAddProduct.Location = new System.Drawing.Point(817, 17);
+            this.btnAddProduct.Location = new System.Drawing.Point(809, 12);
             this.btnAddProduct.Name = "btnAddProduct";
             this.btnAddProduct.Size = new System.Drawing.Size(149, 46);
             this.btnAddProduct.TabIndex = 2;
@@ -61,7 +61,7 @@
             // 
             // btnUpdateOrDeleteProduct
             // 
-            this.btnUpdateOrDeleteProduct.Location = new System.Drawing.Point(995, 17);
+            this.btnUpdateOrDeleteProduct.Location = new System.Drawing.Point(987, 12);
             this.btnUpdateOrDeleteProduct.Name = "btnUpdateOrDeleteProduct";
             this.btnUpdateOrDeleteProduct.Size = new System.Drawing.Size(149, 46);
             this.btnUpdateOrDeleteProduct.TabIndex = 2;
@@ -73,12 +73,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1156, 710);
+            this.ClientSize = new System.Drawing.Size(1147, 710);
             this.Controls.Add(this.btnUpdateOrDeleteProduct);
             this.Controls.Add(this.btnAddProduct);
             this.Controls.Add(this.dataGridProducts);
             this.Name = "FormProductTable";
-            this.Text = "FormProductTable";
+            this.Text = "Products";
             this.Load += new System.EventHandler(this.FormProductTable_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridProducts)).EndInit();
             this.ResumeLayout(false);

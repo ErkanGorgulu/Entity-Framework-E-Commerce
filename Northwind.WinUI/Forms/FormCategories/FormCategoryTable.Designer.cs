@@ -89,7 +89,7 @@
             this.Controls.Add(this.btnAddNewCategory);
             this.Controls.Add(this.dataGridCategories);
             this.Name = "FormCategoryTable";
-            this.Text = "FormCategoryTable";
+            this.Text = "Categories";
             this.Load += new System.EventHandler(this.FormCategoryTable_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridCategories)).EndInit();
             this.ResumeLayout(false);

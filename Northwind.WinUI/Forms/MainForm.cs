@@ -1,5 +1,6 @@
 ﻿using Northwind.WinUI.Forms.FormCategories;
 using Northwind.WinUI.Forms.FormEmployees;
+using Northwind.WinUI.Forms.FormOrders;
 using Northwind.WinUI.Forms.FormsProducts;
 using System;
 using System.Collections.Generic;
@@ -90,10 +91,13 @@ namespace Northwind.WinUI.Forms
             formCategoryTable.MdiParent = this;
             formCategoryTable.Show();
         }
-
+        FormOrdersTable formOrdersTable = new FormOrdersTable();
         private void ordersToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            if (formOrdersTable.IsDisposed)
+                formOrdersTable = new FormOrdersTable();
+            formOrdersTable.MdiParent = this;
+            formOrdersTable.Show();
         }
     }
 }

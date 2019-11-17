@@ -95,6 +95,18 @@
     <Compile Include="Forms\FormEmployees\FormUpdateEmployee.Designer.cs">
       <DependentUpon>FormUpdateEmployee.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\FormOrders\FormOrdersTable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormOrders\FormOrdersTable.Designer.cs">
+      <DependentUpon>FormOrdersTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormOrders\FormPlaceOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormOrders\FormPlaceOrder.Designer.cs">
+      <DependentUpon>FormPlaceOrder.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FormsProducts\FormAddProduct.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -141,6 +153,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormEmployees\FormUpdateEmployee.resx">
       <DependentUpon>FormUpdateEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormOrders\FormOrdersTable.resx">
+      <DependentUpon>FormOrdersTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormOrders\FormPlaceOrder.resx">
+      <DependentUpon>FormPlaceOrder.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormsProducts\FormAddProduct.resx">
       <DependentUpon>FormAddProduct.cs</DependentUpon>
@@ -195,8 +213,6 @@
       <Name>Northwind.Helpers</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Forms\FormOrders\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

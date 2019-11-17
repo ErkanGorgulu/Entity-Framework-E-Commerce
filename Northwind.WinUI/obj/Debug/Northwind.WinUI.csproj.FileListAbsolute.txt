@@ -142,3 +142,5 @@ C:\Users\erdig\Desktop\Northwind E-Commerce\Northwind.WinUI\obj\Debug\Northwind.
 C:\Users\erdig\Desktop\Northwind E-Commerce\Northwind.WinUI\obj\Debug\Northwind.WinUI.csproj.CopyComplete
 C:\Users\erdig\Desktop\Northwind E-Commerce\Northwind.WinUI\obj\Debug\Northwind.WinUI.exe
 C:\Users\erdig\Desktop\Northwind E-Commerce\Northwind.WinUI\obj\Debug\Northwind.WinUI.pdb
+C:\Users\erkan\Desktop\Northwind E-Commerce\Northwind.WinUI\obj\Debug\Northwind.WinUI.Forms.FormOrders.FormOrdersTable.resources
+C:\Users\erkan\Desktop\Northwind E-Commerce\Northwind.WinUI\obj\Debug\Northwind.WinUI.Forms.FormOrders.FormPlaceOrder.resources

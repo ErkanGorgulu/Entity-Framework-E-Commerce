@@ -69,6 +69,7 @@
     <Compile Include="CustomerDemographic.cs">
       <DependentUpon>NorthwindDatabase.tt</DependentUpon>
     </Compile>
+    <Compile Include="CustomerManagement.cs" />
     <Compile Include="Customer_and_Suppliers_by_City.cs">
       <DependentUpon>NorthwindDatabase.tt</DependentUpon>
     </Compile>
@@ -109,6 +110,7 @@
     <Compile Include="Order.cs">
       <DependentUpon>NorthwindDatabase.tt</DependentUpon>
     </Compile>
+    <Compile Include="OrderManagement.cs" />
     <Compile Include="Orders_Qry.cs">
       <DependentUpon>NorthwindDatabase.tt</DependentUpon>
     </Compile>
