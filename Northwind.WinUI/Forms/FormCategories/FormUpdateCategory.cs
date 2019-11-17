@@ -30,9 +30,7 @@ namespace Northwind.WinUI.Forms.FormCategories
         
         private void btnUpdateCategory_Click(object sender, EventArgs e)
         {
-            Category category = new Category();
-            category.CategoryID = Convert.ToInt32(cmbCategoryList.SelectedValue);
-            category.CategoryName = txtCategoryName.Text;
+            Category category = categoryController.GetCategoryById(Convert.ToInt32(cmbCategoryList.SelectedValue));
             category.Description = txtCategoryDescription.Text;
             ReturnMessage message = categoryController.UpdateCategory(category);
             MessageBox.Show(message.Value);
@@ -60,7 +58,6 @@ namespace Northwind.WinUI.Forms.FormCategories
             {
                 if (category.CategoryID == Convert.ToInt32(cmbCategoryList.SelectedValue))
                 {
-                    txtCategoryName.Text = category.CategoryName;
                     txtCategoryDescription.Text = category.Description;
                 }
             }

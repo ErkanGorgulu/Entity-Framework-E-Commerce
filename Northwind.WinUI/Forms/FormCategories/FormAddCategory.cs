@@ -32,14 +32,17 @@ namespace Northwind.WinUI.Forms.FormCategories
             ReturnMessage message = categoryController.AddCategory(category);
 
             MessageBox.Show(message.Value);
-            foreach (Control control in grpControls.Controls)
+            if (message.isSuccessful)
+            {
+                foreach (Control control in grpControls.Controls)
                 {
-                    if(control is TextBox)
+                    if (control is TextBox)
                     {
                         TextBox textBox = control as TextBox;
                         textBox.Text = string.Empty;
                     }
                 }
+            }
             
         }
 

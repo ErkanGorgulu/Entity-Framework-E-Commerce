@@ -30,6 +30,7 @@ namespace Northwind.BLL
                 bool isAdded = categoryManagement.AddCategory(category);
                 if (isAdded)
                 {
+                    message.isSuccessful = true;
                     message.Value = $"{category.CategoryName} is successfully added.";
                 }
                 else
@@ -42,38 +43,24 @@ namespace Northwind.BLL
             {
                 message.Value = AlreadyExists();
                 return message;
-            }         
+            }
         }
-        public ReturnMessage UpdateCategory(Category category)
+        public ReturnMessage UpdateCategory(Category newCategory)
         {
             ReturnMessage message = new ReturnMessage();
-            if (isCategoryNameInvalid(category))
+            bool isUpdated = categoryManagement.UpdateCategory(newCategory);
+            if (isUpdated)
             {
-                message.Value = InvalidCategoryNameMessage();
+                message.Value = $"{newCategory.CategoryName} is successfully updated.";
+                message.isSuccessful = true;
                 return message;
-            }
-            bool isCategoryContained = categoryManagement.IsCategoryContained(category);
-            if(!isCategoryContained)
-            {
-                bool isUpdated = categoryManagement.UpdateCategory(category);
-                if(isUpdated)
-                {
-                    message.Value = $"{category.CategoryName} is successfully updated.";
-                    return message;
-                }
-                else
-                {
-                    message.Value = DatabaseErrorMessage();
-                    return message;
-                }
             }
             else
             {
-                message.Value = AlreadyExists();
+                message.Value = DatabaseErrorMessage();
                 return message;
             }
-        }
-
+        }     
         public ReturnMessage DeleteCategory(Category category)
         {
             ReturnMessage message = new ReturnMessage();
@@ -90,6 +77,11 @@ namespace Northwind.BLL
                 return message;
             }
             
+        }
+
+        public Category GetCategoryById(int categoryId)
+        {
+            return categoryManagement.GetCategoryById(categoryId);
         }
         bool isCategoryNameInvalid(Category category)
         {

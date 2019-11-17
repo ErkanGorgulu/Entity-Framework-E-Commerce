@@ -29,9 +29,7 @@
         private void InitializeComponent()
         {
             this.cmbCategoryList = new System.Windows.Forms.ComboBox();
-            this.lblCategoryName = new System.Windows.Forms.Label();
             this.lblCategoryDesc = new System.Windows.Forms.Label();
-            this.txtCategoryName = new System.Windows.Forms.TextBox();
             this.txtCategoryDescription = new System.Windows.Forms.TextBox();
             this.btnUpdateCategory = new System.Windows.Forms.Button();
             this.btnDeleteCategory = new System.Windows.Forms.Button();
@@ -49,15 +47,6 @@
             this.cmbCategoryList.TabIndex = 0;
             this.cmbCategoryList.SelectionChangeCommitted += new System.EventHandler(this.cmbCategoryList_SelectionChangeCommitted);
             // 
-            // lblCategoryName
-            // 
-            this.lblCategoryName.AutoSize = true;
-            this.lblCategoryName.Location = new System.Drawing.Point(15, 77);
-            this.lblCategoryName.Name = "lblCategoryName";
-            this.lblCategoryName.Size = new System.Drawing.Size(80, 13);
-            this.lblCategoryName.TabIndex = 2;
-            this.lblCategoryName.Text = "Category Name";
-            // 
             // lblCategoryDesc
             // 
             this.lblCategoryDesc.AutoSize = true;
@@ -66,13 +55,6 @@
             this.lblCategoryDesc.Size = new System.Drawing.Size(105, 13);
             this.lblCategoryDesc.TabIndex = 2;
             this.lblCategoryDesc.Text = "Category Description";
-            // 
-            // txtCategoryName
-            // 
-            this.txtCategoryName.Location = new System.Drawing.Point(141, 74);
-            this.txtCategoryName.Name = "txtCategoryName";
-            this.txtCategoryName.Size = new System.Drawing.Size(199, 20);
-            this.txtCategoryName.TabIndex = 3;
             // 
             // txtCategoryDescription
             // 
@@ -106,11 +88,9 @@
             // 
             this.grpCategoryUpdateOrDelete.Controls.Add(this.cmbCategoryList);
             this.grpCategoryUpdateOrDelete.Controls.Add(this.btnDeleteCategory);
-            this.grpCategoryUpdateOrDelete.Controls.Add(this.lblCategoryName);
             this.grpCategoryUpdateOrDelete.Controls.Add(this.btnUpdateCategory);
             this.grpCategoryUpdateOrDelete.Controls.Add(this.lblCategoryDesc);
             this.grpCategoryUpdateOrDelete.Controls.Add(this.txtCategoryDescription);
-            this.grpCategoryUpdateOrDelete.Controls.Add(this.txtCategoryName);
             this.grpCategoryUpdateOrDelete.Location = new System.Drawing.Point(12, 12);
             this.grpCategoryUpdateOrDelete.Name = "grpCategoryUpdateOrDelete";
             this.grpCategoryUpdateOrDelete.Size = new System.Drawing.Size(542, 217);
@@ -135,9 +115,7 @@
         #endregion
 
         private System.Windows.Forms.ComboBox cmbCategoryList;
-        private System.Windows.Forms.Label lblCategoryName;
         private System.Windows.Forms.Label lblCategoryDesc;
-        private System.Windows.Forms.TextBox txtCategoryName;
         private System.Windows.Forms.TextBox txtCategoryDescription;
         private System.Windows.Forms.Button btnUpdateCategory;
         private System.Windows.Forms.Button btnDeleteCategory;

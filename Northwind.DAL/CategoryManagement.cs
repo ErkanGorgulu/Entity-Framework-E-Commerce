@@ -12,14 +12,14 @@ namespace Northwind.DAL
     public class CategoryManagement
     {
         //SqlConnection sqlConnection = new SqlConnection();
-        SqlConnection sqlConnection;
+        //SqlConnection sqlConnection;
 
         public CategoryManagement()
         {
-            if (sqlConnection == null)
-            {
-                sqlConnection = new SqlConnection(ConnectionTools.ConnectionString);
-            }
+            //if (sqlConnection == null)
+            //{
+            //    sqlConnection = new SqlConnection(ConnectionTools.ConnectionString);
+            //}
 
             #region OTHER CONNECTIONS
 
@@ -101,11 +101,12 @@ namespace Northwind.DAL
 
         public bool UpdateCategory(Category category)
         {
-            var updatedCategory = northwind.Set<Category>().FirstOrDefault<Category>(x => x.CategoryID == category.CategoryID);
-            updatedCategory.CategoryName = category.CategoryName;
-            updatedCategory.Description = category.Description;
-            updatedCategory.Picture = category.Picture;
-            int isUpdated = northwind.SaveChanges();
+            //var updatedCategory = northwind.Set<Category>().FirstOrDefault<Category>(x => x.CategoryID == category.CategoryID);
+            //updatedCategory.CategoryName = category.CategoryName;
+            //updatedCategory.Description = category.Description;
+            //updatedCategory.Picture = category.Picture;
+            northwind.Entry<Category>(category).State = System.Data.Entity.EntityState.Modified;
+            int isUpdated = CategorySaveChanges();
             if (isUpdated > 0)
                 return true;
             else
@@ -137,7 +138,7 @@ namespace Northwind.DAL
             {
                 northwind.Set<Category>().Remove(deletedCategory);
             }
-            int isDeleted = northwind.SaveChanges();
+            int isDeleted = CategorySaveChanges();
             if (isDeleted > 0)
                 return true;
             else
@@ -168,5 +169,17 @@ namespace Northwind.DAL
                 return true;
         }
 
+        public Category GetCategoryById(int categoryId)
+        {
+            return northwind.Set<Category>().FirstOrDefault(cat => cat.CategoryID == categoryId);
+        }
+        public void ChangeCategoryValues(Category oldCategory, Category newCategory)
+        {
+            northwind.Entry<Category>(oldCategory).CurrentValues.SetValues(newCategory);
+        }
+        public int CategorySaveChanges()
+        {
+            return northwind.SaveChanges();
+        }
     }
 }
