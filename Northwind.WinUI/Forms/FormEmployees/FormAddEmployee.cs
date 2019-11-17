@@ -49,11 +49,11 @@ namespace Northwind.WinUI.Forms.FormEmployees
             employee.Notes = txtNotes.Text;
             employee.ReportsTo = Convert.ToInt32(cmbReportsToList.SelectedValue);
 
-            bool isAdded = employeeController.AddEmployee(employee);
-            if (isAdded)
-            {
-                MessageBox.Show("Successfully Added");
-            }
+            //bool isAdded = employeeController.AddEmployee(employee);
+            //if (isAdded)
+            //{
+            //    MessageBox.Show("Successfully Added");
+            //}
         }
     }
 }

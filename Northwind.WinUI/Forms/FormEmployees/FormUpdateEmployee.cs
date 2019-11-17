@@ -95,11 +95,11 @@ namespace Northwind.WinUI.Forms.FormEmployees
             employee.ReportsTo = Convert.ToInt32(cmbReportsToList.SelectedValue);
             employee.EmployeeID = Convert.ToInt32(cmbEmployeeList.SelectedValue);
 
-            bool isUpdated = employeeController.UpdateEmployee(employee);
-            if (isUpdated)
-            {
-                MessageBox.Show("Successfully Updated");
-            }
+            //bool isUpdated = employeeController.UpdateEmployee(employee);
+            //if (isUpdated)
+            //{
+            //    MessageBox.Show("Successfully Updated");
+            //}
         }
     }
 }

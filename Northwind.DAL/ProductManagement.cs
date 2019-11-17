@@ -21,7 +21,7 @@ namespace Northwind.DAL
         //getProducts
         public List<Product> GetProducts()
         {
-            List<Product> products = northwind.Set<Product>().ToList();
+            List<Product> products = northwind.Set<Product>().OrderBy(x=>x.ProductName).ToList();
             var categories = northwind.Set<Category>().ToList();
             var suppliers = northwind.Set<Supplier>().ToList();
             foreach (Product product in products)

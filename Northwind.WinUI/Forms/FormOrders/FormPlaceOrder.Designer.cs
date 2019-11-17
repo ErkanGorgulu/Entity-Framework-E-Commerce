@@ -40,20 +40,20 @@
             this.lblOrderDate = new System.Windows.Forms.Label();
             this.lblShoppingCart = new System.Windows.Forms.Label();
             this.groupProducts = new System.Windows.Forms.GroupBox();
-            this.groupCustomerEmployee = new System.Windows.Forms.GroupBox();
-            this.cmbCustomerList = new System.Windows.Forms.ComboBox();
-            this.lblCustomers = new System.Windows.Forms.Label();
-            this.cmbEmployeeList = new System.Windows.Forms.ComboBox();
-            this.lblEmployee = new System.Windows.Forms.Label();
-            this.cmbShipperList = new System.Windows.Forms.ComboBox();
-            this.lblShipper = new System.Windows.Forms.Label();
-            this.groupDates = new System.Windows.Forms.GroupBox();
-            this.dateRequiredDate = new System.Windows.Forms.DateTimePicker();
-            this.lblRequiredDate = new System.Windows.Forms.Label();
-            this.btnPlaceOrder = new System.Windows.Forms.Button();
-            this.lblDiscount = new System.Windows.Forms.Label();
             this.cmbDiscountList = new System.Windows.Forms.ComboBox();
+            this.lblDiscount = new System.Windows.Forms.Label();
             this.lblDiscountedTotalPrice = new System.Windows.Forms.Label();
+            this.groupCustomerEmployee = new System.Windows.Forms.GroupBox();
+            this.lblShipper = new System.Windows.Forms.Label();
+            this.cmbShipperList = new System.Windows.Forms.ComboBox();
+            this.lblEmployee = new System.Windows.Forms.Label();
+            this.cmbEmployeeList = new System.Windows.Forms.ComboBox();
+            this.lblCustomers = new System.Windows.Forms.Label();
+            this.cmbCustomerList = new System.Windows.Forms.ComboBox();
+            this.groupDates = new System.Windows.Forms.GroupBox();
+            this.lblRequiredDate = new System.Windows.Forms.Label();
+            this.dateRequiredDate = new System.Windows.Forms.DateTimePicker();
+            this.btnPlaceOrder = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.numericQuantity)).BeginInit();
             this.groupProducts.SuspendLayout();
             this.groupCustomerEmployee.SuspendLayout();
@@ -147,6 +147,7 @@
             this.dateOrderDate.Size = new System.Drawing.Size(247, 20);
             this.dateOrderDate.TabIndex = 5;
             this.dateOrderDate.Value = new System.DateTime(2019, 11, 17, 18, 46, 4, 0);
+            this.dateOrderDate.ValueChanged += new System.EventHandler(this.dateOrderDate_ValueChanged);
             // 
             // lblOrderDate
             // 
@@ -186,6 +187,33 @@
             this.groupProducts.TabIndex = 6;
             this.groupProducts.TabStop = false;
             // 
+            // cmbDiscountList
+            // 
+            this.cmbDiscountList.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbDiscountList.FormattingEnabled = true;
+            this.cmbDiscountList.Location = new System.Drawing.Point(92, 147);
+            this.cmbDiscountList.Name = "cmbDiscountList";
+            this.cmbDiscountList.Size = new System.Drawing.Size(49, 21);
+            this.cmbDiscountList.TabIndex = 5;
+            this.cmbDiscountList.SelectionChangeCommitted += new System.EventHandler(this.cmbDiscountList_SelectionChangeCommitted);
+            // 
+            // lblDiscount
+            // 
+            this.lblDiscount.AutoSize = true;
+            this.lblDiscount.Location = new System.Drawing.Point(9, 152);
+            this.lblDiscount.Name = "lblDiscount";
+            this.lblDiscount.Size = new System.Drawing.Size(49, 13);
+            this.lblDiscount.TabIndex = 1;
+            this.lblDiscount.Text = "Discount";
+            // 
+            // lblDiscountedTotalPrice
+            // 
+            this.lblDiscountedTotalPrice.AutoSize = true;
+            this.lblDiscountedTotalPrice.Location = new System.Drawing.Point(156, 116);
+            this.lblDiscountedTotalPrice.Name = "lblDiscountedTotalPrice";
+            this.lblDiscountedTotalPrice.Size = new System.Drawing.Size(0, 13);
+            this.lblDiscountedTotalPrice.TabIndex = 1;
+            // 
             // groupCustomerEmployee
             // 
             this.groupCustomerEmployee.Controls.Add(this.lblShipper);
@@ -200,41 +228,14 @@
             this.groupCustomerEmployee.TabIndex = 7;
             this.groupCustomerEmployee.TabStop = false;
             // 
-            // cmbCustomerList
+            // lblShipper
             // 
-            this.cmbCustomerList.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbCustomerList.FormattingEnabled = true;
-            this.cmbCustomerList.Location = new System.Drawing.Point(9, 37);
-            this.cmbCustomerList.Name = "cmbCustomerList";
-            this.cmbCustomerList.Size = new System.Drawing.Size(247, 21);
-            this.cmbCustomerList.TabIndex = 0;
-            // 
-            // lblCustomers
-            // 
-            this.lblCustomers.AutoSize = true;
-            this.lblCustomers.Location = new System.Drawing.Point(6, 18);
-            this.lblCustomers.Name = "lblCustomers";
-            this.lblCustomers.Size = new System.Drawing.Size(56, 13);
-            this.lblCustomers.TabIndex = 1;
-            this.lblCustomers.Text = "Customers";
-            // 
-            // cmbEmployeeList
-            // 
-            this.cmbEmployeeList.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbEmployeeList.FormattingEnabled = true;
-            this.cmbEmployeeList.Location = new System.Drawing.Point(9, 91);
-            this.cmbEmployeeList.Name = "cmbEmployeeList";
-            this.cmbEmployeeList.Size = new System.Drawing.Size(247, 21);
-            this.cmbEmployeeList.TabIndex = 0;
-            // 
-            // lblEmployee
-            // 
-            this.lblEmployee.AutoSize = true;
-            this.lblEmployee.Location = new System.Drawing.Point(6, 72);
-            this.lblEmployee.Name = "lblEmployee";
-            this.lblEmployee.Size = new System.Drawing.Size(53, 13);
-            this.lblEmployee.TabIndex = 1;
-            this.lblEmployee.Text = "Employee";
+            this.lblShipper.AutoSize = true;
+            this.lblShipper.Location = new System.Drawing.Point(6, 128);
+            this.lblShipper.Name = "lblShipper";
+            this.lblShipper.Size = new System.Drawing.Size(90, 13);
+            this.lblShipper.TabIndex = 1;
+            this.lblShipper.Text = "Shipper Company";
             // 
             // cmbShipperList
             // 
@@ -245,14 +246,41 @@
             this.cmbShipperList.Size = new System.Drawing.Size(247, 21);
             this.cmbShipperList.TabIndex = 0;
             // 
-            // lblShipper
+            // lblEmployee
             // 
-            this.lblShipper.AutoSize = true;
-            this.lblShipper.Location = new System.Drawing.Point(6, 128);
-            this.lblShipper.Name = "lblShipper";
-            this.lblShipper.Size = new System.Drawing.Size(90, 13);
-            this.lblShipper.TabIndex = 1;
-            this.lblShipper.Text = "Shipper Company";
+            this.lblEmployee.AutoSize = true;
+            this.lblEmployee.Location = new System.Drawing.Point(6, 72);
+            this.lblEmployee.Name = "lblEmployee";
+            this.lblEmployee.Size = new System.Drawing.Size(53, 13);
+            this.lblEmployee.TabIndex = 1;
+            this.lblEmployee.Text = "Employee";
+            // 
+            // cmbEmployeeList
+            // 
+            this.cmbEmployeeList.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbEmployeeList.FormattingEnabled = true;
+            this.cmbEmployeeList.Location = new System.Drawing.Point(9, 91);
+            this.cmbEmployeeList.Name = "cmbEmployeeList";
+            this.cmbEmployeeList.Size = new System.Drawing.Size(247, 21);
+            this.cmbEmployeeList.TabIndex = 0;
+            // 
+            // lblCustomers
+            // 
+            this.lblCustomers.AutoSize = true;
+            this.lblCustomers.Location = new System.Drawing.Point(6, 18);
+            this.lblCustomers.Name = "lblCustomers";
+            this.lblCustomers.Size = new System.Drawing.Size(56, 13);
+            this.lblCustomers.TabIndex = 1;
+            this.lblCustomers.Text = "Customers";
+            // 
+            // cmbCustomerList
+            // 
+            this.cmbCustomerList.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbCustomerList.FormattingEnabled = true;
+            this.cmbCustomerList.Location = new System.Drawing.Point(9, 37);
+            this.cmbCustomerList.Name = "cmbCustomerList";
+            this.cmbCustomerList.Size = new System.Drawing.Size(247, 21);
+            this.cmbCustomerList.TabIndex = 0;
             // 
             // groupDates
             // 
@@ -266,15 +294,6 @@
             this.groupDates.TabIndex = 8;
             this.groupDates.TabStop = false;
             // 
-            // dateRequiredDate
-            // 
-            this.dateRequiredDate.Location = new System.Drawing.Point(70, 130);
-            this.dateRequiredDate.MinDate = new System.DateTime(2019, 11, 17, 19, 3, 20, 0);
-            this.dateRequiredDate.Name = "dateRequiredDate";
-            this.dateRequiredDate.Size = new System.Drawing.Size(247, 20);
-            this.dateRequiredDate.TabIndex = 5;
-            this.dateRequiredDate.Value = new System.DateTime(2019, 11, 17, 19, 3, 20, 0);
-            // 
             // lblRequiredDate
             // 
             this.lblRequiredDate.AutoSize = true;
@@ -284,6 +303,16 @@
             this.lblRequiredDate.TabIndex = 1;
             this.lblRequiredDate.Text = "Required Date";
             // 
+            // dateRequiredDate
+            // 
+            this.dateRequiredDate.Enabled = false;
+            this.dateRequiredDate.Location = new System.Drawing.Point(70, 130);
+            this.dateRequiredDate.MinDate = new System.DateTime(2019, 11, 17, 19, 3, 20, 0);
+            this.dateRequiredDate.Name = "dateRequiredDate";
+            this.dateRequiredDate.Size = new System.Drawing.Size(247, 20);
+            this.dateRequiredDate.TabIndex = 5;
+            this.dateRequiredDate.Value = new System.DateTime(2019, 11, 17, 19, 3, 20, 0);
+            // 
             // btnPlaceOrder
             // 
             this.btnPlaceOrder.Location = new System.Drawing.Point(227, 489);
@@ -292,33 +321,6 @@
             this.btnPlaceOrder.TabIndex = 9;
             this.btnPlaceOrder.Text = "Place Order";
             this.btnPlaceOrder.UseVisualStyleBackColor = true;
-            // 
-            // lblDiscount
-            // 
-            this.lblDiscount.AutoSize = true;
-            this.lblDiscount.Location = new System.Drawing.Point(9, 152);
-            this.lblDiscount.Name = "lblDiscount";
-            this.lblDiscount.Size = new System.Drawing.Size(49, 13);
-            this.lblDiscount.TabIndex = 1;
-            this.lblDiscount.Text = "Discount";
-            // 
-            // cmbDiscountList
-            // 
-            this.cmbDiscountList.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbDiscountList.FormattingEnabled = true;
-            this.cmbDiscountList.Location = new System.Drawing.Point(92, 147);
-            this.cmbDiscountList.Name = "cmbDiscountList";
-            this.cmbDiscountList.Size = new System.Drawing.Size(49, 21);
-            this.cmbDiscountList.TabIndex = 5;
-            this.cmbDiscountList.SelectionChangeCommitted += new System.EventHandler(this.cmbDiscountList_SelectionChangeCommitted);
-            // 
-            // lblDiscountedTotalPrice
-            // 
-            this.lblDiscountedTotalPrice.AutoSize = true;
-            this.lblDiscountedTotalPrice.Location = new System.Drawing.Point(156, 116);
-            this.lblDiscountedTotalPrice.Name = "lblDiscountedTotalPrice";
-            this.lblDiscountedTotalPrice.Size = new System.Drawing.Size(0, 13);
-            this.lblDiscountedTotalPrice.TabIndex = 1;
             // 
             // FormPlaceOrder
             // 

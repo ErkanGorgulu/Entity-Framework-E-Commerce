@@ -155,6 +155,7 @@
     <Compile Include="Shipper.cs">
       <DependentUpon>NorthwindDatabase.tt</DependentUpon>
     </Compile>
+    <Compile Include="ShipperManagement.cs" />
     <Compile Include="SP_GetProducts_Result.cs">
       <DependentUpon>NorthwindDatabase.tt</DependentUpon>
     </Compile>

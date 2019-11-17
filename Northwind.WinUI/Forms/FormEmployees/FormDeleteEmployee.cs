@@ -35,13 +35,13 @@ namespace Northwind.WinUI.Forms.FormEmployees
             employee.BirthDate = DateTime.Now;
             employee.HireDate = DateTime.Now;
 
-            bool isDeleted = employeeController.DeleteEmployee(employee);
-            if (isDeleted)
-            {
-                MessageBox.Show("Successfully Deleted");
-                cmbEmployeeList.Items.Remove(employee.EmployeeID);
-                cmbEmployeeList.DataSource = employeeController.GetEmployees();
-            }
+            //bool isDeleted = employeeController.DeleteEmployee(employee);
+            //if (isDeleted)
+            //{
+            //    MessageBox.Show("Successfully Deleted");
+            //    cmbEmployeeList.Items.Remove(employee.EmployeeID);
+            //    cmbEmployeeList.DataSource = employeeController.GetEmployees();
+            //}
         }
     }
 }

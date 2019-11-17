@@ -20,6 +20,10 @@ namespace Northwind.WinUI.Forms.FormOrders
             InitializeComponent();
         }
         ProductController productController = new ProductController();
+        CustomerController customerController = new CustomerController();
+        EmployeeController employeeController = new EmployeeController();
+        ShipperController shipperController = new ShipperController();
+        
         List<Product> products = new List<Product>();
         Product product;
         List<Product> productsInCart = new List<Product>();
@@ -32,13 +36,42 @@ namespace Northwind.WinUI.Forms.FormOrders
             SetTotalPrice();
             dateOrderDate.MinDate = DateTime.Now;
             dateRequiredDate.MinDate = DateTime.Now;
+            FillCustomerList();
+            FillEmployeeList();
+            FillShipperList();
+        }
 
 
+        private void FillShipperList()
+        {
+            cmbShipperList.DataSource = shipperController.GetShippers();
+            cmbShipperList.DisplayMember = "CompanyName";
+            cmbShipperList.ValueMember = "ShipperID";
+        }
+
+        private void FillEmployeeList()
+        {
+            List<Employee> employees = employeeController.GetEmployees();
+            foreach (Employee employee in employees)
+            {
+                employee.NameWithTitle = $"{employee.FirstName} {employee.LastName}";
+            }
+            cmbEmployeeList.DataSource = employees;
+            cmbEmployeeList.DisplayMember = "NameWithTitle";
+            cmbEmployeeList.ValueMember = "EmployeeID";
+        }
+
+        private void FillCustomerList()
+        {
+            cmbCustomerList.DataSource = customerController.GetCustomers();
+            cmbCustomerList.DisplayMember = "CompanyName";
+            cmbCustomerList.ValueMember = "CustomerID";
         }
 
         private void FillProductList()
         {
             products = productController.GetProducts();
+            
             cmbProductList.DataSource = products;
             cmbProductList.DisplayMember = "ProductName";
             cmbProductList.ValueMember = "ProductID";
@@ -86,14 +119,16 @@ namespace Northwind.WinUI.Forms.FormOrders
                 lblDiscountedTotalPrice.Text = $"{totalPrice}$";
                 lblTotalPrice.Font = fnt;
                 lblTotalPrice.Text = $"{priceWithoutDiscount}$";
-                finalPrice = totalPrice;
+                finalPrice = Math.Round(totalPrice, 2);
+                
             }
             else
             {
                 lblDiscountedTotalPrice.Text = string.Empty;
                 lblTotalPrice.Text = $"{totalPrice}";
                 lblTotalPrice.Font = default;
-                finalPrice = totalPrice;
+                finalPrice = Math.Round(totalPrice, 2);
+
             }
             
         }
@@ -104,6 +139,12 @@ namespace Northwind.WinUI.Forms.FormOrders
             string selectedItem = cmbProductList.GetItemText(cmbProductList.SelectedItem);
             string selectedProduct = $"{selectedItem}, Quantity:{numericQuantity.Value}, Total Price:{finalPrice}";
             lstAddedProducts.Items.Add(selectedProduct);
+        }
+
+        private void dateOrderDate_ValueChanged(object sender, EventArgs e)
+        {
+            dateRequiredDate.MinDate = dateOrderDate.Value;
+            dateRequiredDate.Enabled = true;
         }
     }
 }
