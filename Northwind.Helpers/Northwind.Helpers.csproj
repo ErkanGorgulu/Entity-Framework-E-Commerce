@@ -50,6 +50,7 @@
       <DependentUpon>Configuration.settings</DependentUpon>
     </Compile>
     <Compile Include="ReturnMessage.cs" />
+    <Compile Include="ShoppingCartAddedProducts.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

@@ -23,5 +23,12 @@ namespace Northwind.DAL
             }
             return orderList;
         }
+
+        public Order AddOrder(Order order)
+        {
+            northwind.Set<Order>().Add(order);
+            northwind.SaveChanges();
+            return order;
+        }
     }
 }

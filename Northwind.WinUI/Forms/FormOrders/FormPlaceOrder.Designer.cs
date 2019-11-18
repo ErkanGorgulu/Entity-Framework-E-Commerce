@@ -321,6 +321,7 @@
             this.btnPlaceOrder.TabIndex = 9;
             this.btnPlaceOrder.Text = "Place Order";
             this.btnPlaceOrder.UseVisualStyleBackColor = true;
+            this.btnPlaceOrder.Click += new System.EventHandler(this.btnPlaceOrder_Click);
             // 
             // FormPlaceOrder
             // 

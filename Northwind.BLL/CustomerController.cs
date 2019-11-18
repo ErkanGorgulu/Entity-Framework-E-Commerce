@@ -15,6 +15,10 @@ namespace Northwind.BLL
         {
             return customerManagement.GetCustomers();
         }
+        public Customer GetCustomerById(string customerID)
+        {
+            return customerManagement.GetCustomerById(customerID);
+        }
 
     }
 }

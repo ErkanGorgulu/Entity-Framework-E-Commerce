@@ -13,5 +13,9 @@ namespace Northwind.DAL
         {
             return northwind.Set<Customer>().ToList();
         }
+        public Customer GetCustomerById(string customerID)
+        {
+            return northwind.Set<Customer>().FirstOrDefault(customer => customer.CustomerID == customerID);
+        }
     }
 }

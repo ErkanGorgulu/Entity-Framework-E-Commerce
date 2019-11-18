@@ -14,5 +14,9 @@ namespace Northwind.BLL
         {
             return orderManagement.GetOrderList();
         }
+        public Order AddOrder(Order order)
+        {
+            return orderManagement.AddOrder(order);
+        }
     }
 }
