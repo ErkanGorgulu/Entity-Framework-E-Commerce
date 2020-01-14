@@ -1,6 +1,5 @@
 # Entity-Framework-E-Commerce
-E-Commerce with well known database Northwind. This project is for my personal growth.
-
+E-Commerce with well known database Northwind.
 
 This is a WinForms app. I started developing it with ADO.NET. Then later on, I switched to Entity Framework. It's a dummy project for me to improve myself.
 
